@@ -1,0 +1,56 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Data files (downloaded at runtime)
+data/raw/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Neo4j local volumes (if not using Docker volumes)
+neo4j_data/
+neo4j_logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generative AI
+.claude/
+dev/
