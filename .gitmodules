@@ -1,3 +1,6 @@
 [submodule "scrollytelling/old_and_new_testament_arcs"]
 	path = scrollytelling/old_and_new_testament_arcs
 	url = https://github.com/wsovine/bible-crossrefs-visualization
+[submodule "scrollytelling/bible_timeline"]
+	path = scrollytelling/bible_timeline
+	url = https://github.com/wsovine/bible-timeline.git
