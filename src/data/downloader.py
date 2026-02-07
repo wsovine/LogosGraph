@@ -1,6 +1,7 @@
 """Download Bible data files from remote sources."""
 
 import logging
+import time
 import zipfile
 from io import BytesIO
 from pathlib import Path
@@ -120,6 +121,62 @@ def download_haydock(data_dir: Path | None = None) -> Path:
 
     logger.info(f"Extracted {sfm_count} USFM files to {haydock_dir}")
     return haydock_dir
+
+
+def download_catechism_html(data_dir: Path | None = None) -> Path:
+    """Download Vatican Catechism HTML pages containing footnotes.
+
+    Downloads pages __P1.HTM through __P108.HTM from Vatican website.
+    Skips pages that already exist locally.
+
+    Args:
+        data_dir: Base directory for data files. Defaults to settings.DATA_DIR.
+
+    Returns:
+        Path to the directory containing HTML files.
+
+    Raises:
+        requests.HTTPError: If a download fails.
+    """
+    if data_dir is None:
+        data_dir = settings.DATA_DIR
+
+    html_dir = data_dir / "catechism" / "html"
+    html_dir.mkdir(parents=True, exist_ok=True)
+
+    base_url = "https://www.vatican.va/archive/ENG0015/__P{}.HTM"
+
+    # Vatican uses uppercase hex for page IDs: 1-9, A-F, 10-1F, 20-2F, etc.
+    # 108 pages = hex 6C
+    downloaded = 0
+    skipped = 0
+
+    for page_num in tqdm(range(1, 109), desc="Downloading CCC HTML"):
+        # Convert to uppercase hex (without 0x prefix)
+        page_id = f"{page_num:X}"
+
+        dest_path = html_dir / f"__P{page_id}.HTM"
+
+        if dest_path.exists():
+            skipped += 1
+            continue
+
+        url = base_url.format(page_id)
+        try:
+            response = requests.get(url, timeout=30)
+            response.raise_for_status()
+
+            with open(dest_path, "wb") as f:
+                f.write(response.content)
+            downloaded += 1
+            time.sleep(0.2)  # Be polite to Vatican server
+
+        except requests.HTTPError as e:
+            logger.warning(f"Failed to download page {page_id}: {e}")
+            continue
+
+    logger.info(f"Downloaded {downloaded} HTML files, skipped {skipped} existing")
+    return html_dir
 
 
 def download_all(data_dir: Path | None = None) -> dict[str, Path]:

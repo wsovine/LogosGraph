@@ -17,6 +17,9 @@ class Settings:
     NEO4J_USER: str = os.getenv("NEO4J_USER", "neo4j")
     NEO4J_PASSWORD: str = os.getenv("NEO4J_PASSWORD", "logosgraph")
 
+    # Anthropic API (for LLM extraction)
+    ANTHROPIC_API_KEY: str | None = os.getenv("ANTHROPIC_API_KEY")
+
     # Import settings
     BATCH_SIZE: int = int(os.getenv("BATCH_SIZE", "5000"))
 

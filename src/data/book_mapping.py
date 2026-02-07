@@ -8,11 +8,18 @@ Maps between:
 - Standard 3-letter abbreviations (GEN, EXO, PRO, etc.)
 """
 
+import json
 import logging
 import re
+from pathlib import Path
 from typing import NamedTuple
 
+from src.config import settings
+
 logger = logging.getLogger(__name__)
+
+# Deuterocanonical books (7 books not in Protestant canon)
+DEUTEROCANONICAL_BOOKS: set[str] = {"TOB", "JDT", "WIS", "SIR", "BAR", "1MA", "2MA"}
 
 # CPDV numeric ID (1-73) to standard 3-letter abbreviation
 CPDV_BOOK_ID_TO_ABBREV: dict[int, str] = {
@@ -337,6 +344,156 @@ HAYDOCK_ABBREV_TO_STANDARD: dict[str, str] = {
     "Apoc": "REV", "Apoc.": "REV", "Rev": "REV", "Rev.": "REV",
 }
 
+# CCC (Catechism) abbreviations to standard 3-letter abbreviation
+# Maps abbreviations found in Vatican CCC footnotes
+CCC_ABBREV_TO_STANDARD: dict[str, str] = {
+    # Old Testament
+    "Gen": "GEN",
+    "Ex": "EXO", "EX": "EXO", "Exod": "EXO",
+    "Lev": "LEV",
+    "Num": "NUM",
+    "Dt": "DEU", "Deut": "DEU",
+    "Jos": "JOS", "Josh": "JOS",
+    "Judg": "JDG", "Jdg": "JDG",
+    "Ruth": "RUT",
+    "1 Sam": "1SA", "2 Sam": "2SA",
+    "I Sam": "1SA", "II Sam": "2SA",
+    "1 Kgs": "1KI", "2 Kgs": "2KI",
+    "I Kgs": "1KI", "II Kgs": "2KI",
+    "1 Kg": "1KI", "2 Kg": "2KI",
+    "1 Chr": "1CH", "2 Chr": "2CH",
+    "I Chr": "1CH", "II Chr": "2CH",
+    "Ezra": "EZR", "Ezr": "EZR",
+    "Neh": "NEH",
+    "Tob": "TOB",
+    "Jdt": "JDT", "Judith": "JDT",
+    "Esth": "EST", "Est": "EST",
+    "1 Mac": "1MA", "2 Mac": "2MA",
+    "I Mac": "1MA", "II Mac": "2MA",
+    "1 Macc": "1MA", "2 Macc": "2MA",
+    "Job": "JOB",
+    "Ps": "PSA", "Pss": "PSA", "Psalm": "PSA", "Psalms": "PSA",
+    "Prov": "PRO", "Pr": "PRO",
+    "Eccl": "ECC", "Qoh": "ECC",
+    "Song": "SNG", "Cant": "SNG", "SS": "SNG",
+    "Wis": "WIS",
+    "Sir": "SIR", "Ecclus": "SIR",
+    "Is": "ISA", "Isa": "ISA",
+    "Jer": "JER",
+    "Lam": "LAM",
+    "Bar": "BAR",
+    "Ezek": "EZK", "Ezk": "EZK", "Ez": "EZK",
+    "Dan": "DAN", "Dn": "DAN",
+    "Hos": "HOS",
+    "Joel": "JOL", "Jl": "JOL",
+    "Amos": "AMO", "Am": "AMO",
+    "Obad": "OBA", "Ob": "OBA",
+    "Jon": "JON", "Jonah": "JON",
+    "Mic": "MIC",
+    "Nah": "NAM",
+    "Hab": "HAB",
+    "Zeph": "ZEP", "Zep": "ZEP",
+    "Hag": "HAG",
+    "Zech": "ZEC", "Zec": "ZEC",
+    "Mal": "MAL",
+    # New Testament
+    "Mt": "MAT", "Matt": "MAT",
+    "Mk": "MRK", "Mark": "MRK",
+    "Lk": "LUK", "Luke": "LUK",
+    "Jn": "JHN", "John": "JHN",
+    "Acts": "ACT", "Act": "ACT",
+    "Rom": "ROM",
+    "1 Cor": "1CO", "2 Cor": "2CO",
+    "I Cor": "1CO", "II Cor": "2CO",
+    "Gal": "GAL",
+    "Eph": "EPH",
+    "Phil": "PHP",
+    "Col": "COL",
+    "1 Thess": "1TH", "2 Thess": "2TH",
+    "I Thess": "1TH", "II Thess": "2TH",
+    "1 Th": "1TH", "2 Th": "2TH",
+    "1 Tim": "1TI", "2 Tim": "2TI",
+    "I Tim": "1TI", "II Tim": "2TI",
+    "Tit": "TIT", "Titus": "TIT",
+    "Phlm": "PHM", "Philem": "PHM",
+    "Heb": "HEB",
+    "Jas": "JAS", "James": "JAS",
+    "1 Pet": "1PE", "2 Pet": "2PE",
+    "I Pet": "1PE", "II Pet": "2PE",
+    "1 Pt": "1PE", "2 Pt": "2PE",
+    "1 Jn": "1JN", "2 Jn": "2JN", "3 Jn": "3JN",
+    "I Jn": "1JN", "II Jn": "2JN", "III Jn": "3JN",
+    "l Jn": "1JN",  # lowercase L typo in some citations
+    "Jude": "JUD",
+    "Rev": "REV", "Apoc": "REV",
+}
+
+# External document types referenced in CCC footnotes
+# Maps abbreviation to (type, full_title)
+EXTERNAL_DOC_TYPES: dict[str, tuple[str, str]] = {
+    # Vatican II Documents
+    "LG": ("Vatican II", "Lumen Gentium"),
+    "SC": ("Vatican II", "Sacrosanctum Concilium"),
+    "GS": ("Vatican II", "Gaudium et Spes"),
+    "DV": ("Vatican II", "Dei Verbum"),
+    "UR": ("Vatican II", "Unitatis Redintegratio"),
+    "AG": ("Vatican II", "Ad Gentes"),
+    "NA": ("Vatican II", "Nostra Aetate"),
+    "AA": ("Vatican II", "Apostolicam Actuositatem"),
+    "PO": ("Vatican II", "Presbyterorum Ordinis"),
+    "PC": ("Vatican II", "Perfectae Caritatis"),
+    "CD": ("Vatican II", "Christus Dominus"),
+    "DH": ("Vatican II", "Dignitatis Humanae"),
+    "OT": ("Vatican II", "Optatam Totius"),
+    "GE": ("Vatican II", "Gravissimum Educationis"),
+    "IM": ("Vatican II", "Inter Mirifica"),
+    # Reference Works
+    "DS": ("Reference", "Denzinger-Schönmetzer"),
+    "PG": ("Patristics", "Patrologia Graeca"),
+    "PL": ("Patristics", "Patrologia Latina"),
+    "PLS": ("Patristics", "Patrologia Latina Supplementum"),
+    "AAS": ("Reference", "Acta Apostolicae Sedis"),
+    "CCL": ("Patristics", "Corpus Christianorum Latina"),
+    "CSEL": ("Patristics", "Corpus Scriptorum Ecclesiasticorum Latinorum"),
+    "SCh": ("Patristics", "Sources Chrétiennes"),
+    # Papal Encyclicals/Documents
+    "CT": ("Encyclical", "Catechesi Tradendae"),
+    "FC": ("Encyclical", "Familiaris Consortio"),
+    "EN": ("Encyclical", "Evangelii Nuntiandi"),
+    "RP": ("Encyclical", "Reconciliatio et Paenitentia"),
+    "MF": ("Encyclical", "Mysterium Fidei"),
+    "CL": ("Encyclical", "Christifideles Laici"),
+    "CA": ("Encyclical", "Centesimus Annus"),
+    "MD": ("Encyclical", "Mulieris Dignitatem"),
+    "RH": ("Encyclical", "Redemptor Hominis"),
+    "LE": ("Encyclical", "Laborem Exercens"),
+    "SRS": ("Encyclical", "Sollicitudo Rei Socialis"),
+    "EV": ("Encyclical", "Evangelium Vitae"),
+    "VS": ("Encyclical", "Veritatis Splendor"),
+    "FR": ("Encyclical", "Fides et Ratio"),
+    "DeV": ("Encyclical", "Dominum et Vivificantem"),
+    "RMi": ("Encyclical", "Redemptoris Missio"),
+    "RMa": ("Encyclical", "Redemptoris Mater"),
+    "CPG": ("Papal", "Credo of the People of God"),
+    "CPC": ("Papal", "Credo of the People of God"),
+    # Liturgical Documents
+    "GIRM": ("Liturgical", "General Instruction of the Roman Missal"),
+    "OCF": ("Liturgical", "Order of Christian Funerals"),
+    "OE": ("Liturgical", "Ordo Exsequiarum"),
+    "OP": ("Liturgical", "Ordo Paenitentiae"),
+    "OBP": ("Liturgical", "Ordo Baptismi Parvulorum"),
+    "OICA": ("Liturgical", "Ordo Initiationis Christianae Adultorum"),
+    # Catechetical
+    "GCD": ("Catechetical", "General Catechetical Directory"),
+    "DCG": ("Catechetical", "Directorium Catechisticum Generale"),
+    # Canon Law
+    "CIC": ("Canon Law", "Code of Canon Law"),
+    "CCEO": ("Canon Law", "Code of Canons of the Eastern Churches"),
+    # Other Church Documents
+    "STh": ("Theological", "Summa Theologiae"),
+    "RC": ("Catechetical", "Roman Catechism"),
+}
+
 # Standard abbreviation to full book name
 STANDARD_TO_BOOK_NAME: dict[str, str] = {
     "GEN": "Genesis",
@@ -500,6 +657,62 @@ def build_verse_id(book: str, chapter: int, verse: int) -> str:
     return f"{book}-{chapter}-{verse}"
 
 
+def hebrew_to_vulgate_psalm(chapter: int) -> int:
+    """Convert Hebrew Psalm number to Vulgate number.
+
+    The CCC uses Hebrew numbering, but CPDV uses Vulgate numbering.
+
+    Mapping:
+    - Psalms 1-8: Same in both
+    - Psalms 9-10 (Hebrew) = Psalm 9 (Vulgate) - combined
+    - Psalms 11-113 (Hebrew) = Psalms 10-112 (Vulgate) - offset by -1
+    - Psalms 114-115 (Hebrew) = Psalm 113 (Vulgate) - combined
+    - Psalms 116-146 (Hebrew) = Psalms 115-145 (Vulgate) - offset by -1
+    - Psalm 147 (Hebrew) = Psalms 146-147 (Vulgate) - split
+    - Psalms 148-150: Same in both
+
+    Args:
+        chapter: Hebrew Psalm number (1-150)
+
+    Returns:
+        Vulgate Psalm number
+    """
+    if chapter <= 8:
+        return chapter
+    elif chapter <= 10:
+        return 9  # Hebrew 9-10 = Vulgate 9
+    elif chapter <= 113:
+        return chapter - 1  # Hebrew 11-113 = Vulgate 10-112
+    elif chapter <= 115:
+        return 113  # Hebrew 114-115 = Vulgate 113
+    elif chapter <= 146:
+        return chapter - 1  # Hebrew 116-146 = Vulgate 115-145
+    elif chapter == 147:
+        return 146  # Hebrew 147 maps to Vulgate 146 (first half) - best approximation
+    else:
+        return chapter  # Psalms 148-150 same
+
+
+def build_ccc_verse_id(book: str, chapter: int, verse: int) -> str:
+    """Build verse ID for CCC citations, applying Psalm number translation.
+
+    CCC uses Hebrew Psalm numbering, but our database uses Vulgate
+    numbering from CPDV. This function translates Psalm numbers when
+    building verse IDs from CCC citations.
+
+    Args:
+        book: Standard 3-letter abbreviation (e.g., "PSA")
+        chapter: Chapter number (Hebrew numbering for Psalms)
+        verse: Verse number
+
+    Returns:
+        Verse ID string like "PSA-118-160" (Vulgate numbering)
+    """
+    if book == "PSA":
+        chapter = hebrew_to_vulgate_psalm(chapter)
+    return build_verse_id(book, chapter, verse)
+
+
 # Regex pattern for parsing Haydock reference text
 # Matches: "Book Chapter:Verse" with optional verse range
 # Examples: "Romans 8:15", "3 Kings 3:9", "Matthew 5:3-12", "1 Corinthians 3:16"
@@ -614,3 +827,36 @@ def parse_haydock_reference(text: str) -> list[VerseRef]:
             refs.append(VerseRef(book_code, chapter, verse))
 
     return refs
+
+
+def load_book_metadata(file_path: Path | None = None) -> dict[str, dict]:
+    """Load book metadata from JSON file.
+
+    Args:
+        file_path: Path to book_metadata.json. Defaults to data/raw/book_metadata.json.
+
+    Returns:
+        Dictionary mapping book abbreviation to metadata dict with keys:
+        - name: Full book name
+        - order: Canonical order (1-73)
+        - testament: "OT" or "NT"
+        - isDeuterocanonical: Boolean
+        - dateWrittenStart: Year (negative for BC)
+        - dateWrittenEnd: Year
+        - dateEventsStart: Year or None
+        - dateEventsEnd: Year or None
+    """
+    if file_path is None:
+        file_path = settings.DATA_DIR / "book_metadata.json"
+
+    logger.info(f"Loading book metadata from {file_path}")
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Remove the _metadata key if present
+    if "_metadata" in data:
+        del data["_metadata"]
+
+    logger.info(f"Loaded metadata for {len(data)} books")
+    return data

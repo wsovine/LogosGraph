@@ -11,6 +11,13 @@ EXPECTED_BOOK_COUNT = 73
 EXPECTED_CROSSREF_COUNT = 340000  # Approximate minimum
 DEUTEROCANONICAL_BOOKS = ["TOB", "JDT", "WIS", "SIR", "BAR", "1MA", "2MA"]
 
+# CCC expected values
+EXPECTED_CCC_PARAGRAPHS = 2800  # Approximate minimum (~2,865 actual)
+EXPECTED_CCC_INTERNAL_REFS = 3500  # Approximate minimum (~3,713 actual)
+EXPECTED_CCC_SCRIPTURE_REFS = 1900  # Approximate minimum (~2,006 actual)
+EXPECTED_EXTERNAL_DOCS = 350  # Approximate minimum (~390 actual)
+EXPECTED_CCC_EXTERNAL_REFS = 500  # Approximate minimum (~556 actual)
+
 
 def check(name: str, passed: bool, details: str = "") -> bool:
     """Print check result and return pass/fail."""
@@ -184,6 +191,95 @@ def main():
             sources = record["sources"]
             count = record["count"]
             print(f"         {sources}: {count:,}")
+
+        # CCC Validation Checks
+        print("\n  Catechism (CCC) Checks:")
+
+        # Check 12: CCC paragraph count
+        result = session.run("MATCH (c:CatechismParagraph) RETURN count(c) AS count")
+        ccc_count = result.single()["count"]
+        passed = ccc_count >= EXPECTED_CCC_PARAGRAPHS
+        all_passed &= check(
+            "CCC paragraph count",
+            passed,
+            f"Found {ccc_count:,} paragraphs (expected >= {EXPECTED_CCC_PARAGRAPHS:,})"
+        )
+
+        # Check 13: CCC internal cross-references
+        result = session.run("""
+            MATCH (:CatechismParagraph)-[r:CROSS_REFERENCES]->(:CatechismParagraph)
+            RETURN count(r) AS count
+        """)
+        ccc_internal = result.single()["count"]
+        passed = ccc_internal >= EXPECTED_CCC_INTERNAL_REFS
+        all_passed &= check(
+            "CCC internal refs",
+            passed,
+            f"Found {ccc_internal:,} edges (expected >= {EXPECTED_CCC_INTERNAL_REFS:,})"
+        )
+
+        # Check 14: CCC→Verse citations
+        result = session.run("""
+            MATCH (:CatechismParagraph)-[r:CITES]->(:Verse)
+            RETURN count(r) AS count
+        """)
+        ccc_scripture = result.single()["count"]
+        passed = ccc_scripture >= EXPECTED_CCC_SCRIPTURE_REFS
+        all_passed &= check(
+            "CCC→Scripture citations",
+            passed,
+            f"Found {ccc_scripture:,} edges (expected >= {EXPECTED_CCC_SCRIPTURE_REFS:,})"
+        )
+
+        # Check 15: External document count
+        result = session.run("MATCH (d:ExternalDocument) RETURN count(d) AS count")
+        ext_doc_count = result.single()["count"]
+        passed = ext_doc_count >= EXPECTED_EXTERNAL_DOCS
+        all_passed &= check(
+            "External document nodes",
+            passed,
+            f"Found {ext_doc_count:,} documents (expected >= {EXPECTED_EXTERNAL_DOCS:,})"
+        )
+
+        # Check 16: CCC→ExternalDocument citations
+        result = session.run("""
+            MATCH (:CatechismParagraph)-[r:CITES]->(:ExternalDocument)
+            RETURN count(r) AS count
+        """)
+        ccc_external = result.single()["count"]
+        passed = ccc_external >= EXPECTED_CCC_EXTERNAL_REFS
+        all_passed &= check(
+            "CCC→ExtDoc citations",
+            passed,
+            f"Found {ccc_external:,} edges (expected >= {EXPECTED_CCC_EXTERNAL_REFS:,})"
+        )
+
+        # Check 17: Sample CCC→Scripture edge (CCC 232 → Mt 28:19)
+        result = session.run("""
+            MATCH (c:CatechismParagraph {id: 'CCC-232'})-[r:CITES]->(v:Verse {id: 'MAT-28-19'})
+            RETURN count(r) AS count
+        """)
+        sample_edge = result.single()["count"]
+        passed = sample_edge > 0
+        all_passed &= check(
+            "CCC-232 → MAT-28-19",
+            passed,
+            "Trinity citation edge exists" if passed else "Missing expected edge"
+        )
+
+        # Check 18: CCC passage groups exist
+        result = session.run("""
+            MATCH (:CatechismParagraph)-[r:CROSS_REFERENCES]->(:CatechismParagraph)
+            WHERE r.passage_group IS NOT NULL
+            RETURN count(DISTINCT r.passage_group) AS count
+        """)
+        ccc_passage_groups = result.single()["count"]
+        passed = ccc_passage_groups > 0
+        all_passed &= check(
+            "CCC passage groups",
+            passed,
+            f"Found {ccc_passage_groups:,} distinct passage groups"
+        )
 
     connection.close()
 
