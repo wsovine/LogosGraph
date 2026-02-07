@@ -38,9 +38,14 @@ ENV/
 # Data files (downloaded at runtime)
 data/raw/
 
+# Checkpoint/progress files
+data/extracted/.typology_checkpoint.json
+data/reviewed/.review_progress.json
+
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb_checkpoints
+*.ipynb.bak
 
 # Neo4j local volumes (if not using Docker volumes)
 neo4j_data/
