@@ -1,0 +1,207 @@
+{
+  "$schema": "./typology_schema.json",
+  "description": "Type nodes extracted from CCC paragraphs on biblical typology",
+  "extraction_date": "2026-01-12",
+  "types": [
+    {
+      "id": "noahs-flood",
+      "name": "Noah's Flood",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The flood that cleansed the earth in the days of Noah, through which eight persons were saved by water.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "noahs-ark",
+      "name": "Noah's Ark",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The ark built by Noah that preserved his family through the flood waters.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "red-sea-crossing",
+      "name": "Crossing of the Red Sea",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "Israel's passage through the Red Sea, liberated from Egyptian slavery and passing dry-shod through the waters.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "cloud-in-desert",
+      "name": "Cloud in the Desert",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The pillar of cloud that guided and protected Israel through the wilderness.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "water-from-rock",
+      "name": "Water from the Rock",
+      "testament": "OT",
+      "category": "Christological",
+      "description": "Water that flowed from the rock struck by Moses at Horeb/Meribah to quench Israel's thirst.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "manna",
+      "name": "Manna in the Desert",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The bread from heaven that fed Israel during their forty years in the wilderness.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "circumcision",
+      "name": "Circumcision",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The sign of the covenant given to Abraham, marking incorporation into the people of God.",
+      "source": "CCC-527",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "jordan-crossing",
+      "name": "Crossing of the Jordan",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "Israel's passage through the Jordan River into the Promised Land under Joshua.",
+      "source": "CCC-1222",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "melchizedek",
+      "name": "Melchizedek",
+      "testament": "OT",
+      "category": "Christological",
+      "description": "The priest-king of Salem who offered bread and wine and blessed Abraham.",
+      "source": "CCC-1544",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "passover",
+      "name": "Passover",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The feast commemorating Israel's liberation from Egypt, including the paschal lamb and unleavened bread.",
+      "source": "CCC-1334",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "ot-priesthood",
+      "name": "Old Testament Priesthood",
+      "testament": "OT",
+      "category": "Christological",
+      "description": "The Levitical priesthood established at Sinai for sacrifice and mediation.",
+      "source": "CCC-1544",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "ot-sacrifices",
+      "name": "Old Testament Sacrifices",
+      "testament": "OT",
+      "category": "Sacramental",
+      "description": "The various sacrifices and offerings prescribed in the Law of Moses.",
+      "source": "CCC-1150",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "baptism",
+      "name": "Baptism",
+      "testament": "NT",
+      "category": "Sacramental",
+      "description": "The sacrament of regeneration and incorporation into Christ through water and the Spirit.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "eucharist",
+      "name": "Eucharist",
+      "testament": "NT",
+      "category": "Sacramental",
+      "description": "The sacrament of Christ's Body and Blood under the appearances of bread and wine.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "christ",
+      "name": "Christ",
+      "testament": "NT",
+      "category": "Christological",
+      "description": "Jesus Christ, the incarnate Son of God and fulfillment of all Old Testament types.",
+      "source": "CCC-128",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "christs-victory",
+      "name": "Christ's Victory",
+      "testament": "NT",
+      "category": "Christological",
+      "description": "Christ's triumph over sin, death, and Satan through the Paschal Mystery.",
+      "source": "CCC-117",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "spiritual-gifts-of-christ",
+      "name": "Spiritual Gifts of Christ",
+      "testament": "NT",
+      "category": "Christological",
+      "description": "The grace and spiritual refreshment that flows from Christ to believers.",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "christ-high-priest",
+      "name": "Christ the High Priest",
+      "testament": "NT",
+      "category": "Christological",
+      "description": "Christ as the eternal high priest who offered himself once for all on the cross.",
+      "source": "CCC-1544",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "eternal-life",
+      "name": "Eternal Life",
+      "testament": "NT",
+      "category": "Eschatological",
+      "description": "The blessed inheritance of heaven promised to those who are baptized into Christ.",
+      "source": "CCC-1222",
+      "confidence": "high",
+      "reviewed": true
+    },
+    {
+      "id": "new-covenant-sacraments",
+      "name": "Sacraments of the New Covenant",
+      "testament": "NT",
+      "category": "Sacramental",
+      "description": "The seven sacraments instituted by Christ as signs and means of grace.",
+      "source": "CCC-1150",
+      "confidence": "high",
+      "reviewed": true
+    }
+  ]
+}

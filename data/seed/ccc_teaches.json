@@ -1,0 +1,62 @@
+{
+  "$schema": "./typology_schema.json",
+  "description": "TEACHES relationships connecting CCC paragraphs to Types they discuss",
+  "extraction_date": "2026-01-12",
+  "teaches": [
+    {
+      "ccc_id": "CCC-117",
+      "type_ids": ["red-sea-crossing", "christs-victory", "baptism"],
+      "notes": "Explains the allegorical sense using Red Sea as example"
+    },
+    {
+      "ccc_id": "CCC-128",
+      "type_ids": ["christ"],
+      "notes": "Defines typology as discerning prefigurations of Christ"
+    },
+    {
+      "ccc_id": "CCC-129",
+      "type_ids": ["christ"],
+      "notes": "Explains typological reading in light of Christ"
+    },
+    {
+      "ccc_id": "CCC-130",
+      "type_ids": ["christ"],
+      "notes": "Typology indicates dynamic movement toward fulfillment"
+    },
+    {
+      "ccc_id": "CCC-527",
+      "type_ids": ["circumcision", "baptism"],
+      "notes": "Jesus' circumcision prefigures baptism"
+    },
+    {
+      "ccc_id": "CCC-1094",
+      "type_ids": ["noahs-flood", "noahs-ark", "red-sea-crossing", "cloud-in-desert", "water-from-rock", "manna", "baptism", "eucharist", "spiritual-gifts-of-christ"],
+      "notes": "Core typology teaching listing multiple type/antitype pairs"
+    },
+    {
+      "ccc_id": "CCC-1150",
+      "type_ids": ["circumcision", "ot-sacrifices", "passover", "new-covenant-sacraments"],
+      "notes": "OT covenant signs prefigure NT sacraments"
+    },
+    {
+      "ccc_id": "CCC-1221",
+      "type_ids": ["red-sea-crossing", "baptism"],
+      "notes": "Red Sea crossing as liberation prefiguring baptism"
+    },
+    {
+      "ccc_id": "CCC-1222",
+      "type_ids": ["jordan-crossing", "baptism", "eternal-life"],
+      "notes": "Jordan crossing prefigures baptism and eternal life"
+    },
+    {
+      "ccc_id": "CCC-1334",
+      "type_ids": ["melchizedek", "passover", "manna", "eucharist"],
+      "notes": "OT bread/wine offerings and Passover prefigure Eucharist"
+    },
+    {
+      "ccc_id": "CCC-1544",
+      "type_ids": ["melchizedek", "ot-priesthood", "christ-high-priest"],
+      "notes": "OT priesthood and Melchizedek prefigure Christ's priesthood"
+    }
+  ]
+}

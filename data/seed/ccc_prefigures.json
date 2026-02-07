@@ -1,0 +1,119 @@
+{
+  "$schema": "./typology_schema.json",
+  "description": "PREFIGURES relationships between OT types and NT antitypes, extracted from CCC",
+  "extraction_date": "2026-01-12",
+  "relationships": [
+    {
+      "from_type": "noahs-flood",
+      "to_type": "baptism",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "The flood and Noah's ark prefigured salvation by Baptism"
+    },
+    {
+      "from_type": "noahs-ark",
+      "to_type": "baptism",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "The ark that saved through water prefigures baptismal salvation"
+    },
+    {
+      "from_type": "red-sea-crossing",
+      "to_type": "baptism",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "The cloud and the crossing of the Red Sea prefigured Baptism"
+    },
+    {
+      "from_type": "red-sea-crossing",
+      "to_type": "christs-victory",
+      "source": "CCC-117",
+      "confidence": "high",
+      "notes": "The crossing of the Red Sea is a sign or type of Christ's victory"
+    },
+    {
+      "from_type": "cloud-in-desert",
+      "to_type": "baptism",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "The cloud that led Israel prefigured Baptism"
+    },
+    {
+      "from_type": "water-from-rock",
+      "to_type": "spiritual-gifts-of-christ",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "Water from the rock was the figure of the spiritual gifts of Christ"
+    },
+    {
+      "from_type": "water-from-rock",
+      "to_type": "christ",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "The rock itself is a type of Christ (cf. 1 Cor 10:4)"
+    },
+    {
+      "from_type": "manna",
+      "to_type": "eucharist",
+      "source": "CCC-1094",
+      "confidence": "high",
+      "notes": "Manna in the desert prefigured the Eucharist, the true bread from heaven"
+    },
+    {
+      "from_type": "circumcision",
+      "to_type": "baptism",
+      "source": "CCC-527",
+      "confidence": "high",
+      "notes": "Circumcision prefigures that 'circumcision of Christ' which is Baptism"
+    },
+    {
+      "from_type": "jordan-crossing",
+      "to_type": "baptism",
+      "source": "CCC-1222",
+      "confidence": "high",
+      "notes": "Baptism is prefigured in the crossing of the Jordan River"
+    },
+    {
+      "from_type": "jordan-crossing",
+      "to_type": "eternal-life",
+      "source": "CCC-1222",
+      "confidence": "high",
+      "notes": "Entry into the Promised Land is an image of eternal life"
+    },
+    {
+      "from_type": "melchizedek",
+      "to_type": "christ-high-priest",
+      "source": "CCC-1544",
+      "confidence": "high",
+      "notes": "Melchizedek is a prefiguration of the priesthood of Christ"
+    },
+    {
+      "from_type": "melchizedek",
+      "to_type": "eucharist",
+      "source": "CCC-1334",
+      "confidence": "high",
+      "notes": "Melchizedek's offering of bread and wine prefigures the Eucharist"
+    },
+    {
+      "from_type": "ot-priesthood",
+      "to_type": "christ-high-priest",
+      "source": "CCC-1544",
+      "confidence": "high",
+      "notes": "Everything that the priesthood of the Old Covenant prefigured finds fulfillment in Christ"
+    },
+    {
+      "from_type": "passover",
+      "to_type": "eucharist",
+      "source": "CCC-1334",
+      "confidence": "high",
+      "notes": "Jesus gave new and definitive meaning to the Passover blessing of bread and cup"
+    },
+    {
+      "from_type": "ot-sacrifices",
+      "to_type": "new-covenant-sacraments",
+      "source": "CCC-1150",
+      "confidence": "high",
+      "notes": "The Church sees in OT liturgical signs a prefiguring of the sacraments of the New Covenant"
+    }
+  ]
+}

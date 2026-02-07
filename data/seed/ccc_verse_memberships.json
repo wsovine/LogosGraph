@@ -1,0 +1,107 @@
+{
+  "$schema": "./typology_schema.json",
+  "description": "MEMBER_OF relationships connecting verses to Types as scriptural evidence",
+  "extraction_date": "2026-01-12",
+  "memberships": [
+    {
+      "type_id": "noahs-flood",
+      "verse_ids": ["GEN-6-17", "GEN-7-11", "GEN-7-17", "GEN-7-23"],
+      "notes": "The flood narrative in Genesis 6-8"
+    },
+    {
+      "type_id": "noahs-ark",
+      "verse_ids": ["GEN-6-14", "GEN-6-18", "GEN-7-1", "GEN-8-19", "1PE-3-20"],
+      "notes": "Noah builds the ark; 1 Peter explicitly connects ark to baptism"
+    },
+    {
+      "type_id": "red-sea-crossing",
+      "verse_ids": ["EXO-14-21", "EXO-14-22", "EXO-14-29", "1CO-10-1", "1CO-10-2"],
+      "notes": "Exodus narrative; 1 Cor 10 explicitly connects to baptism"
+    },
+    {
+      "type_id": "cloud-in-desert",
+      "verse_ids": ["EXO-13-21", "EXO-13-22", "NUM-9-15", "NUM-9-16", "1CO-10-1"],
+      "notes": "The pillar of cloud/fire guiding Israel"
+    },
+    {
+      "type_id": "water-from-rock",
+      "verse_ids": ["EXO-17-6", "NUM-20-11", "1CO-10-4"],
+      "notes": "Rock at Horeb/Meribah; 1 Cor 10:4 'that Rock was Christ'"
+    },
+    {
+      "type_id": "manna",
+      "verse_ids": ["EXO-16-4", "EXO-16-31", "EXO-16-35", "JHN-6-31", "JHN-6-32", "JHN-6-49", "JHN-6-51"],
+      "notes": "Manna in Exodus; John 6 discourse on bread of life"
+    },
+    {
+      "type_id": "circumcision",
+      "verse_ids": ["GEN-17-10", "GEN-17-11", "GEN-17-12", "LUK-2-21", "COL-2-11", "COL-2-12"],
+      "notes": "Covenant sign; Jesus circumcised; Col 2 connects to baptism"
+    },
+    {
+      "type_id": "jordan-crossing",
+      "verse_ids": ["JOS-3-14", "JOS-3-15", "JOS-3-16", "JOS-3-17", "JOS-4-23"],
+      "notes": "Israel crosses Jordan into Promised Land"
+    },
+    {
+      "type_id": "melchizedek",
+      "verse_ids": ["GEN-14-18", "GEN-14-19", "GEN-14-20", "PSA-110-4", "HEB-5-6", "HEB-7-1", "HEB-7-17"],
+      "notes": "Genesis account; Psalm 110; Hebrews extended typology"
+    },
+    {
+      "type_id": "passover",
+      "verse_ids": ["EXO-12-1", "EXO-12-11", "EXO-12-14", "EXO-12-27", "1CO-5-7"],
+      "notes": "Passover institution; 1 Cor 5:7 'Christ our Passover'"
+    },
+    {
+      "type_id": "ot-priesthood",
+      "verse_ids": ["EXO-28-1", "EXO-29-9", "LEV-8-12", "HEB-5-1", "HEB-7-11"],
+      "notes": "Levitical priesthood established; Hebrews contrasts with Christ"
+    },
+    {
+      "type_id": "ot-sacrifices",
+      "verse_ids": ["LEV-1-2", "LEV-4-3", "LEV-16-15", "HEB-9-12", "HEB-10-1", "HEB-10-4"],
+      "notes": "Levitical offerings; Hebrews shows these were shadows"
+    },
+    {
+      "type_id": "baptism",
+      "verse_ids": ["MAT-3-13", "MAT-3-16", "MAT-28-19", "MRK-16-16", "ROM-6-3", "ROM-6-4", "1PE-3-21"],
+      "notes": "Jesus' baptism; Great Commission; Romans on baptism into death; 1 Peter on Noah connection"
+    },
+    {
+      "type_id": "eucharist",
+      "verse_ids": ["MAT-26-26", "MAT-26-27", "MAT-26-28", "LUK-22-19", "LUK-22-20", "1CO-11-24", "1CO-11-25", "JHN-6-53", "JHN-6-54", "JHN-6-55"],
+      "notes": "Institution narratives; John 6 bread of life discourse"
+    },
+    {
+      "type_id": "christ",
+      "verse_ids": ["JHN-1-14", "JHN-1-17", "COL-1-15", "COL-2-9", "HEB-1-3"],
+      "notes": "Christ as fulfillment of all types"
+    },
+    {
+      "type_id": "christs-victory",
+      "verse_ids": ["COL-2-15", "1CO-15-55", "1CO-15-57", "REV-5-5"],
+      "notes": "Christ's triumph over powers, death, and the grave"
+    },
+    {
+      "type_id": "spiritual-gifts-of-christ",
+      "verse_ids": ["1CO-10-4", "JHN-4-14", "JHN-7-37", "JHN-7-38", "JHN-7-39"],
+      "notes": "Christ as spiritual rock; living water flowing from Christ"
+    },
+    {
+      "type_id": "christ-high-priest",
+      "verse_ids": ["HEB-2-17", "HEB-4-14", "HEB-4-15", "HEB-7-26", "HEB-7-27", "HEB-9-11", "HEB-9-12"],
+      "notes": "Hebrews extensively on Christ's high priesthood"
+    },
+    {
+      "type_id": "eternal-life",
+      "verse_ids": ["JHN-3-16", "JHN-6-40", "JHN-6-47", "JHN-10-28", "ROM-6-23", "1JN-5-11"],
+      "notes": "Promise of eternal life through Christ"
+    },
+    {
+      "type_id": "new-covenant-sacraments",
+      "verse_ids": ["HEB-8-6", "HEB-9-15", "HEB-12-24", "LUK-22-20", "2CO-3-6"],
+      "notes": "The new covenant and its sacramental signs"
+    }
+  ]
+}
