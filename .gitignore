@@ -59,3 +59,9 @@ htmlcov/
 # Generative AI
 .claude/
 dev/
+
+# Generated print/poster image exports (large binaries, regenerable from notebooks)
+notebooks/**/*.png
+
+# Backup files (e.g. created by scripts/merge_types.py)
+*.bak

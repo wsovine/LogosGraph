@@ -852,6 +852,7 @@ class TypologyReviewer:
             suggestion: "ReviewSuggestion | None" = None
             if self.ai_assistant:
                 print(colorize("Getting AI suggestion...", "dim"))
+                self.ai_assistant.update_types(self.session.get_all_types())
                 suggestion = self.ai_assistant.get_suggestion(item, extraction)
                 self._current_suggestion = suggestion
 
