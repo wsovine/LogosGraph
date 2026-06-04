@@ -41,17 +41,24 @@ Neo4j schema and sample queries for LogosGraph.
 
 ### Type
 
+A typological concept from either testament — an OT "type" or its NT "antitype".
+
 ```cypher
 (:Type {
-  id: "type-noahs-flood",
+  id: "noahs-flood",          # kebab-case slug (no prefix)
   name: "Noah's Flood",
-  testament: "OT",
-  description: "...",
-  source: "CCC",
-  confidence: "high",
+  testament: "OT",            # "OT" or "NT"
+  category: "Sacramental",    # seed types only; canonical category lives on PREFIGURES
+  description: "...",         # may be null for review-created types
+  source: "CCC-1094",         # "CCC-<n>", "haydock", "haydock-review", or "haydock-review-ai"
+  confidence: "high",         # high, medium, low
   reviewed: true
 })
 ```
+
+- IDs are kebab-case slugs (`noahs-flood`, `melchizedek`, `christ-high-priest`).
+- `category` is present on the 20 CCC seed types for convenience; the **authoritative** category for a
+  typological connection lives on the `PREFIGURES` edge (review-created types have no node category).
 
 ## Relationships
 
@@ -71,23 +78,27 @@ Neo4j schema and sample queries for LogosGraph.
 
 ### PREFIGURES
 
-Connects OT types to their NT antitypes (typological relationships).
+Connects an OT type to its NT antitype (typological relationship). **One edge per type→antitype pair**:
+when many sources attest the same connection, their provenance is accumulated into the `sources` and
+`source_verses` arrays (the same convention as `CROSS_REFERENCES.sources`).
 
 ```cypher
 [:PREFIGURES {
-  category: "Sacramental",    # Typology category
-  confidence: "high",         # high, medium, or low
-  source: "CCC-1094",         # Source reference (CCC paragraph or "haydock")
-  description: "...",         # Authoritative description (from CCC)
-  logosgraph_notes: "..."     # Reviewer notes from LogosGraph review process
+  category: "Christological",            # canonical typology category (may be null for CCC-seed-only edges)
+  confidence: "high",                    # high, medium, or low
+  sources: ["CCC-1094", "haydock"],      # every source attesting this connection
+  source_verses: ["GEN-1-26", "..."],    # Haydock-commentary verses that attest it (may be empty)
+  notes: "..."                           # description/reviewer note (first source's note)
 }]
 ```
 
-- `category`: One of Sacramental, Christological, Ecclesial, Marian, Eschatological, Covenantal
-- `confidence`: Confidence level in the connection
-- `source`: Where this typology was identified (CCC paragraph number or "haydock")
-- `description`: Authoritative explanation from the source (CCC text or paraphrase)
-- `logosgraph_notes`: Notes added during LogosGraph review process (less authoritative)
+- `category`: One of Sacramental, Christological, Ecclesial, Marian, Eschatological, Covenantal. Null on the
+  handful of edges sourced only from `ccc_prefigures.json` (which carries no category).
+- `confidence`: Confidence level in the connection.
+- `sources`: Array of attestations — CCC paragraph ids (`"CCC-1094"`) and/or `"haydock"`.
+- `source_verses`: Array of verse ids whose Haydock commentary attests the connection (rich provenance;
+  e.g. `david → christ` carries ~26 source_verses).
+- `notes`: Authoritative description (CCC) or reviewer note (Haydock review).
 
 ### Other Relationships
 
@@ -105,6 +116,9 @@ CREATE CONSTRAINT verse_id IF NOT EXISTS FOR (v:Verse) REQUIRE v.id IS UNIQUE;
 CREATE CONSTRAINT book_id IF NOT EXISTS FOR (b:Book) REQUIRE b.id IS UNIQUE;
 CREATE CONSTRAINT ccc_id IF NOT EXISTS FOR (c:CatechismParagraph) REQUIRE c.id IS UNIQUE;
 CREATE CONSTRAINT type_id IF NOT EXISTS FOR (t:Type) REQUIRE t.id IS UNIQUE;
+
+CREATE INDEX type_category_idx IF NOT EXISTS FOR (t:Type) ON (t.category);
+CREATE INDEX type_testament_idx IF NOT EXISTS FOR (t:Type) ON (t.testament);
 ```
 
 ## Sample Queries
@@ -158,9 +172,53 @@ MATCH (ccc:CatechismParagraph)-[:CITES]->(v:Verse {id: 'JHN-3-16'})
 RETURN ccc.paragraph, ccc.text
 ```
 
-### What Prefigures Baptism?
+### Typology Queries
+
+Current graph (2026-06-03): 198 Type nodes (156 OT / 42 NT), 272 PREFIGURES, 555 MEMBER_OF, 33 TEACHES.
+
+**What prefigures Baptism?** — OT types pointing at the `baptism` antitype (→ 17 results).
 
 ```cypher
-MATCH (ot:Type)-[:PREFIGURES]->(nt:Type {name: 'Baptism'})
-RETURN ot.name, ot.description
+MATCH (ot:Type)-[r:PREFIGURES]->(:Type {id: 'baptism'})
+RETURN ot.name, r.category, r.sources
+ORDER BY ot.name
 ```
+> e.g. Circumcision, Crossing of the Jordan, Crossing of the Red Sea, Noah's Flood/Ark,
+> God's Wonders by Water, The Pool of Siloam, The Mark of Tau, Levitical Purifications, …
+
+**Which Types does a verse support?** — follow MEMBER_OF up from a verse.
+
+```cypher
+MATCH (:Verse {id: 'GEN-7-11'})-[:MEMBER_OF]->(t:Type)
+RETURN t.id, t.name, t.testament
+```
+> → `noahs-flood` (Noah's Flood, OT)
+
+**What Types does a Catechism paragraph teach?**
+
+```cypher
+MATCH (:CatechismParagraph {id: 'CCC-1094'})-[:TEACHES]->(t:Type)
+RETURN t.id, t.testament ORDER BY t.testament, t.id
+```
+> → 9 types: noahs-flood, noahs-ark, red-sea-crossing, cloud-in-desert, water-from-rock, manna (OT);
+> baptism, eucharist, spiritual-gifts-of-christ (NT)
+
+**Full chain: OT verse → OT type → NT antitype → NT verse.**
+
+```cypher
+MATCH (ov:Verse)-[:MEMBER_OF]->(ot:Type {id: 'manna'})-[:PREFIGURES]->(nt:Type)
+OPTIONAL MATCH (nv:Verse)-[:MEMBER_OF]->(nt)
+RETURN ot.name, nt.name, collect(DISTINCT ov.id)[..3] AS ot_verses,
+       collect(DISTINCT nv.id)[..3] AS nt_verses
+```
+> e.g. Manna → Eucharist (`EXO-16-4`, `JHN-6-31`, …)
+
+**Best-attested typologies** — PREFIGURES edges ranked by how many Haydock verses attest them.
+
+```cypher
+MATCH (a:Type)-[r:PREFIGURES]->(b:Type)
+RETURN a.name, b.name, r.category, size(r.source_verses) AS verses
+ORDER BY verses DESC LIMIT 10
+```
+> Top: David → Christ (26), The Temple of Jerusalem → The One True Church (11),
+> Old Testament Priesthood → Christ the High Priest (10), Moses → Christ (9), Solomon → Christ (9)

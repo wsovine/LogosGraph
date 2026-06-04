@@ -18,6 +18,12 @@ EXPECTED_CCC_SCRIPTURE_REFS = 1900  # Approximate minimum (~2,006 actual)
 EXPECTED_EXTERNAL_DOCS = 350  # Approximate minimum (~390 actual)
 EXPECTED_CCC_EXTERNAL_REFS = 500  # Approximate minimum (~556 actual)
 
+# Typology expected values (full seed + reviewed import; ~198 types)
+EXPECTED_TYPE_COUNT = 150  # Approximate minimum (~198 actual)
+EXPECTED_PREFIGURES = 250  # Approximate minimum (~272 actual)
+EXPECTED_BAPTISM_TYPES = 5  # OT types prefiguring Baptism (~17 actual)
+EXPECTED_CCC1094_TYPES = 9  # Types taught by CCC-1094 (9 actual)
+
 
 def check(name: str, passed: bool, details: str = "") -> bool:
     """Print check result and return pass/fail."""
@@ -280,6 +286,217 @@ def main():
             passed,
             f"Found {ccc_passage_groups:,} distinct passage groups"
         )
+
+        # Typology Validation Checks
+        print("\n  Typology Checks:")
+
+        # Check 19: Type node count
+        result = session.run("MATCH (t:Type) RETURN count(t) AS count")
+        type_count = result.single()["count"]
+        passed = type_count >= EXPECTED_TYPE_COUNT
+        all_passed &= check(
+            "Type node count",
+            passed,
+            f"Found {type_count:,} types (expected >= {EXPECTED_TYPE_COUNT:,})"
+        )
+
+        # Check 20: PREFIGURES edges
+        result = session.run("MATCH (:Type)-[r:PREFIGURES]->(:Type) RETURN count(r) AS count")
+        prefigures_count = result.single()["count"]
+        passed = prefigures_count >= EXPECTED_PREFIGURES
+        all_passed &= check(
+            "PREFIGURES edges",
+            passed,
+            f"Found {prefigures_count:,} type → antitype edges (expected >= {EXPECTED_PREFIGURES:,})"
+        )
+
+        # Check 21: MEMBER_OF edges
+        result = session.run("MATCH (:Verse)-[r:MEMBER_OF]->(:Type) RETURN count(r) AS count")
+        member_count = result.single()["count"]
+        passed = member_count > 0
+        all_passed &= check(
+            "MEMBER_OF edges",
+            passed,
+            f"Found {member_count:,} Verse → Type edges"
+        )
+
+        # Check 22: TEACHES edges
+        result = session.run("MATCH (:CatechismParagraph)-[r:TEACHES]->(:Type) RETURN count(r) AS count")
+        teaches_count = result.single()["count"]
+        passed = teaches_count > 0
+        all_passed &= check(
+            "TEACHES edges",
+            passed,
+            f"Found {teaches_count:,} CCC → Type edges"
+        )
+
+        # Check 23: Sample PREFIGURES edge (Melchizedek → Christ the High Priest)
+        result = session.run("""
+            MATCH (:Type {id: 'melchizedek'})-[r:PREFIGURES]->(:Type {id: 'christ-high-priest'})
+            RETURN count(r) AS count
+        """)
+        sample_prefig = result.single()["count"]
+        passed = sample_prefig > 0
+        all_passed &= check(
+            "melchizedek → christ-high-priest",
+            passed,
+            "PREFIGURES edge exists" if passed else "Missing expected edge"
+        )
+
+        # Check 24: Sample MEMBER_OF (verses attesting the melchizedek type)
+        result = session.run("""
+            MATCH (:Verse)-[r:MEMBER_OF]->(:Type {id: 'melchizedek'})
+            RETURN count(r) AS count
+        """)
+        sample_member = result.single()["count"]
+        passed = sample_member > 0
+        all_passed &= check(
+            "Verses → melchizedek",
+            passed,
+            f"Found {sample_member} verse memberships"
+        )
+
+        # Check 25: Reviewed (Haydock) provenance present on PREFIGURES edges
+        result = session.run("""
+            MATCH (:Type)-[r:PREFIGURES]->(:Type)
+            WHERE 'haydock' IN r.sources
+            RETURN count(r) AS count
+        """)
+        haydock_prefig = result.single()["count"]
+        passed = haydock_prefig > 0
+        all_passed &= check(
+            "Haydock-sourced PREFIGURES",
+            passed,
+            f"Found {haydock_prefig:,} edges with 'haydock' in sources"
+        )
+
+        # Typology Integrity Checks (must hold for a consistent graph)
+        print("\n  Typology Integrity Checks:")
+
+        # Check 26: No PREFIGURES self-loops (a type prefiguring itself)
+        result = session.run("MATCH (t:Type)-[r:PREFIGURES]->(t) RETURN count(r) AS count")
+        self_loops = result.single()["count"]
+        all_passed &= check(
+            "No PREFIGURES self-loops",
+            self_loops == 0,
+            f"Found {self_loops} self-loops (expected 0)"
+        )
+
+        # Check 27: Every PREFIGURES edge has provenance (non-empty sources)
+        result = session.run("""
+            MATCH ()-[r:PREFIGURES]->()
+            WHERE r.sources IS NULL OR size(r.sources) = 0
+            RETURN count(r) AS count
+        """)
+        no_sources = result.single()["count"]
+        all_passed &= check(
+            "PREFIGURES provenance present",
+            no_sources == 0,
+            f"Found {no_sources} edges with empty sources (expected 0)"
+        )
+
+        # Check 28: All Type nodes have valid name + testament
+        result = session.run("""
+            MATCH (t:Type)
+            WHERE t.name IS NULL OR NOT t.testament IN ['OT', 'NT']
+            RETURN count(t) AS count
+        """)
+        bad_types = result.single()["count"]
+        all_passed &= check(
+            "Type required properties",
+            bad_types == 0,
+            f"Found {bad_types} Types with missing name or invalid testament (expected 0)"
+        )
+
+        # Check 29: MEMBER_OF / TEACHES only point at Type nodes
+        result = session.run("""
+            MATCH (:Verse)-[r:MEMBER_OF]->(x) WHERE NOT x:Type
+            RETURN count(r) AS count
+        """)
+        bad_member = result.single()["count"]
+        result = session.run("""
+            MATCH (:CatechismParagraph)-[r:TEACHES]->(x) WHERE NOT x:Type
+            RETURN count(r) AS count
+        """)
+        bad_teaches = result.single()["count"]
+        all_passed &= check(
+            "MEMBER_OF / TEACHES endpoints are Types",
+            bad_member == 0 and bad_teaches == 0,
+            f"Found {bad_member} bad MEMBER_OF, {bad_teaches} bad TEACHES (expected 0)"
+        )
+
+        # Typology Sample Queries (Phase 5.2 acceptance — must return results)
+        print("\n  Typology Sample Queries:")
+
+        # Check 30: "What prefigures Baptism?"
+        result = session.run("""
+            MATCH (ot:Type)-[:PREFIGURES]->(:Type {id: 'baptism'})
+            RETURN count(ot) AS count
+        """)
+        baptism_types = result.single()["count"]
+        all_passed &= check(
+            "What prefigures Baptism?",
+            baptism_types >= EXPECTED_BAPTISM_TYPES,
+            f"Found {baptism_types} OT types → baptism (expected >= {EXPECTED_BAPTISM_TYPES})"
+        )
+
+        # Check 31: "What Types does CCC-1094 teach?"
+        result = session.run("""
+            MATCH (:CatechismParagraph {id: 'CCC-1094'})-[:TEACHES]->(t:Type)
+            RETURN count(t) AS count
+        """)
+        ccc1094_types = result.single()["count"]
+        all_passed &= check(
+            "CCC-1094 teaches Types",
+            ccc1094_types >= EXPECTED_CCC1094_TYPES,
+            f"Found {ccc1094_types} types taught by CCC-1094 (expected >= {EXPECTED_CCC1094_TYPES})"
+        )
+
+        # Check 32: Verse → Type membership (GEN-7-11 supports noahs-flood)
+        result = session.run("""
+            MATCH (:Verse {id: 'GEN-7-11'})-[:MEMBER_OF]->(t:Type {id: 'noahs-flood'})
+            RETURN count(t) AS count
+        """)
+        sample_membership = result.single()["count"]
+        all_passed &= check(
+            "GEN-7-11 → noahs-flood",
+            sample_membership > 0,
+            "MEMBER_OF edge exists" if sample_membership else "Missing expected edge"
+        )
+
+        # Informational typology reports (not pass/fail)
+        print("\n  Typology Distribution (informational):")
+        result = session.run("MATCH (t:Type) RETURN t.testament AS k, count(*) AS n ORDER BY n DESC")
+        print("         Testament:   " + ", ".join(f"{r['k']}={r['n']}" for r in result))
+        result = session.run("""
+            MATCH (a:Type)-[:PREFIGURES]->(b:Type)
+            RETURN a.testament + '->' + b.testament AS k, count(*) AS n ORDER BY n DESC
+        """)
+        print("         Direction:   " + ", ".join(f"{r['k']}={r['n']}" for r in result))
+        result = session.run("""
+            MATCH ()-[r:PREFIGURES]->()
+            RETURN coalesce(r.category, '(none)') AS k, count(*) AS n ORDER BY n DESC
+        """)
+        print("         Category:    " + ", ".join(f"{r['k']}={r['n']}" for r in result))
+        result = session.run("""
+            MATCH ()-[r:PREFIGURES]->()
+            RETURN coalesce(r.confidence, '(none)') AS k, count(*) AS n ORDER BY n DESC
+        """)
+        print("         Confidence:  " + ", ".join(f"{r['k']}={r['n']}" for r in result))
+        orphans = session.run("MATCH (t:Type) WHERE NOT (t)--() RETURN count(t) AS n").single()["n"]
+        no_member = session.run(
+            "MATCH (t:Type) WHERE NOT (:Verse)-[:MEMBER_OF]->(t) RETURN count(t) AS n"
+        ).single()["n"]
+        print(f"         Orphan Types (no edges): {orphans}")
+        print(f"         Types with no MEMBER_OF (no scriptural evidence): {no_member}")
+        print("         Most-attested PREFIGURES (by source_verses):")
+        result = session.run("""
+            MATCH (a:Type)-[r:PREFIGURES]->(b:Type)
+            RETURN a.id AS f, b.id AS t, size(r.source_verses) AS nv
+            ORDER BY nv DESC LIMIT 5
+        """)
+        for r in result:
+            print(f"           {r['f']} → {r['t']}  ({r['nv']} verses)")
 
     connection.close()
 

@@ -28,6 +28,21 @@ from src.import_pipeline.catechism_importer import (
     import_external_documents,
     import_catechism_external_refs,
 )
+from src.data.typology_parser import (
+    parse_all_types,
+    parse_seed_prefigures,
+    parse_approved_prefigures,
+    parse_seed_memberships,
+    parse_approved_memberships,
+    parse_teaches,
+)
+from src.data.typology_schemas import validate_all_seed_files
+from src.import_pipeline.typology_importer import (
+    import_types,
+    import_prefigures,
+    import_verse_memberships,
+    import_teaches,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -176,6 +191,40 @@ def run_full_import(
     if ccc_external_skipped > 0:
         print(f"   ⚠️  Skipped {ccc_external_skipped:,} (missing references)")
 
+    # Step 13: Import biblical typology (seed + reviewed)
+    print("\n⛪ Step 13: Importing biblical typology...")
+    step_start = time.time()
+    seed_valid, seed_errors = validate_all_seed_files()
+    if not seed_valid:
+        raise ValueError(f"Typology seed files failed validation: {seed_errors}")
+
+    type_count = import_types(parse_all_types(), connection)
+    prefigures = list(parse_seed_prefigures()) + list(parse_approved_prefigures())
+    prefigures_created, prefigures_skipped = import_prefigures(prefigures, connection)
+    memberships = list(parse_seed_memberships()) + list(parse_approved_memberships())
+    member_created, member_skipped = import_verse_memberships(memberships, connection)
+    teaches_created, teaches_skipped = import_teaches(list(parse_teaches()), connection)
+
+    stats["type_count"] = type_count
+    stats["prefigures_created"] = prefigures_created
+    stats["prefigures_skipped"] = prefigures_skipped
+    stats["member_of_created"] = member_created
+    stats["member_of_skipped"] = member_skipped
+    stats["teaches_created"] = teaches_created
+    stats["teaches_skipped"] = teaches_skipped
+    stats["typology_import_time"] = time.time() - step_start
+    print(
+        f"   ✓ {type_count} Type nodes, {prefigures_created:,} PREFIGURES, "
+        f"{member_created:,} MEMBER_OF, {teaches_created:,} TEACHES "
+        f"({stats['typology_import_time']:.1f}s)"
+    )
+    if prefigures_skipped or member_skipped or teaches_skipped:
+        print(
+            f"   ⚠️  Skipped (missing endpoints): "
+            f"{prefigures_skipped} PREFIGURES, {member_skipped} MEMBER_OF, "
+            f"{teaches_skipped} TEACHES"
+        )
+
     # Cleanup
     connection.close()
 
@@ -199,6 +248,10 @@ def run_full_import(
     print(f"   • CCC→Scripture citations: {ccc_scripture_created:,}")
     print(f"   • External documents: {ext_doc_count:,}")
     print(f"   • CCC→ExtDoc citations: {ccc_external_created:,}")
+    print(f"   • Type nodes: {type_count:,}")
+    print(f"   • PREFIGURES edges: {prefigures_created:,}")
+    print(f"   • MEMBER_OF edges: {member_created:,}")
+    print(f"   • TEACHES edges: {teaches_created:,}")
     print(f"   • Total cross-ref edges: {total_crossrefs:,}")
     print(f"   • Total CCC edges: {total_ccc_edges:,}")
     print(f"   • Total time: {total_time:.1f}s")

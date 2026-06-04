@@ -58,7 +58,7 @@ class TheologyAssistant:
     def __init__(
         self,
         existing_types: dict[str, dict],
-        model: str = "claude-opus-4-6",
+        model: str = "claude-opus-4-8",
     ):
         """Initialize the theology assistant.
 
@@ -161,11 +161,32 @@ Respond with a JSON object in this exact format:
 
 Important guidelines:
 - Be conservative: only approve extractions that are clearly supported by the commentary text
-- Prefer existing types when they match well, but don't force-fit
+- **Strongly prefer existing types — for both OT types AND NT antitypes.** If a biblical figure or person already exists (e.g. Moses, Joseph, Mary), reuse it for any episode involving that figure. A single "Moses" type covers his uplifted hands, radiant face, rod striking the rock, etc. A single "Mary" antitype covers her motherhood, virginity, victory over the serpent, etc. The verse-level detail belongs in the extraction's description fields, not in the type name.
+- Only create a new type when no existing type covers the concept — not merely because the specific episode isn't named. New types should be general (e.g. "Red Heifer" not "Red Heifer Purification Rite", "Mary" not "Mary's Victory over the Serpent").
 - For new types, use clear, standard theological terminology
 - The category should reflect the primary nature of the typological relationship
 - Confidence should reflect how certain you are about your recommendation
 """
+
+    def update_types(self, types: dict[str, dict]) -> None:
+        """Update the known types list (e.g. after new types are created).
+
+        Args:
+            types: Complete dictionary mapping type ID to type data.
+        """
+        self.existing_types = types
+        self.ot_types = [
+            (tid, t["name"])
+            for tid, t in types.items()
+            if t.get("testament") == "OT"
+        ]
+        self.nt_types = [
+            (tid, t["name"])
+            for tid, t in types.items()
+            if t.get("testament") == "NT"
+        ]
+        self.ot_types.sort(key=lambda x: x[1])
+        self.nt_types.sort(key=lambda x: x[1])
 
     def get_suggestion(self, item: dict, extraction: dict) -> ReviewSuggestion:
         """Get an AI suggestion for reviewing an extraction.

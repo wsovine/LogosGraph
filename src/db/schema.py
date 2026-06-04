@@ -80,6 +80,25 @@ def setup_schema(connection: Neo4jConnection | None = None) -> None:
             FOR (b:Book) ON (b.order)
         """)
 
+        # Type (biblical typology) constraint and indexes
+        logger.info("Creating unique constraint on Type.id")
+        session.run("""
+            CREATE CONSTRAINT type_id_unique IF NOT EXISTS
+            FOR (t:Type) REQUIRE t.id IS UNIQUE
+        """)
+
+        logger.info("Creating index on Type.category")
+        session.run("""
+            CREATE INDEX type_category_idx IF NOT EXISTS
+            FOR (t:Type) ON (t.category)
+        """)
+
+        logger.info("Creating index on Type.testament")
+        session.run("""
+            CREATE INDEX type_testament_idx IF NOT EXISTS
+            FOR (t:Type) ON (t.testament)
+        """)
+
         logger.info("Schema setup complete")
 
 
