@@ -65,3 +65,8 @@ notebooks/**/*.png
 
 # Backup files (e.g. created by scripts/merge_types.py)
 *.bak
+# Local-only port override (machine-specific, acies conflict)
+docker-compose.override.yml
+
+# Transient adjudication resume checkpoint
+data/extracted/.member_adjudication_checkpoint.json

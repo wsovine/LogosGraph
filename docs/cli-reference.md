@@ -162,6 +162,94 @@ python scripts/review_typology.py --ai-assist
 
 ---
 
+## Membership Enrichment
+
+Pipeline for enriching the MEMBER_OF evidence layer from cross-references.
+See [typology-workflow.md](typology-workflow.md#step-5-enrich-member_of-evidence-optional) for the full guide.
+
+### mine_member_candidates.py
+
+Mine MEMBER_OF candidates: verses cross-referenced by multiple existing
+member verses of a Type. Read-only against the database.
+
+```bash
+# Mine with defaults (corroboration >= 2, hub degree <= 150, 40 per type)
+python scripts/mine_member_candidates.py
+
+# Stricter mining
+python scripts/mine_member_candidates.py --min-corroboration 3 --max-degree 100
+```
+
+**Options:**
+- `-o, --output` - Output JSONL (default: `data/extracted/member_candidates.jsonl`)
+- `--min-corroboration` - Min member verses cross-referencing the candidate (default: 2)
+- `--max-degree` - Hub filter: max total cross-references on candidate (default: 150)
+- `--per-type-cap` - Max candidates per type, 0 disables (default: 40)
+
+---
+
+### adjudicate_memberships.py
+
+Judge each mined candidate against its verse text using the theologian
+persona (`.claude/agents/theologian.md`). Requires `ANTHROPIC_API_KEY`.
+
+```bash
+# Test with 5 candidates
+python scripts/adjudicate_memberships.py --limit 5
+
+# Full run with resume support
+python scripts/adjudicate_memberships.py --resume
+
+# Match the interactive review assistant's model
+python scripts/adjudicate_memberships.py --model claude-opus-4-8
+```
+
+**Options:**
+- `-i, --input` / `-o, --output` - JSONL paths (defaults under `data/extracted/`)
+- `--model` - Model (default: `claude-sonnet-4-6`)
+- `--limit` - Process only N candidates (testing)
+- `--resume` - Skip already-processed candidates via checkpoint
+- `--rate-limit` - Max requests/minute (default: 50)
+
+---
+
+### review_memberships.py
+
+Interactive human review of theologian-accepted candidates.
+
+```bash
+# Check progress
+python scripts/review_memberships.py --stats
+
+# Review accepted candidates (y/n/s/q)
+python scripts/review_memberships.py
+
+# Also second-guess theologian rejections
+python scripts/review_memberships.py --include-rejected
+```
+
+**Output:**
+- `data/reviewed/member_of_approved.jsonl` - Approved memberships
+- `data/reviewed/member_of_rejected.jsonl` - Rejected candidates
+
+---
+
+### import_memberships.py
+
+Import approved memberships as MEMBER_OF edges with provenance
+(`source: 'crossref-mined'`, `confidence`, `corroboration`, `reviewed`).
+Idempotent; never modifies existing edges.
+
+```bash
+# Preview
+python scripts/import_memberships.py --dry-run
+
+# Import
+python scripts/import_memberships.py
+```
+
+---
+
 ## Database
 
 ### import_all.py

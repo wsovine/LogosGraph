@@ -109,6 +109,22 @@ when many sources attest the same connection, their provenance is accumulated in
 (:CatechismParagraph)-[:TEACHES]->(:Type)            # CCC teaches about type
 ```
 
+MEMBER_OF edges from the original curated review carry no properties.
+Edges added by the enrichment pipeline (see
+[typology-workflow.md](typology-workflow.md#step-5-enrich-member_of-evidence-optional))
+carry provenance:
+
+```cypher
+[:MEMBER_OF {
+  source: "crossref-mined",   # absent on curated edges
+  confidence: "high",          # theologian verdict: high, medium, low
+  corroboration: 4,            # member verses that cross-referenced the candidate
+  reviewed: true               # passed human review
+}]
+```
+
+Query the curated evidence layer only with `WHERE r.source IS NULL`.
+
 ## Constraints and Indexes
 
 ```cypher

@@ -153,6 +153,57 @@ def import_verse_memberships(
     )
 
 
+def import_mined_memberships(
+    rows: Iterable[dict],
+    connection: Neo4jConnection | None = None,
+    batch_size: int | None = None,
+) -> tuple[int, int]:
+    """Import reviewed crossref-mined MEMBER_OF edges with provenance.
+
+    Unlike :func:`import_verse_memberships` (curated review data, bare edges),
+    mined edges carry provenance properties so they remain distinguishable
+    from the original human-reviewed evidence layer: query curated-only with
+    ``WHERE r.source IS NULL``.
+
+    Properties are set ON CREATE only -- if the edge already exists (curated
+    or previously mined), it is left untouched.
+
+    Args:
+        rows: Approved rows from data/reviewed/member_of_approved.jsonl with
+            keys verse_id, type_id, corroboration, and an ``adjudication``
+            dict carrying confidence.
+
+    Returns:
+        Tuple of (edges_processed, rows_skipped) -- skipped rows had a
+        missing Verse or Type endpoint.
+    """
+    query = """
+        UNWIND $rows AS m
+        MATCH (t:Type {id: m.type_id})
+        MATCH (v:Verse {id: m.verse_id})
+        MERGE (v)-[r:MEMBER_OF]->(t)
+        ON CREATE SET
+            r.source = 'crossref-mined',
+            r.confidence = m.confidence,
+            r.corroboration = m.corroboration,
+            r.reviewed = true
+        RETURN count(r) AS created
+    """
+    flat = [
+        {
+            "verse_id": row["verse_id"],
+            "type_id": row["type_id"],
+            "corroboration": row.get("corroboration"),
+            "confidence": row.get("adjudication", {}).get("confidence"),
+        }
+        for row in rows
+    ]
+    return _import_edges(
+        flat, query, "rows", lambda batch: len(batch),
+        "Importing mined MEMBER_OF edges", connection, batch_size,
+    )
+
+
 def import_teaches(
     teaches: Iterable[dict],
     connection: Neo4jConnection | None = None,

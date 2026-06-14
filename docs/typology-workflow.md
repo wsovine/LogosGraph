@@ -192,8 +192,6 @@ CREATE NEW TYPE
 
 ## Step 4: Import to Neo4j
 
-*(Phase 4 - Not yet implemented)*
-
 ```bash
 python scripts/import_typology.py
 ```
@@ -203,6 +201,44 @@ This will:
 2. Create PREFIGURES relationships with categories
 3. Create MEMBER_OF relationships (verse → type)
 4. Create TEACHES relationships (CCC → type)
+
+## Step 5: Enrich MEMBER_OF Evidence (optional)
+
+The initial review yields relatively few member verses per Type (~3 on
+average). The enrichment pipeline mines the cross-reference layer for
+additional evidence verses, with two safety gates before anything reaches
+the database:
+
+```bash
+# 1. Structural mining (read-only): candidates must be cross-referenced
+#    by >= 2 existing member verses; hub verses excluded
+python scripts/mine_member_candidates.py
+
+# 2. Theologian adjudication: each candidate judged against its actual
+#    verse text (catches Vulgate-vs-modern versification mismatches)
+python scripts/adjudicate_memberships.py --resume
+
+# 3. Human review of accepted candidates
+python scripts/review_memberships.py
+
+# 4. Import with provenance, then validate
+python scripts/import_memberships.py
+python scripts/validate_import.py
+```
+
+Mined edges carry `source: 'crossref-mined'` plus `confidence`,
+`corroboration`, and `reviewed` properties; edges from the original curated
+review have no properties. To query the curated evidence layer only:
+
+```cypher
+MATCH (v:Verse)-[r:MEMBER_OF]->(t:Type) WHERE r.source IS NULL ...
+```
+
+**Membership criterion** (what the adjudicator and reviewer enforce): a
+verse is a member only if its text *directly witnesses* the concept --
+narrates, institutes, prophesies, or explicitly invokes it. Thematic
+similarity is not membership, and a verse about the antitype is not
+evidence for the type.
 
 ## Tips
 
