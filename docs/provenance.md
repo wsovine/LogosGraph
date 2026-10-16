@@ -39,7 +39,7 @@ No single source addresses all these needs. LogosGraph combines multiple sources
 
 **The problem**: TSK represents Protestant scholarship; we need Catholic interpretive tradition.
 
-**Why Haydock**: George Leo Haydock's commentary (1811-1859) draws extensively from Church Fathers and Doctors of the Church. It represents the Catholic exegetical tradition preserved across generations:
+**Why Haydock**: George Leo Haydock's commentary (first published 1811–1814) draws extensively from Church Fathers and Doctors of the Church. It represents the Catholic exegetical tradition preserved across generations:
 
 - Patristic interpretation from the first millennium
 - Medieval scholastic insights (particularly Aquinas)

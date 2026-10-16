@@ -115,12 +115,12 @@ The `votes` field comes from OpenBible.info's crowdsourced voting system, provid
 
 ### History
 
-The Haydock Catholic Bible Commentary was compiled by George Leo Haydock between 1811-1859. It represents a comprehensive Catholic commentary on Scripture:
+The Haydock Catholic Bible Commentary was compiled by George Leo Haydock (1774–1849) and first published in 1811–1814; later editions were revised by others. LogosGraph uses the text of an 1883 edition. It represents a comprehensive Catholic commentary on Scripture:
 
 - **Complete Coverage**: All 73 books of the Catholic Bible, including deuterocanonicals
 - **Patristic Sources**: Cross-references drawn from Church Fathers and Doctors of the Church
 - **Catholic Perspective**: Grounded in Catholic theological tradition
-- **Public Domain**: Original 1883 edition freely available
+- **Public Domain**: The 1883 edition used here is freely available
 
 Unlike TSK's word-matching approach, Haydock's references often reflect theological and typological connections identified in the Catholic interpretive tradition.
 
