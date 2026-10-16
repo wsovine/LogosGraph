@@ -425,6 +425,33 @@ def main():
             f"Found {bad_member} bad MEMBER_OF, {bad_teaches} bad TEACHES (expected 0)"
         )
 
+        # Check 29b: Every PREFIGURES edge has a category (needed to color/filter it)
+        result = session.run("""
+            MATCH ()-[r:PREFIGURES]->() WHERE r.category IS NULL
+            RETURN count(r) AS count
+        """)
+        no_category = result.single()["count"]
+        all_passed &= check(
+            "PREFIGURES category present",
+            no_category == 0,
+            f"Found {no_category} edges with no category (expected 0)"
+        )
+
+        # Check 29c: Every PREFIGURES source verse resolves to a Verse node
+        result = session.run("""
+            MATCH ()-[r:PREFIGURES]->()
+            UNWIND r.source_verses AS vid
+            OPTIONAL MATCH (v:Verse {id: vid})
+            WITH vid WHERE v IS NULL
+            RETURN collect(DISTINCT vid) AS missing
+        """)
+        missing_verses = result.single()["missing"]
+        all_passed &= check(
+            "PREFIGURES source verses resolve",
+            not missing_verses,
+            f"Unresolved source verses: {missing_verses}" if missing_verses else "All source verses exist"
+        )
+
         # Typology Sample Queries (Phase 5.2 acceptance — must return results)
         print("\n  Typology Sample Queries:")
 

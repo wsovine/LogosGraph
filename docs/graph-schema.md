@@ -84,7 +84,7 @@ when many sources attest the same connection, their provenance is accumulated in
 
 ```cypher
 [:PREFIGURES {
-  category: "Christological",            # canonical typology category (may be null for CCC-seed-only edges)
+  category: "Christological",            # canonical typology category (always set)
   confidence: "high",                    # high, medium, or low
   sources: ["CCC-1094", "haydock"],      # every source attesting this connection
   source_verses: ["GEN-1-26", "..."],    # Haydock-commentary verses that attest it (may be empty)
@@ -190,8 +190,8 @@ RETURN ccc.paragraph, ccc.text
 
 ### Typology Queries
 
-Current graph (2026-06-14): 198 Type nodes (156 OT / 42 NT), 272 PREFIGURES, 1,130 MEMBER_OF
-(555 curated + 575 `crossref-mined`), 33 TEACHES.
+Current graph (2026-10-16): 198 Type nodes (156 OT / 42 NT), 275 PREFIGURES, 1,130 MEMBER_OF
+(555 curated + 575 `crossref-mined`), 43 TEACHES.
 
 **What prefigures Baptism?** — OT types pointing at the `baptism` antitype (→ 17 results).
 

@@ -272,6 +272,32 @@ python scripts/import_all.py
 
 ---
 
+### import_typology.py
+
+Import Type nodes and PREFIGURES / MEMBER_OF / TEACHES edges from the CCC seed files and reviewed Haydock extractions.
+
+```bash
+python scripts/import_typology.py [OPTIONS]
+```
+
+| Option | Description |
+|--------|-------------|
+| `--types`, `--prefigures`, `--memberships`, `--teaches` | Run only these steps (default: all) |
+| `--seed-only` | Only curated CCC seed data |
+| `--reviewed-only` | Only reviewed Haydock data |
+| `--reset` | Delete all Type nodes and typology edges first, then import everything |
+| `-v, --verbose` | Enable verbose logging |
+
+The import only adds or accumulates (MERGE), so a correction to an existing seed or reviewed row (e.g. a fixed verse ID) takes effect only with `--reset`. `--reset` also removes the crossref-mined MEMBER_OF edges, so follow it with `import_memberships.py`:
+
+```bash
+python scripts/import_typology.py --reset
+python scripts/import_memberships.py
+python scripts/validate_import.py
+```
+
+---
+
 ### validate_import.py
 
 Validate database state after import.
@@ -300,4 +326,7 @@ python -m src.data.typology_extractor
 
 # Validate seed data schemas
 python -m src.data.typology_schemas
+
+# Unit tests (requires the dev extra: pip install -e ".[dev]")
+python -m pytest tests/
 ```

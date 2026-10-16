@@ -57,6 +57,16 @@
       "ccc_id": "CCC-1544",
       "type_ids": ["melchizedek", "ot-priesthood", "christ-high-priest"],
       "notes": "OT priesthood and Melchizedek prefigure Christ's priesthood"
+    },
+    {
+      "ccc_id": "CCC-489",
+      "type_ids": ["eve", "sarah", "hannah", "deborah", "ruth", "judith", "esther", "mary"],
+      "notes": "The mission of the holy women of the Old Covenant prepared for that of Mary"
+    },
+    {
+      "ccc_id": "CCC-2676",
+      "type_ids": ["the-ark-of-the-covenant", "mary"],
+      "notes": "Mary is the ark of the covenant, the place where the glory of the Lord dwells"
     }
   ]
 }

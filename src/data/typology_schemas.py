@@ -350,6 +350,16 @@ def validate_teaches_file(
     return len(errors) == 0, errors
 
 
+def _reviewed_type_ids(file_path: Path | None = None) -> set[str]:
+    """Return the IDs of Types created during review (data/reviewed/new_types.jsonl)."""
+    if file_path is None:
+        file_path = settings.DATA_DIR.parent / "reviewed" / "new_types.jsonl"
+    if not file_path.exists():
+        return set()
+    with open(file_path, "r", encoding="utf-8") as f:
+        return {json.loads(line)["id"] for line in f if line.strip()}
+
+
 def validate_all_seed_files() -> tuple[bool, dict[str, list[str]]]:
     """Validate all seed data files.
 
@@ -362,6 +372,10 @@ def validate_all_seed_files() -> tuple[bool, dict[str, list[str]]]:
     types_valid, types_errors, valid_type_ids = validate_types_file()
     if types_errors:
         all_errors["ccc_types.json"] = types_errors
+
+    # Seed relationships may also reference Types created during Haydock review
+    # (e.g. CCC 489's holy women -> Mary); the importer loads both sets of Types.
+    valid_type_ids = valid_type_ids | _reviewed_type_ids()
 
     # Validate other files
     prefigures_valid, prefigures_errors = validate_prefigures_file(valid_type_ids=valid_type_ids)

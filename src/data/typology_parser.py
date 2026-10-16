@@ -134,8 +134,13 @@ def parse_approved_prefigures(file_path: Path | None = None) -> Generator[dict, 
                 "confidence": rec.get("confidence"),
                 "category": rec.get("category"),
                 "notes": rec.get("reviewer_notes"),
-                "source_verse": rec.get("verse_id"),
+                "source_verse": None if _is_chapter_level(rec["verse_id"]) else rec["verse_id"],
             }
+
+
+def _is_chapter_level(verse_id: str) -> bool:
+    """Haydock chapter prefaces are keyed to verse 0 (e.g. "REV-18-0") and have no Verse node."""
+    return verse_id.endswith("-0")
 
 
 # ---------------------------------------------------------------------------
@@ -162,7 +167,8 @@ def parse_approved_memberships(file_path: Path | None = None) -> Generator[dict,
     """Yield {type_id, verse_ids:[verse_id]} from each reviewed extraction.
 
     The verse whose Haydock commentary attests the OT figure becomes scriptural
-    evidence (MEMBER_OF) for that type.
+    evidence (MEMBER_OF) for that type. Chapter-level prefaces attest no
+    particular verse, so they yield no membership.
     """
     if file_path is None:
         file_path = REVIEWED_DIR / "typology_approved.jsonl"
@@ -178,6 +184,8 @@ def parse_approved_memberships(file_path: Path | None = None) -> Generator[dict,
             if not line:
                 continue
             rec = json.loads(line)
+            if _is_chapter_level(rec["verse_id"]):
+                continue
             yield {"type_id": rec["type_id"], "verse_ids": [rec["verse_id"]]}
 
 

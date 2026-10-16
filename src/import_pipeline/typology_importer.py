@@ -119,7 +119,8 @@ def import_prefigures(
                 ELSE r.source_verses + [rel.source_verse]
             END,
             r.category = CASE WHEN r.category IS NULL THEN rel.category ELSE r.category END,
-            r.confidence = CASE WHEN r.confidence IS NULL THEN rel.confidence ELSE r.confidence END
+            r.confidence = CASE WHEN r.confidence IS NULL THEN rel.confidence ELSE r.confidence END,
+            r.notes = CASE WHEN r.notes IS NULL THEN rel.notes ELSE r.notes END
         RETURN count(r) AS created
     """
     return _import_edges(

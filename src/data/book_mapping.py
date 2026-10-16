@@ -693,6 +693,51 @@ def hebrew_to_vulgate_psalm(chapter: int) -> int:
         return chapter  # Psalms 148-150 same
 
 
+def vulgate_to_hebrew_psalm(chapter: int, verse: int) -> tuple[int, int]:
+    """Convert a Vulgate (CPDV) Psalm reference to Hebrew numbering.
+
+    The inverse of hebrew_to_vulgate_psalm(), but verse-aware so the
+    split and merged Psalms land on the right Hebrew Psalm and verse.
+
+    Mapping (CPDV verse boundaries):
+    - Psalms 1-8, 148-150: Same in both
+    - Psalm 9: verses 1-21 = Hebrew 9; verses 22-39 = Hebrew 10:1-18
+    - Psalms 10-112 = Hebrew 11-113 (offset +1)
+    - Psalm 113: verses 1-8 = Hebrew 114; verses 9-26 = Hebrew 115:1-18
+    - Psalm 114 = Hebrew 116:1-9; Psalm 115 = Hebrew 116:10-19
+    - Psalms 116-145 = Hebrew 117-146 (offset +1)
+    - Psalm 146 = Hebrew 147:1-11; Psalm 147 = Hebrew 147:12-20
+
+    Both CPDV and Hebrew count a Psalm's title as verse 1, so verse numbers
+    can differ by one or two from English Bibles that don't.
+
+    Args:
+        chapter: Vulgate Psalm number (1-150)
+        verse: Verse number within the Vulgate Psalm
+
+    Returns:
+        Tuple of (hebrew_chapter, hebrew_verse)
+    """
+    if chapter <= 8 or chapter >= 148:
+        return chapter, verse
+    elif chapter == 9:
+        return (9, verse) if verse <= 21 else (10, verse - 21)
+    elif chapter <= 112:
+        return chapter + 1, verse
+    elif chapter == 113:
+        return (114, verse) if verse <= 8 else (115, verse - 8)
+    elif chapter == 114:
+        return 116, verse
+    elif chapter == 115:
+        return 116, verse + 9
+    elif chapter <= 145:
+        return chapter + 1, verse
+    elif chapter == 146:
+        return 147, verse
+    else:
+        return 147, verse + 11  # Vulgate 147 = Hebrew 147:12-20
+
+
 def build_ccc_verse_id(book: str, chapter: int, verse: int) -> str:
     """Build verse ID for CCC citations, applying Psalm number translation.
 
@@ -711,6 +756,39 @@ def build_ccc_verse_id(book: str, chapter: int, verse: int) -> str:
     if book == "PSA":
         chapter = hebrew_to_vulgate_psalm(chapter)
     return build_verse_id(book, chapter, verse)
+
+
+def display_ref(verse_id: str) -> str:
+    """Format a verse ID as a reader-facing reference.
+
+    Psalms show the Vulgate (CPDV) number with the Hebrew number used by
+    most modern Bibles in parentheses. Verse 0 marks a chapter-level note.
+
+    Examples:
+        "GEN-14-18" -> "Genesis 14:18"
+        "PSA-109-4" -> "Psalm 109 (110):4"
+        "PSA-9-22"  -> "Psalm 9:22 (10:1)"
+        "REV-18-0"  -> "Revelation 18"
+
+    Args:
+        verse_id: Verse ID like "GEN-14-18" (Vulgate Psalm numbering)
+
+    Returns:
+        Human-readable reference string
+    """
+    book, chapter_str, verse_str = verse_id.rsplit("-", 2)
+    chapter, verse = int(chapter_str), int(verse_str)
+
+    if book != "PSA":
+        name = STANDARD_TO_BOOK_NAME[book]
+        return f"{name} {chapter}" if verse == 0 else f"{name} {chapter}:{verse}"
+
+    hebrew_chapter, hebrew_verse = vulgate_to_hebrew_psalm(chapter, verse)
+    if (hebrew_chapter, hebrew_verse) == (chapter, verse):
+        return f"Psalm {chapter}:{verse}"
+    if hebrew_verse == verse:
+        return f"Psalm {chapter} ({hebrew_chapter}):{verse}"
+    return f"Psalm {chapter}:{verse} ({hebrew_chapter}:{hebrew_verse})"
 
 
 # Regex pattern for parsing Haydock reference text

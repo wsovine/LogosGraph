@@ -11,6 +11,11 @@ Examples:
     python scripts/import_typology.py --seed-only     # only curated CCC seed data
     python scripts/import_typology.py --types --prefigures   # only those steps
     python scripts/import_typology.py --reviewed-only -v
+    python scripts/import_typology.py --reset         # rebuild from scratch (applies corrections)
+
+The import only adds or accumulates, so edits to existing seed/reviewed rows
+(e.g. a corrected verse ID) take effect only with --reset. --reset also deletes
+the crossref-mined MEMBER_OF edges; re-run scripts/import_memberships.py after.
 """
 
 import argparse
@@ -52,9 +57,18 @@ def main():
     source = parser.add_mutually_exclusive_group()
     source.add_argument("--seed-only", action="store_true", help="Only curated CCC seed data")
     source.add_argument("--reviewed-only", action="store_true", help="Only reviewed Haydock data")
+    parser.add_argument(
+        "--reset",
+        action="store_true",
+        help="Delete all Type nodes and typology edges before a full import "
+             "(re-run import_memberships.py afterwards)",
+    )
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose logging")
 
     args = parser.parse_args()
+    if args.reset and (args.types or args.prefigures or args.memberships or args.teaches
+                       or args.seed_only or args.reviewed_only):
+        parser.error("--reset rebuilds everything; it can't be combined with step or source flags")
 
     log_level = logging.DEBUG if args.verbose else logging.WARNING
     logging.basicConfig(
@@ -81,6 +95,13 @@ def main():
 
         setup_schema(connection)
         print("   ✓ Schema ready (Type constraint + indexes)")
+
+        if args.reset:
+            with connection.session() as session:
+                deleted = session.run(
+                    "MATCH (t:Type) DETACH DELETE t RETURN count(t) AS deleted"
+                ).single()["deleted"]
+            print(f"   ✓ Reset: deleted {deleted} Type nodes and their typology edges")
 
         # Seed files are needed for every mode except reviewed-only steps that
         # use no seed input; validate them whenever they will be read.
@@ -140,6 +161,8 @@ def main():
         print("\n" + "=" * 60)
         print(f"Typology import complete ({time.time() - start:.1f}s)")
         print("=" * 60 + "\n")
+        if args.reset:
+            print("Next: python scripts/import_memberships.py  (restores crossref-mined MEMBER_OF)\n")
 
     except Exception as e:
         print(f"\n❌ Error: {e}")

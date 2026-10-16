@@ -49,7 +49,7 @@ Full documentation in [docs/](docs/README.md):
 ## Roadmap
 
 - **Phase 3/4 (Complete)**: Catechism of the Catholic Church integration (2,865 paragraphs, Scripture citations, external documents)
-- **Typology (Complete)**: OT type → NT antitype connections from CCC and Haydock (198 Types, 272 PREFIGURES, 1,130 verse memberships incl. cross-ref-mined)
+- **Typology (Complete)**: OT type → NT antitype connections from CCC and Haydock (198 Types, 275 PREFIGURES, 1,130 verse memberships incl. cross-ref-mined)
 - **Next**: Typology scrollytelling visualization
 - **Future**: Patristic sources (e.g. Daniélou's *From Shadows to Reality*), original language cross-references
 

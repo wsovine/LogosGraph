@@ -70,7 +70,7 @@ Defines PREFIGURES relationships between OT types and NT antitypes.
 | `to_type` | string | yes | NT antitype ID |
 | `source` | string | yes | Source reference (e.g., "CCC-1094") |
 | `confidence` | string | yes | Confidence level |
-| `category` | string | no | Category for this relationship |
+| `category` | string | no | Category for this relationship (set on every seed row; an edge's category comes from the first row that sets it, and seed rows import first) |
 | `notes` | string | no | Authoritative description (becomes `description` on PREFIGURES edge) |
 
 ---
@@ -233,6 +233,7 @@ Approved extractions with normalized type IDs.
 
 | Field | Type | Description |
 |-------|------|-------------|
+| `verse_id` | string | Verse whose commentary attests the typology (becomes MEMBER_OF evidence and a PREFIGURES `source_verses` entry). Verse 0 (e.g. `REV-18-0`) marks a chapter-level preface: no MEMBER_OF, not added to `source_verses` |
 | `type_id` | string | Normalized OT type ID |
 | `antitype_id` | string | Normalized NT antitype ID |
 | `category` | string | Category for PREFIGURES edge |
