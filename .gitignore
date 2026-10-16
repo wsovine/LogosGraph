@@ -70,3 +70,7 @@ docker-compose.override.yml
 
 # Transient adjudication resume checkpoint
 data/extracted/.member_adjudication_checkpoint.json
+
+
+# Generated pyvis network exports from typology notebooks
+notebooks/**/typology_*.html

@@ -190,7 +190,8 @@ RETURN ccc.paragraph, ccc.text
 
 ### Typology Queries
 
-Current graph (2026-06-03): 198 Type nodes (156 OT / 42 NT), 272 PREFIGURES, 555 MEMBER_OF, 33 TEACHES.
+Current graph (2026-06-14): 198 Type nodes (156 OT / 42 NT), 272 PREFIGURES, 1,130 MEMBER_OF
+(555 curated + 575 `crossref-mined`), 33 TEACHES.
 
 **What prefigures Baptism?** — OT types pointing at the `baptism` antitype (→ 17 results).
 
