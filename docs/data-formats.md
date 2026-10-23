@@ -277,6 +277,40 @@ New types created during review.
 }
 ```
 
+### ccc_typology_approved.jsonl / ccc_typology_rejected.jsonl
+
+Reviewed rows from the Catechism pass. Import uses `type_id`, `antitype_id`, `category` (or
+`existing_category` for a link the graph already had), the quote(s), and `verse_ids`.
+
+```json
+{
+  "cand_id": "c1541:new:seventy elders>holy-orders",
+  "ccc": 1541, "kind": "prefigures", "relation": "explicit",
+  "type_id": "the-seventy-elders", "antitype_id": "holy-orders",
+  "category": "Sacramental", "confidence": "high",
+  "quote": "The liturgy of the Church, however, sees in the priesthood of Aaron …",
+  "quotes": null,
+  "verse_ids": {"type_verses": ["NUM-11-24", "NUM-11-25"]},
+  "verifier": {"verdict": "accept", "reason": "…"},
+  "review": {"decision": "approved", "how": "manual", "edited": false, "date": "2026-10-20"}
+}
+```
+
+`kind` is `prefigures` or `teaches`. A `synthesized` row has `quotes: [{ccc, quote}, …]` in place of
+`quote`. `review.how` records whether a row was approved by hand or by applying the verifier's verdict.
+
+### type_changes.jsonl
+
+The approved Type decisions overlay, applied by `parse_all_types()`. Action `new` adds a Type
+(`new_id`, `name`, `testament`, `description`). `broaden` / `rename` override `name`/`description` and keep
+`target_id`. `merge` folds `absorbs[]` into `target_id` everywhere (TEACHES, PREFIGURES, MEMBER_OF).
+
+```json
+{"decision_id": "td-003", "action": "broaden", "target_id": "cloud-in-desert",
+ "name": "The Cloud of the Lord's Glory", "description": "…", "absorbs": [],
+ "affected_links": [{"link": "cloud-in-desert → baptism (Sacramental)", "why": "…"}], "rationale": "…"}
+```
+
 ---
 
 ## Categories

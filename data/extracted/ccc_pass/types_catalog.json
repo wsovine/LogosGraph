@@ -1,0 +1,4256 @@
+[
+ {
+  "id": "aaron",
+  "name": "Aaron",
+  "testament": "OT",
+  "description": "Aaron, brother of Moses and first high priest of Israel.",
+  "out": [
+   {
+    "id": "christ-high-priest",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "mary",
+    "category": "Marian"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "abel",
+  "name": "Abel",
+  "testament": "OT",
+  "description": "Abel, the just son of Adam whose innocent blood was shed by his brother Cain.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "abimelech",
+  "name": "Abimelech",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "antichrist",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "absalom",
+  "name": "Absalom",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "destruction-of-jerusalem-as-divine-judgment",
+    "category": "Eschatological"
+   },
+   {
+    "id": "unbelievers-rejection-of-christ-crucified",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "adam",
+  "name": "Adam",
+  "testament": "OT",
+  "description": "Adam, the first man, whose creation and fall prefigure Christ as the New Adam.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "ahithophel",
+  "name": "Ahithophel",
+  "testament": "OT",
+  "description": "Achitophel, David's trusted counselor who betrayed him; a figure of the perfidious Judas (Ps 40:10, 'lifted up his heel').",
+  "out": [
+   {
+    "id": "the-betrayal-by-judas",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "anointing-of-kings-priests-and-prophets",
+  "name": "Anointing of Kings, Priests, and Prophets",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "antiochus-epiphanes",
+  "name": "Antiochus Epiphanes",
+  "testament": "OT",
+  "description": "The Hellenistic king and great persecutor of God's people (the 'little horn'); a figure of Antichrist.",
+  "out": [
+   {
+    "id": "antichrist",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "babylon",
+  "name": "Babylon",
+  "testament": "OT",
+  "description": "The ancient city of Babylon, the city of confusion, idolatry, and oppression of God's people.",
+  "out": [
+   {
+    "id": "babylon-the-great-the-harlot",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "balaam",
+  "name": "Balaam",
+  "testament": "OT",
+  "description": "Balaam, the pagan seer whose oracles included the prophecy of the Star from Jacob (Numbers 24:17).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "binding-of-isaac",
+  "name": "Binding of Isaac",
+  "testament": "OT",
+  "description": "Abraham's willing sacrifice of his son Isaac on Mount Moriah (Genesis 22).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "the-resurrection",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "brazen-serpent",
+  "name": "Brazen Serpent",
+  "testament": "OT",
+  "description": "The bronze serpent Moses lifted up on a pole in the wilderness so that all who looked upon it were healed (Numbers 21:8-9).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "burning-bush",
+  "name": "Burning Bush",
+  "testament": "OT",
+  "description": "The bush that burned with fire but was not consumed, in which the Angel of the Lord appeared to Moses (Exodus 3).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "ceremonial-law",
+  "name": "Ceremonial Law",
+  "testament": "OT",
+  "description": "The ceremonial and ritual prescriptions of the Old Testament Law, fulfilled and surpassed in the New Covenant.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "cherubim-of-the-ark",
+  "name": "Cherubim of the Ark",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "the-saints-in-heavenly-worship",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "circumcision",
+  "name": "Circumcision",
+  "testament": "OT",
+  "description": "The sign of the covenant given to Abraham, marking incorporation into the people of God.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "spiritual-purity-and-interior-holiness",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   527,
+   1150
+  ]
+ },
+ {
+  "id": "cloud-in-desert",
+  "name": "Cloud in the Desert",
+  "testament": "OT",
+  "description": "The pillar of cloud that guided and protected Israel through the wilderness.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-holy-spirit-as-divine-guide",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1094
+  ]
+ },
+ {
+  "id": "jordan-crossing",
+  "name": "Crossing of the Jordan",
+  "testament": "OT",
+  "description": "Israel's passage through the Jordan River into the Promised Land under Joshua.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "eternal-life",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1222
+  ]
+ },
+ {
+  "id": "red-sea-crossing",
+  "name": "Crossing of the Red Sea",
+  "testament": "OT",
+  "description": "Israel's passage through the Red Sea, liberated from Egyptian slavery and passing dry-shod through the waters.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "christs-victory",
+    "category": "Christological"
+   },
+   {
+    "id": "the-saints-in-heavenly-worship",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   117,
+   1094,
+   1221
+  ]
+ },
+ {
+  "id": "cyrus",
+  "name": "Cyrus",
+  "testament": "OT",
+  "description": "Cyrus the Persian, who overthrew Babylon and freed the captives; a figure of the Messiah, the executor of divine justice (Isa 41:2; 45:1).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "daniels-four-beasts-four-empires",
+  "name": "Daniel's Four Beasts (Four Empires)",
+  "testament": "OT",
+  "description": "The four beasts of Daniel 7 (lion/Chaldean, bear/Persian, leopard/Greek, and the fourth/Roman empire); the composite beast of Revelation alludes to them, figuring the final apostate empire of Antichrist.",
+  "out": [
+   {
+    "id": "antichrist",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "david",
+  "name": "David",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christ-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-victory",
+    "category": "Christological"
+   },
+   {
+    "id": "holy-orders",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-betrayal-by-judas",
+    "category": "Christological"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-resurrection",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "deborah",
+  "name": "Deborah",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-synagogue-as-preparation-for-the-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "destruction-of-sodom",
+  "name": "Destruction of Sodom",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "dietary-laws",
+  "name": "Dietary Laws",
+  "testament": "OT",
+  "description": "The Mosaic laws distinguishing clean and unclean animals (Leviticus 11, Deuteronomy 14).",
+  "out": [
+   {
+    "id": "spiritual-purity-and-interior-holiness",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "divine-fire-lightning",
+  "name": "Divine Fire (Lightning)",
+  "testament": "OT",
+  "description": "The fire/lightning of God's power in Ps 28(29); a figure of the Holy Spirit appearing as tongues of fire at Pentecost.",
+  "out": [
+   {
+    "id": "descent-of-the-holy-spirit-at-pentecost",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "edom",
+  "name": "Edom",
+  "testament": "OT",
+  "description": "Edom and Bosra, conquered enemies; taken mystically for the enemies of Christ and his Church.",
+  "out": [
+   {
+    "id": "persecutors-of-the-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "elijah",
+  "name": "Elijah",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   },
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   },
+   {
+    "id": "john-the-baptist",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "elisha",
+  "name": "Elisha",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "spiritual-gifts-of-christ",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "esau",
+  "name": "Esau",
+  "testament": "OT",
+  "description": "Esau, who lost his birthright and privileges to Jacob; a figure of the reprobate, though not himself necessarily reprobate.",
+  "out": [
+   {
+    "id": "the-reprobate-the-rejected",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "esther",
+  "name": "Esther",
+  "testament": "OT",
+  "description": "Queen Esther, who interceded for her people and secured their deliverance; a figure of the Church and of the Blessed Virgin Mary.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "eve",
+  "name": "Eve",
+  "testament": "OT",
+  "description": "Eve, the first woman and mother of all the living.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "feast-of-pentecost",
+  "name": "Feast of Pentecost",
+  "testament": "OT",
+  "description": "The Feast of Weeks (Shavuot), celebrating the firstfruits of the harvest and the giving of the Law at Sinai.",
+  "out": [
+   {
+    "id": "descent-of-the-holy-spirit-at-pentecost",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "gehazi",
+  "name": "Gehazi",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "judas-and-simony",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "gideon",
+  "name": "Gideon",
+  "testament": "OT",
+  "description": "Gideon, judge of Israel who delivered his people with a small band chosen by God.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "gods-deliverance-from-sennacherib",
+  "name": "God's Deliverance from Sennacherib",
+  "testament": "OT",
+  "description": "God's overthrow of Sennacherib's army, terrifying the persecutors; a figure of the certainty of the final judgment.",
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "gods-healing-word",
+  "name": "God's Healing Word",
+  "testament": "OT",
+  "description": "God's word/command by which the sick were healed; read by the Fathers in the prophetical sense of Christ the Word who heals.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "gods-wonders-by-water",
+  "name": "God's Wonders by Water",
+  "testament": "OT",
+  "description": "The many wonders God wrought by water in the Old Testament (Exodus plagues, provision in the wilderness); a figure of the grace conferred in baptism.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "gog-and-magog",
+  "name": "Gog and Magog",
+  "testament": "OT",
+  "description": "Gog and Magog of Ezekiel's prophecy \u2014 nations gathered against God's people; a figure of the last persecution of the Church under Antichrist before the final judgment.",
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "goliath",
+  "name": "Goliath",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christs-victory",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "hannah",
+  "name": "Hannah",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "hezekiah",
+  "name": "Hezekiah",
+  "testament": "OT",
+  "description": "King Ezechias of Judah, righteous king delivered from the Assyrians; figure of Christ and of the Church persecuted yet increasing.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "holofernes",
+  "name": "Holofernes",
+  "testament": "OT",
+  "description": "The pagan general in Judith who demands universal worship and divine status; a figure of Antichrist.",
+  "out": [
+   {
+    "id": "antichrist",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "hosea",
+  "name": "Hosea",
+  "testament": "OT",
+  "description": "The prophet Osee, who took back the unfaithful woman; acting 'as a figure of the Lord, who has received an outrage' yet offers grace to penitent sinners.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "isaac",
+  "name": "Isaac",
+  "testament": "OT",
+  "description": "Isaac, son of the free-woman Sarah and child of promise; in Paul's allegory (Gal 4) a figure of the New Covenant, the free children of God, and the Church.",
+  "out": [
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "isaiah-the-prophet",
+  "name": "Isaiah (the prophet)",
+  "testament": "OT",
+  "description": "The prophet Isaiah, anointed by God's Spirit to preach good news to the poor; a figure of Christ the Anointed One (Luke 4:18).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "ishmael",
+  "name": "Ishmael",
+  "testament": "OT",
+  "description": "Ishmael, son of Abraham by Hagar, the son of the bondwoman born according to the flesh.",
+  "out": [
+   {
+    "id": "heretics",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-mosaic-law",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-synagogues-persecution-of-the-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "israel-jeshurun",
+  "name": "Israel (Jeshurun)",
+  "testament": "OT",
+  "description": "Israel under the title Jeshurun, the beloved of God; a figure of the Messiah, the true Beloved.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "israels-disobedience-in-the-wilderness",
+  "name": "Israel's Disobedience in the Wilderness",
+  "testament": "OT",
+  "description": "The murmurs, infidelities, and disobedience of the Hebrews in the desert; written 'in a figure' (1 Cor 10:6) as a warning that the sacraments without amendment bring condemnation.",
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jacob",
+  "name": "Jacob",
+  "testament": "OT",
+  "description": "Jacob (Israel), patriarch whose life of struggle and sorrow prefigures Christ.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-elect-predestinate",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jael",
+  "name": "Jael",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jephthah",
+  "name": "Jephthah",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jephthahs-daughter",
+  "name": "Jephthah's Daughter",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "mary",
+    "category": "Marian"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jeremiah",
+  "name": "Jeremiah",
+  "testament": "OT",
+  "description": "The prophet Jeremiah, persecuted and afflicted; a figure of Christ in his sufferings.",
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "job",
+  "name": "Job",
+  "testament": "OT",
+  "description": "The innocent sufferer whose trials, vindication, and restoration figure Christ (the innocent man of sorrows), the Church, and the resurrection of the just.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-resurrection",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jonah",
+  "name": "Jonah",
+  "testament": "OT",
+  "description": "The prophet Jonah, three days in the belly of the fish; a figure of Christ's resurrection (the sign of Jonas, Matt 12:40).",
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-resurrection",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "josedec",
+  "name": "Josedec",
+  "testament": "OT",
+  "description": "Jesus son of Josedech, high priest who returned from exile and helped rebuild the temple (Hag, Zech); a figure of Christ the High Priest and builder of the spiritual temple.",
+  "out": [
+   {
+    "id": "christ-high-priest",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "joseph",
+  "name": "Joseph",
+  "testament": "OT",
+  "description": "Joseph, son of Jacob, sold by his brothers yet exalted to deliver his people from famine.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "joshua",
+  "name": "Joshua",
+  "testament": "OT",
+  "description": "Joshua (Yehoshua), successor of Moses who led Israel into the Promised Land.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "josias",
+  "name": "Josias",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "jotham",
+  "name": "Jotham",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "holy-orders",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "judah",
+  "name": "Judah",
+  "testament": "OT",
+  "description": "Judah, son of Jacob, from whose tribe the Messiah descends (Genesis 49).",
+  "out": [
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "judas-maccabeus",
+  "name": "Judas Maccabeus",
+  "testament": "OT",
+  "description": "The Maccabean warrior who conquered Idumea and fought to save his people; a glorious figure of Christ the victorious conqueror (read of the ascension).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-victory",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "judith",
+  "name": "Judith",
+  "testament": "OT",
+  "description": "The widow of Israel who delivered her people by slaying Holofernes; a figure of the Blessed Virgin Mary and of the Church.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "leah",
+  "name": "Leah",
+  "testament": "OT",
+  "description": "Leah, first wife of Jacob, mother of six of the twelve tribes.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "leviathan",
+  "name": "Leviathan",
+  "testament": "OT",
+  "description": "The great sea-monster of Job, fearsome yet subject to God; represents the devil under God's dominion.",
+  "out": [
+   {
+    "id": "satan-the-devil",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "levitical-leprosy-laws",
+  "name": "Levitical Leprosy Laws",
+  "testament": "OT",
+  "description": "The Levitical laws governing the diagnosis, quarantine, and purification of leprosy (Leviticus 13-14).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "levitical-purifications-ceremonial-washings",
+  "name": "Levitical Purifications (Ceremonial Washings)",
+  "testament": "OT",
+  "description": "The ceremonial purifications of the Old Law with water; figures of baptism and penance, in which the blood of Christ is applied to the soul.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "liver-of-the-fish-tobit",
+  "name": "Liver of the Fish (Tobit)",
+  "testament": "OT",
+  "description": "The fish's liver burned to expel the demon Asmodeus in Tobit; read mystically as the means of demonic deliverance.",
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "manna",
+  "name": "Manna in the Desert",
+  "testament": "OT",
+  "description": "The bread from heaven that fed Israel during their forty years in the wilderness.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1094,
+   1334
+  ]
+ },
+ {
+  "id": "adam-and-eve",
+  "name": "Marriage of Adam and Eve",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "melchizedek",
+  "name": "Melchizedek",
+  "testament": "OT",
+  "description": "The priest-king of Salem who offered bread and wine and blessed Abraham.",
+  "out": [
+   {
+    "id": "christ-high-priest",
+    "category": "Christological"
+   },
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1334,
+   1544
+  ]
+ },
+ {
+  "id": "miriam",
+  "name": "Miriam",
+  "testament": "OT",
+  "description": "Miriam, sister of Moses and Aaron, prophetess of Israel.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "moses",
+  "name": "Moses",
+  "testament": "OT",
+  "description": "Moses, liberator and lawgiver of Israel, mediator of the Old Covenant.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "mosess-veil",
+  "name": "Moses's Veil",
+  "testament": "OT",
+  "description": "The veil Moses placed over his face to hide the fading glory of the law (Exod 34); a figure of the obscurity and transience of the old covenant, removed in the unveiled glory of the new (2 Cor 3).",
+  "out": [
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "naamans-cleansing-in-the-jordan",
+  "name": "Naaman's Cleansing in the Jordan",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "nehemiah",
+  "name": "Nehemiah",
+  "testament": "OT",
+  "description": "Nehemiah, whose name means 'comforter of God,' sent by the king to rebuild Jerusalem; a figure of Christ sent to comfort and establish the Church.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "noah",
+  "name": "Noah",
+  "testament": "OT",
+  "description": "Noah, the just man who found favor with God and was preserved through the Flood.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "unbelievers-rejection-of-christ-crucified",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "noahs-ark",
+  "name": "Noah's Ark",
+  "testament": "OT",
+  "description": "The ark built by Noah that preserved his family through the flood waters.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1094
+  ]
+ },
+ {
+  "id": "noahs-flood",
+  "name": "Noah's Flood",
+  "testament": "OT",
+  "description": "The flood that cleansed the earth in the days of Noah, through which eight persons were saved by water.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1094
+  ]
+ },
+ {
+  "id": "old-law-confession-and-satisfaction",
+  "name": "Old Law Confession and Satisfaction",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "sacrament-of-penance",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "ot-priesthood",
+  "name": "Old Testament Priesthood",
+  "testament": "OT",
+  "description": "The Levitical priesthood established at Sinai for sacrifice and mediation.",
+  "out": [
+   {
+    "id": "christ-high-priest",
+    "category": "Christological"
+   },
+   {
+    "id": "holy-orders",
+    "category": "Sacramental"
+   },
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1544
+  ]
+ },
+ {
+  "id": "ot-sacrifices",
+  "name": "Old Testament Sacrifices",
+  "testament": "OT",
+  "description": "The various sacrifices and offerings prescribed in the Law of Moses.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christ-high-priest",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   },
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1150
+  ]
+ },
+ {
+  "id": "passover",
+  "name": "Passover",
+  "testament": "OT",
+  "description": "The feast commemorating Israel's liberation from Egypt, including the paschal lamb and unleavened bread.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1150,
+   1334
+  ]
+ },
+ {
+  "id": "proselytes-strangers-in-israel",
+  "name": "Proselytes (Strangers in Israel)",
+  "testament": "OT",
+  "description": "Foreign strangers/proselytes who renounced idolatry, embraced Israel's religion, and were incorporated into the covenant community.",
+  "out": [
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "queen-of-sheba",
+  "name": "Queen of Sheba",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "rahab",
+  "name": "Rahab",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "raphael",
+  "name": "Raphael",
+  "testament": "OT",
+  "description": "The angel Raphael in Tobit, who appears in human form to guide and protect Tobias; commentary reads him as prefiguring Christ's assumption of human nature.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "rebecca",
+  "name": "Rebecca",
+  "testament": "OT",
+  "description": "Rebecca, wife of Isaac, chosen by divine providence as bride for the patriarch's son.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "red-heifer",
+  "name": "Red Heifer",
+  "testament": "OT",
+  "description": "The red heifer sacrifice prescribed in Numbers 19, whose ashes mixed with water purified those defiled by contact with the dead.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "return-from-babylonian-captivity",
+  "name": "Return from Babylonian Captivity",
+  "testament": "OT",
+  "description": "The restored holy people returning from captivity to rebuilt Jerusalem, described by the prophets as a sanctified community; a figure of the Church.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-victory",
+    "category": "Christological"
+   },
+   {
+    "id": "the-conversion-of-the-jews",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-resurrection",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "ruth",
+  "name": "Ruth",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "samson",
+  "name": "Samson",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-victory",
+    "category": "Christological"
+   },
+   {
+    "id": "destruction-of-jerusalem-as-divine-judgment",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-resurrection",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "samuel",
+  "name": "Samuel",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "sanaballat",
+  "name": "Sanaballat",
+  "testament": "OT",
+  "description": "Sanballat, persecutor of the Jewish restoration and friend of Tobias; prefigures heretics who oppose the true faith.",
+  "out": [
+   {
+    "id": "heretics",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "sarah",
+  "name": "Sarah",
+  "testament": "OT",
+  "description": "Sarah, wife of Abraham and mother of Isaac, the free woman whose son was born according to the promise.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   489
+  ]
+ },
+ {
+  "id": "saul",
+  "name": "Saul",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "sennacherib",
+  "name": "Sennacherib",
+  "testament": "OT",
+  "description": "The Assyrian king who spoiled Samaria and Judah and despised God, then was brought to nothing; a figure of the persecutors of the Church.",
+  "out": [
+   {
+    "id": "persecutors-of-the-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "solomon",
+  "name": "Solomon",
+  "testament": "OT",
+  "description": "King Solomon, son of David, whose name means 'peaceable' and whose peaceful reign and temple-building prefigure Christ.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christ-church",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "temporal-chastisements-of-israel",
+  "name": "Temporal Chastisements of Israel",
+  "testament": "OT",
+  "description": "The temporal punishments inflicted on Israel for sin (e.g. the slaying of the murmurers, Num 25); types of eternal chastisement (1 Cor 10:11).",
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "temporal-rewards-of-the-old-law",
+  "name": "Temporal Rewards of the Old Law",
+  "testament": "OT",
+  "description": "The material blessings and temporal prosperity God granted the just under the Old Covenant, given as a figure of heavenly rewards.",
+  "out": [
+   {
+    "id": "eternal-life",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-abomination-of-desolation",
+  "name": "The Abomination of Desolation",
+  "testament": "OT",
+  "description": "The profanation of the temple foretold by Daniel (partly fulfilled by Pilate's and Adrian's images), prefiguring the abomination Antichrist will bring at the end.",
+  "out": [
+   {
+    "id": "antichrist",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-altar-of-incense",
+  "name": "The Altar of Incense",
+  "testament": "OT",
+  "description": "The golden altar of incense in the holy place, where incense was offered morning and evening; signifies Christ the Mediator, through whose merits the prayers of the faithful ascend.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-saints-in-heavenly-worship",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-angel-of-the-lord",
+  "name": "The Angel of the Lord",
+  "testament": "OT",
+  "description": "The angel who encamps round God's servants to guard them (Ps 33/34); read by the Fathers as figuring Christ the protector.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-ark-of-the-covenant",
+  "name": "The Ark of the Covenant",
+  "testament": "OT",
+  "description": "The ark where God's presence dwelt, which David longed to be near; a figure of heaven, the place of God's presence.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   },
+   {
+    "id": "mary",
+    "category": "Marian"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   2676
+  ]
+ },
+ {
+  "id": "the-ass-and-the-colt-palm-sunday",
+  "name": "The Ass and the Colt (Palm Sunday)",
+  "testament": "OT",
+  "description": "The ass and the colt of Zech 9:9, read by the Fathers as figuring the Jews (ass) and Gentiles (colt) to be loosed and brought to Christ, united in his Church.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-babylonian-exile",
+  "name": "The Babylonian Exile",
+  "testament": "OT",
+  "description": "Israel's exile, deprived of religion, temple, and princes; a figure of the long desolation the Jews endured after rejecting Christ.",
+  "out": [
+   {
+    "id": "destruction-of-jerusalem-as-divine-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-cup-of-divine-wrath",
+  "name": "The Cup of Divine Wrath",
+  "testament": "OT",
+  "description": "The cup/chalice of God's judgment in which the dregs are reserved for sinners; a figure of the eschatological cup of wrath at the last judgment.",
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-divine-chariot-theophany",
+  "name": "The Divine Chariot Theophany",
+  "testament": "OT",
+  "description": "God appearing on his chariot of winds/clouds (cf. Ezek 1:4) to come to David's aid; read by the Fathers as figuring Christ's ascension.",
+  "out": [
+   {
+    "id": "christs-ascension",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-dove-and-the-olive-branch-noah",
+  "name": "The Dove and the Olive Branch (Noah)",
+  "testament": "OT",
+  "description": "The dove returning to the ark with an olive branch (Gen 8:11), signifying peace and deliverance from the flood; a figure of the peace conferred in baptism.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-exodus-from-egypt",
+  "name": "The Exodus from Egypt",
+  "testament": "OT",
+  "description": "God's deliverance of Israel from Egyptian bondage; a figure of the redemption of mankind by Christ.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-faithful-remnant",
+  "name": "The Faithful Remnant",
+  "testament": "OT",
+  "description": "The few of Israel preserved through judgment (e.g. under Hezekiah after the Assyrians); a figure of the remnant who embrace the faith of Christ (Rom 9:27).",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-feast-on-mount-zion",
+  "name": "The Feast on Mount Zion",
+  "testament": "OT",
+  "description": "Isaiah's prophesied banquet of rich food and wine on Mount Zion for all nations; a figure of the Eucharist and the heavenly banquet.",
+  "out": [
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   },
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-foolish-shepherd",
+  "name": "The Foolish Shepherd",
+  "testament": "OT",
+  "description": "The foolish/idol shepherd of Zech 11:15, representing the wicked princes and priests (and emperors like Caligula and Nero) who rule before the desolation of Jerusalem.",
+  "out": [
+   {
+    "id": "persecutors-of-the-church",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-gates-lifted-for-the-king-of-glory",
+  "name": "The Gates Lifted for the King of Glory",
+  "testament": "OT",
+  "description": "The eternal gates commanded to lift up their heads for the triumphal entry of the King of Glory (Ps 23/24); a figure of Christ's ascension into heaven.",
+  "out": [
+   {
+    "id": "christs-ascension",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-glory-of-the-lord-departing-the-temple",
+  "name": "The Glory of the Lord Departing the Temple",
+  "testament": "OT",
+  "description": "The divine glory on the throne departing Jerusalem by way of Mount Olivet (Ezek 11:23); read of Christ (two natures on the throne) ascending from Olivet.",
+  "out": [
+   {
+    "id": "christs-ascension",
+    "category": "Christological"
+   },
+   {
+    "id": "destruction-of-jerusalem-as-divine-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-golden-candlestick-menorah",
+  "name": "The Golden Candlestick (Menorah)",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "spiritual-gifts-of-christ",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-heavenly-jerusalem-prophetic-vision",
+  "name": "The Heavenly Jerusalem (Prophetic Vision)",
+  "testament": "OT",
+  "description": "The OT prophetic vision of Jerusalem adorned with precious stones and gold (Tobit 13 / Isaiah 54), prefiguring the glorified Church.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-heavens",
+  "name": "The Heavens",
+  "testament": "OT",
+  "description": "The heavens and stars that silently declare God's glory; read as figuring the Church and her apostolic preachers.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-holy-of-holies",
+  "name": "The Holy of Holies",
+  "testament": "OT",
+  "description": "The innermost sanctuary of the tabernacle/temple, entered once a year by the high priest; a figure of heaven, into which Christ entered by his ascension (Heb 6; 9).",
+  "out": [
+   {
+    "id": "christs-ascension",
+    "category": "Christological"
+   },
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-invitation-to-the-waters-isaiah-55",
+  "name": "The Invitation to the Waters (Isaiah 55)",
+  "testament": "OT",
+  "description": "Isaiah's invitation to all who thirst to come to the waters, milk, and wine without price; a figure of Christ's invitation and the grace of the sacraments.",
+  "out": [
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-king-of-tyre",
+  "name": "The King of Tyre",
+  "testament": "OT",
+  "description": "The king of Tyre, 'the seal of resemblance,' whose pride is commonly understood of Lucifer.",
+  "out": [
+   {
+    "id": "satan-the-devil",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-kings-of-sheba-bearing-gifts",
+  "name": "The Kings of Sheba Bearing Gifts",
+  "testament": "OT",
+  "description": "The kings of Sheba and Ephah prophesied to come bearing gold and frankincense (Isa 60:6); fulfilled in the Magi adoring Christ.",
+  "out": [
+   {
+    "id": "the-adoration-of-the-magi",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-living-waters-from-the-sanctuary",
+  "name": "The Living Waters from the Sanctuary",
+  "testament": "OT",
+  "description": "The fountain of water flowing from Jerusalem/the temple (Joel 3:18; Ezek 47); a figure of the fountain of grace in the Church militant and of glory in the Church triumphant.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-mark-of-tau",
+  "name": "The Mark of Tau",
+  "testament": "OT",
+  "description": "The mark Tau (in ancient Hebrew the form of a cross) set on the foreheads of the righteous to spare them (Ezek 9:4); a figure of the sign of Christ's cross in baptism.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-mincha-unbloody-sacrifice",
+  "name": "The Mincha (Unbloody Sacrifice)",
+  "testament": "OT",
+  "description": "The mincha, the unbloody grain/flour offering of the Old Law; a figure of the Mass.",
+  "out": [
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-mosaic-law",
+  "name": "The Mosaic Law",
+  "testament": "OT",
+  "description": "The Law (Torah) given to Israel; perfected and fulfilled by the Gospel of Christ (Matt 5:17).",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [
+   {
+    "id": "ishmael",
+    "category": "Covenantal"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-pool-of-siloam",
+  "name": "The Pool of Siloam",
+  "testament": "OT",
+  "description": "The pool of Siloe ('sent') at Jerusalem; its waters figure the sacrament of baptism, and its name figures Christ the Sent One.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-promised-land",
+  "name": "The Promised Land",
+  "testament": "OT",
+  "description": "The land of Israel/Judea where right worship was observed; a figure of heaven, 'the land of rectitude.'",
+  "out": [
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-prophets",
+  "name": "The Prophets",
+  "testament": "OT",
+  "description": "The Old Testament prophets, who represented God under visible forms and prefigured Christ, the end of the law.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "descent-of-the-holy-spirit-at-pentecost",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-rebuilt-temple",
+  "name": "The Rebuilt Temple",
+  "testament": "OT",
+  "description": "The second temple, rebuilt under Persian patronage after the exile, enduring despite adversity; a figure of the Church's indestructibility.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-rechabites",
+  "name": "The Rechabites",
+  "testament": "OT",
+  "description": "The Rechabites who kept strict ascetic rules and abstained from lawful things for greater perfection; a figure of the religious orders of the Church.",
+  "out": [
+   {
+    "id": "religious-orders-consecrated-life",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-rejected-cornerstone",
+  "name": "The Rejected Cornerstone",
+  "testament": "OT",
+  "description": "The stone the builders rejected, become the head of the corner (Ps 117:22); applied to David/Zorobabel/Israel as figures of Christ, rejected then made the foundation.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-scapegoat-day-of-atonement",
+  "name": "The Scapegoat (Day of Atonement)",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-shepherd-of-israel",
+  "name": "The Shepherd of Israel",
+  "testament": "OT",
+  "description": "God/the Messiah portrayed as a shepherd ruling, guiding, and feeding his flock (Ps 23; Ezek 34); fulfilled in Christ the Lamb-Shepherd who leads the saints to fountains of living water.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-son-of-isaiah-emmanuel-sign",
+  "name": "The Son of Isaiah (Emmanuel sign)",
+  "testament": "OT",
+  "description": "The child to be born of Isaiah (Isa 8:4) as a near-term sign of deliverance; a prefigurement of Christ the true Emmanuel.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-spouse-of-the-canticle-song-of-songs",
+  "name": "The Spouse of the Canticle (Song of Songs)",
+  "testament": "OT",
+  "description": "The bride/spouse of the Song of Songs, read as the Church seeking and united to Christ the one true Shepherd-Bridegroom.",
+  "out": [
+   {
+    "id": "christ-church",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-stone-daniels-vision",
+  "name": "The Stone (Daniel's Vision)",
+  "testament": "OT",
+  "description": "The stone cut without hands that shattered the four kingdoms and became a mountain filling the earth (Dan 2); a figure of Christ's eternal kingdom, the Church.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-sun",
+  "name": "The Sun",
+  "testament": "OT",
+  "description": "The sun set in the firmament, giving light and warmth to all the world; read as figuring Christ, the Sun of Justice.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-synagogue-old-covenant-assembly",
+  "name": "The Synagogue (Old Covenant Assembly)",
+  "testament": "OT",
+  "description": "The synagogue/assembly of the Old Covenant which rejected the Messiah; contrasted with the Church that received him as head.",
+  "out": [
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-tabernacle-gods-dwelling-place",
+  "name": "The Tabernacle (God's Dwelling Place)",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "destruction-of-jerusalem-as-divine-judgment",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-table-of-showbread-bread-of-the-presence",
+  "name": "The Table of Showbread (Bread of the Presence)",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "eucharist",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-temple-of-jerusalem",
+  "name": "The Temple of Jerusalem",
+  "testament": "OT",
+  "description": "The material temple/sanctuary on Zion, stable and singular; fulfilled in the Church and figuring the heavenly dwelling.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "heaven",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-threshing-floor",
+  "name": "The Threshing Floor",
+  "testament": "OT",
+  "description": "The threshing floor where grain is separated from chaff by winnowing; a figure of the Church, where the elect are distinguished from the reprobate.",
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-twelve-patriarchs",
+  "name": "The Twelve Patriarchs",
+  "testament": "OT",
+  "description": "The twelve patriarchs, ancestral heads of the tribes of Israel; prefiguring the twelve apostles.",
+  "out": [
+   {
+    "id": "the-twelve-apostles",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-unbroken-bones-of-the-just",
+  "name": "The Unbroken Bones of the Just",
+  "testament": "OT",
+  "description": "The bones of the just man that shall not be broken (Ps 33/34:21); fulfilled in Christ, whose bones were not broken (John 19:36).",
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-veil-of-the-tabernacle",
+  "name": "The Veil of the Tabernacle",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-vineyard-of-israel",
+  "name": "The Vineyard of Israel",
+  "testament": "OT",
+  "description": null,
+  "out": [
+   {
+    "id": "christ-church",
+    "category": "Christological"
+   },
+   {
+    "id": "the-gospel-new-covenant",
+    "category": "Covenantal"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-virgin-of-emmanuel-isaiah-7-14",
+  "name": "The Virgin of Emmanuel (Isaiah 7:14)",
+  "testament": "OT",
+  "description": "The virgin (almah) who shall conceive and bear Emmanuel; fulfilled in the Virgin Mary's conception of Christ.",
+  "out": [
+   {
+    "id": "mary",
+    "category": "Marian"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-voice-of-the-lord-thunder",
+  "name": "The Voice of the Lord (Thunder)",
+  "testament": "OT",
+  "description": "The sevenfold 'voice of the Lord' (thunder) in Ps 28(29); read of Christ's powerful preaching, his baptism, and the sacraments.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "new-covenant-sacraments",
+    "category": "Sacramental"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "the-year-of-jubilee",
+  "name": "The Year of Jubilee",
+  "testament": "OT",
+  "description": "The Jubilee year (Lev 25) of liberation, debt-forgiveness, and restoration; a figure of Christ's redemption.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "water-from-rock",
+  "name": "Water from the Rock",
+  "testament": "OT",
+  "description": "Water that flowed from the rock struck by Moses at Horeb/Meribah to quench Israel's thirst.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "spiritual-gifts-of-christ",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": [
+   1094
+  ]
+ },
+ {
+  "id": "the-wilderness-pilgrimage-toward-the-promised-land",
+  "name": "Wilderness Pilgrimage toward the Promised Land",
+  "testament": "OT",
+  "description": "Israel's forty-year journey through the wilderness toward the earthly Promised Land.",
+  "out": [
+   {
+    "id": "baptism",
+    "category": "Sacramental"
+   },
+   {
+    "id": "eternal-life",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-gentiles-grafted-into-christs-church",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "zechariahs-thirty-pieces-of-silver",
+  "name": "Zechariah's Thirty Pieces of Silver",
+  "testament": "OT",
+  "description": "The prophet's symbolic action of receiving thirty pieces of silver (the 'handsome price,' ironically) and casting them to the potter in the house of the Lord (Zech 11:12-13); fulfilled in Judas's betrayal.",
+  "out": [
+   {
+    "id": "the-betrayal-by-judas",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "zedekiah",
+  "name": "Zedekiah",
+  "testament": "OT",
+  "description": "Sedecias, the last king of Judah, rejected and afflicted; read as figuring Christ rejected and treated thus for the sins of mankind.",
+  "out": [
+   {
+    "id": "christs-passion",
+    "category": "Christological"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "zorobabel",
+  "name": "Zorobabel",
+  "testament": "OT",
+  "description": "The post-exilic leader who, though highly regarded, never truly possessed the throne; a figure of Christ, lest the Jews think the prophecies fulfilled in him.",
+  "out": [
+   {
+    "id": "christ",
+    "category": "Christological"
+   },
+   {
+    "id": "the-one-true-church",
+    "category": "Ecclesial"
+   }
+  ],
+  "inc": [],
+  "ccc": []
+ },
+ {
+  "id": "antichrist",
+  "name": "Antichrist",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "abimelech",
+    "category": "Eschatological"
+   },
+   {
+    "id": "antiochus-epiphanes",
+    "category": "Eschatological"
+   },
+   {
+    "id": "daniels-four-beasts-four-empires",
+    "category": "Eschatological"
+   },
+   {
+    "id": "holofernes",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-abomination-of-desolation",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "babylon-the-great-the-harlot",
+  "name": "Babylon the Great (the Harlot)",
+  "testament": "NT",
+  "description": "The mystical Babylon of Revelation \u2014 Rome and all wicked great cities / the multitude of the wicked who persecute the faithful \u2014 destined for judgment.",
+  "out": [],
+  "inc": [
+   {
+    "id": "babylon",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "baptism",
+  "name": "Baptism",
+  "testament": "NT",
+  "description": "The sacrament of regeneration and incorporation into Christ through water and the Spirit.",
+  "out": [],
+  "inc": [
+   {
+    "id": "circumcision",
+    "category": "Sacramental"
+   },
+   {
+    "id": "cloud-in-desert",
+    "category": "Sacramental"
+   },
+   {
+    "id": "elisha",
+    "category": "Sacramental"
+   },
+   {
+    "id": "gods-wonders-by-water",
+    "category": "Sacramental"
+   },
+   {
+    "id": "jordan-crossing",
+    "category": "Sacramental"
+   },
+   {
+    "id": "levitical-purifications-ceremonial-washings",
+    "category": "Sacramental"
+   },
+   {
+    "id": "naamans-cleansing-in-the-jordan",
+    "category": "Sacramental"
+   },
+   {
+    "id": "noahs-ark",
+    "category": "Sacramental"
+   },
+   {
+    "id": "noahs-flood",
+    "category": "Sacramental"
+   },
+   {
+    "id": "rebecca",
+    "category": "Sacramental"
+   },
+   {
+    "id": "red-heifer",
+    "category": "Sacramental"
+   },
+   {
+    "id": "red-sea-crossing",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-dove-and-the-olive-branch-noah",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-mark-of-tau",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-pool-of-siloam",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-voice-of-the-lord-thunder",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-wilderness-pilgrimage-toward-the-promised-land",
+    "category": "Sacramental"
+   }
+  ],
+  "ccc": [
+   117,
+   527,
+   1094,
+   1221,
+   1222
+  ]
+ },
+ {
+  "id": "christ",
+  "name": "Christ",
+  "testament": "NT",
+  "description": "Jesus Christ, the incarnate Son of God and fulfillment of all Old Testament types.",
+  "out": [],
+  "inc": [
+   {
+    "id": "abel",
+    "category": "Christological"
+   },
+   {
+    "id": "adam",
+    "category": "Christological"
+   },
+   {
+    "id": "anointing-of-kings-priests-and-prophets",
+    "category": "Christological"
+   },
+   {
+    "id": "balaam",
+    "category": "Christological"
+   },
+   {
+    "id": "binding-of-isaac",
+    "category": "Christological"
+   },
+   {
+    "id": "brazen-serpent",
+    "category": "Christological"
+   },
+   {
+    "id": "burning-bush",
+    "category": "Christological"
+   },
+   {
+    "id": "ceremonial-law",
+    "category": "Christological"
+   },
+   {
+    "id": "cloud-in-desert",
+    "category": "Christological"
+   },
+   {
+    "id": "cyrus",
+    "category": "Christological"
+   },
+   {
+    "id": "david",
+    "category": "Christological"
+   },
+   {
+    "id": "elijah",
+    "category": "Christological"
+   },
+   {
+    "id": "elisha",
+    "category": "Christological"
+   },
+   {
+    "id": "gods-healing-word",
+    "category": "Christological"
+   },
+   {
+    "id": "hezekiah",
+    "category": "Christological"
+   },
+   {
+    "id": "hosea",
+    "category": "Christological"
+   },
+   {
+    "id": "isaiah-the-prophet",
+    "category": "Christological"
+   },
+   {
+    "id": "israel-jeshurun",
+    "category": "Christological"
+   },
+   {
+    "id": "jacob",
+    "category": "Christological"
+   },
+   {
+    "id": "jephthah",
+    "category": "Christological"
+   },
+   {
+    "id": "job",
+    "category": "Christological"
+   },
+   {
+    "id": "joseph",
+    "category": "Christological"
+   },
+   {
+    "id": "joshua",
+    "category": "Christological"
+   },
+   {
+    "id": "josias",
+    "category": "Christological"
+   },
+   {
+    "id": "judas-maccabeus",
+    "category": "Christological"
+   },
+   {
+    "id": "levitical-leprosy-laws",
+    "category": "Christological"
+   },
+   {
+    "id": "manna",
+    "category": "Christological"
+   },
+   {
+    "id": "moses",
+    "category": "Christological"
+   },
+   {
+    "id": "nehemiah",
+    "category": "Christological"
+   },
+   {
+    "id": "noah",
+    "category": "Christological"
+   },
+   {
+    "id": "ot-sacrifices",
+    "category": "Christological"
+   },
+   {
+    "id": "passover",
+    "category": "Christological"
+   },
+   {
+    "id": "raphael",
+    "category": "Christological"
+   },
+   {
+    "id": "red-heifer",
+    "category": "Christological"
+   },
+   {
+    "id": "return-from-babylonian-captivity",
+    "category": "Christological"
+   },
+   {
+    "id": "samson",
+    "category": "Christological"
+   },
+   {
+    "id": "samuel",
+    "category": "Christological"
+   },
+   {
+    "id": "solomon",
+    "category": "Christological"
+   },
+   {
+    "id": "the-altar-of-incense",
+    "category": "Christological"
+   },
+   {
+    "id": "the-angel-of-the-lord",
+    "category": "Christological"
+   },
+   {
+    "id": "the-ark-of-the-covenant",
+    "category": "Christological"
+   },
+   {
+    "id": "the-exodus-from-egypt",
+    "category": "Christological"
+   },
+   {
+    "id": "the-golden-candlestick-menorah",
+    "category": "Christological"
+   },
+   {
+    "id": "the-mosaic-law",
+    "category": "Christological"
+   },
+   {
+    "id": "the-pool-of-siloam",
+    "category": "Christological"
+   },
+   {
+    "id": "the-prophets",
+    "category": "Christological"
+   },
+   {
+    "id": "the-rebuilt-temple",
+    "category": "Christological"
+   },
+   {
+    "id": "the-rejected-cornerstone",
+    "category": "Christological"
+   },
+   {
+    "id": "the-scapegoat-day-of-atonement",
+    "category": "Christological"
+   },
+   {
+    "id": "the-shepherd-of-israel",
+    "category": "Christological"
+   },
+   {
+    "id": "the-son-of-isaiah-emmanuel-sign",
+    "category": "Christological"
+   },
+   {
+    "id": "the-sun",
+    "category": "Christological"
+   },
+   {
+    "id": "the-temple-of-jerusalem",
+    "category": "Christological"
+   },
+   {
+    "id": "the-voice-of-the-lord-thunder",
+    "category": "Christological"
+   },
+   {
+    "id": "the-year-of-jubilee",
+    "category": "Christological"
+   },
+   {
+    "id": "water-from-rock",
+    "category": "Christological"
+   },
+   {
+    "id": "zorobabel",
+    "category": "Christological"
+   }
+  ],
+  "ccc": [
+   128,
+   129,
+   130
+  ]
+ },
+ {
+  "id": "christ-high-priest",
+  "name": "Christ the High Priest",
+  "testament": "NT",
+  "description": "Christ as the eternal high priest who offered himself once for all on the cross.",
+  "out": [],
+  "inc": [
+   {
+    "id": "aaron",
+    "category": "Christological"
+   },
+   {
+    "id": "josedec",
+    "category": "Christological"
+   },
+   {
+    "id": "melchizedek",
+    "category": "Christological"
+   },
+   {
+    "id": "ot-priesthood",
+    "category": "Christological"
+   },
+   {
+    "id": "ot-sacrifices",
+    "category": "Christological"
+   }
+  ],
+  "ccc": [
+   1544
+  ]
+ },
+ {
+  "id": "christs-ascension",
+  "name": "Christ's Ascension",
+  "testament": "NT",
+  "description": "Christ's ascension into heaven and exaltation to the right hand of the Father.",
+  "out": [],
+  "inc": [
+   {
+    "id": "the-divine-chariot-theophany",
+    "category": "Christological"
+   },
+   {
+    "id": "the-gates-lifted-for-the-king-of-glory",
+    "category": "Christological"
+   },
+   {
+    "id": "the-glory-of-the-lord-departing-the-temple",
+    "category": "Christological"
+   },
+   {
+    "id": "the-holy-of-holies",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "christs-passion",
+  "name": "Christ's Passion",
+  "testament": "NT",
+  "description": "The suffering and crucifixion of Jesus Christ for the redemption of mankind.",
+  "out": [],
+  "inc": [
+   {
+    "id": "aaron",
+    "category": "Christological"
+   },
+   {
+    "id": "binding-of-isaac",
+    "category": "Christological"
+   },
+   {
+    "id": "brazen-serpent",
+    "category": "Christological"
+   },
+   {
+    "id": "david",
+    "category": "Christological"
+   },
+   {
+    "id": "elisha",
+    "category": "Christological"
+   },
+   {
+    "id": "jephthahs-daughter",
+    "category": "Christological"
+   },
+   {
+    "id": "jeremiah",
+    "category": "Christological"
+   },
+   {
+    "id": "job",
+    "category": "Christological"
+   },
+   {
+    "id": "jonah",
+    "category": "Christological"
+   },
+   {
+    "id": "judas-maccabeus",
+    "category": "Christological"
+   },
+   {
+    "id": "liver-of-the-fish-tobit",
+    "category": "Christological"
+   },
+   {
+    "id": "moses",
+    "category": "Covenantal"
+   },
+   {
+    "id": "ot-sacrifices",
+    "category": "Christological"
+   },
+   {
+    "id": "passover",
+    "category": "Christological"
+   },
+   {
+    "id": "samson",
+    "category": "Christological"
+   },
+   {
+    "id": "the-scapegoat-day-of-atonement",
+    "category": "Christological"
+   },
+   {
+    "id": "the-unbroken-bones-of-the-just",
+    "category": "Christological"
+   },
+   {
+    "id": "the-veil-of-the-tabernacle",
+    "category": "Christological"
+   },
+   {
+    "id": "zedekiah",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "christs-victory",
+  "name": "Christ's Victory",
+  "testament": "NT",
+  "description": "Christ's triumph over sin, death, and Satan through the Paschal Mystery.",
+  "out": [],
+  "inc": [
+   {
+    "id": "david",
+    "category": "Christological"
+   },
+   {
+    "id": "goliath",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "judas-maccabeus",
+    "category": "Christological"
+   },
+   {
+    "id": "red-sea-crossing",
+    "category": "Christological"
+   },
+   {
+    "id": "return-from-babylonian-captivity",
+    "category": "Christological"
+   },
+   {
+    "id": "samson",
+    "category": "Christological"
+   }
+  ],
+  "ccc": [
+   117
+  ]
+ },
+ {
+  "id": "christ-church",
+  "name": "Christ's union with the Church",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "adam-and-eve",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "david",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "solomon",
+    "category": "Christological"
+   },
+   {
+    "id": "the-spouse-of-the-canticle-song-of-songs",
+    "category": "Christological"
+   },
+   {
+    "id": "the-vineyard-of-israel",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "descent-of-the-holy-spirit-at-pentecost",
+  "name": "Descent of the Holy Spirit at Pentecost",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "divine-fire-lightning",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "feast-of-pentecost",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-prophets",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "destruction-of-jerusalem-as-divine-judgment",
+  "name": "Destruction of Jerusalem as Divine Judgment",
+  "testament": "NT",
+  "description": null,
+  "out": [
+   {
+    "id": "final-judgment",
+    "category": "Eschatological"
+   }
+  ],
+  "inc": [
+   {
+    "id": "absalom",
+    "category": "Eschatological"
+   },
+   {
+    "id": "samson",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-babylonian-exile",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-glory-of-the-lord-departing-the-temple",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-tabernacle-gods-dwelling-place",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "eternal-life",
+  "name": "Eternal Life",
+  "testament": "NT",
+  "description": "The blessed inheritance of heaven promised to those who are baptized into Christ.",
+  "out": [],
+  "inc": [
+   {
+    "id": "jordan-crossing",
+    "category": "Eschatological"
+   },
+   {
+    "id": "temporal-rewards-of-the-old-law",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-wilderness-pilgrimage-toward-the-promised-land",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": [
+   1222
+  ]
+ },
+ {
+  "id": "eucharist",
+  "name": "Eucharist",
+  "testament": "NT",
+  "description": "The sacrament of Christ's Body and Blood under the appearances of bread and wine.",
+  "out": [],
+  "inc": [
+   {
+    "id": "elijah",
+    "category": "Sacramental"
+   },
+   {
+    "id": "judah",
+    "category": "Sacramental"
+   },
+   {
+    "id": "manna",
+    "category": "Sacramental"
+   },
+   {
+    "id": "melchizedek",
+    "category": "Sacramental"
+   },
+   {
+    "id": "ot-sacrifices",
+    "category": "Sacramental"
+   },
+   {
+    "id": "passover",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-feast-on-mount-zion",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-mincha-unbloody-sacrifice",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-table-of-showbread-bread-of-the-presence",
+    "category": "Sacramental"
+   }
+  ],
+  "ccc": [
+   1094,
+   1334
+  ]
+ },
+ {
+  "id": "final-judgment",
+  "name": "Final Judgment",
+  "testament": "NT",
+  "description": "The Last Judgment at the end of time, when Christ will judge the living and the dead.",
+  "out": [],
+  "inc": [
+   {
+    "id": "destruction-of-jerusalem-as-divine-judgment",
+    "category": "Eschatological"
+   },
+   {
+    "id": "destruction-of-sodom",
+    "category": "Eschatological"
+   },
+   {
+    "id": "elijah",
+    "category": "Eschatological"
+   },
+   {
+    "id": "gods-deliverance-from-sennacherib",
+    "category": "Eschatological"
+   },
+   {
+    "id": "gog-and-magog",
+    "category": "Eschatological"
+   },
+   {
+    "id": "israels-disobedience-in-the-wilderness",
+    "category": "Eschatological"
+   },
+   {
+    "id": "josias",
+    "category": "Eschatological"
+   },
+   {
+    "id": "noahs-flood",
+    "category": "Eschatological"
+   },
+   {
+    "id": "saul",
+    "category": "Eschatological"
+   },
+   {
+    "id": "temporal-chastisements-of-israel",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-cup-of-divine-wrath",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-mark-of-tau",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-threshing-floor",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "heaven",
+  "name": "Heaven",
+  "testament": "NT",
+  "description": "The heavenly tabernacle and city, the eternal dwelling place of God and his people (Apoc 15:5; Heb 12:22).",
+  "out": [],
+  "inc": [
+   {
+    "id": "the-ark-of-the-covenant",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-feast-on-mount-zion",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-holy-of-holies",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-mosaic-law",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-promised-land",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-tabernacle-gods-dwelling-place",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-temple-of-jerusalem",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "heretics",
+  "name": "Heretics",
+  "testament": "NT",
+  "description": "Those who teach false doctrine and oppose the true faith within the Christian era.",
+  "out": [],
+  "inc": [
+   {
+    "id": "ishmael",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "sanaballat",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "holy-orders",
+  "name": "Holy Orders",
+  "testament": "NT",
+  "description": "The Sacrament of Holy Orders, by which men are ordained to the Christian priesthood.",
+  "out": [],
+  "inc": [
+   {
+    "id": "david",
+    "category": "Sacramental"
+   },
+   {
+    "id": "jotham",
+    "category": "Sacramental"
+   },
+   {
+    "id": "ot-priesthood",
+    "category": "Sacramental"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "john-the-baptist",
+  "name": "John the Baptist",
+  "testament": "NT",
+  "description": "John the Baptist, who came in the spirit and power of Elijah to prepare the way before Christ's first coming (Matt 11:14; 17:11).",
+  "out": [],
+  "inc": [
+   {
+    "id": "elijah",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "judas-and-simony",
+  "name": "Judas and Simony",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "gehazi",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "mary",
+  "name": "Mary",
+  "testament": "NT",
+  "description": "The Blessed Virgin Mary, Mother of God and Mother of the Church.",
+  "out": [],
+  "inc": [
+   {
+    "id": "aaron",
+    "category": "Marian"
+   },
+   {
+    "id": "deborah",
+    "category": "Marian"
+   },
+   {
+    "id": "esther",
+    "category": "Marian"
+   },
+   {
+    "id": "eve",
+    "category": "Marian"
+   },
+   {
+    "id": "gideon",
+    "category": "Marian"
+   },
+   {
+    "id": "hannah",
+    "category": "Marian"
+   },
+   {
+    "id": "jael",
+    "category": "Marian"
+   },
+   {
+    "id": "jephthahs-daughter",
+    "category": "Marian"
+   },
+   {
+    "id": "judith",
+    "category": "Marian"
+   },
+   {
+    "id": "miriam",
+    "category": "Marian"
+   },
+   {
+    "id": "ruth",
+    "category": "Marian"
+   },
+   {
+    "id": "sarah",
+    "category": "Marian"
+   },
+   {
+    "id": "the-ark-of-the-covenant",
+    "category": "Marian"
+   },
+   {
+    "id": "the-virgin-of-emmanuel-isaiah-7-14",
+    "category": "Marian"
+   }
+  ],
+  "ccc": [
+   489,
+   2676
+  ]
+ },
+ {
+  "id": "persecutors-of-the-church",
+  "name": "Persecutors of the Church",
+  "testament": "NT",
+  "description": "Those who persecute the Christian Church and, like their OT figures, are ultimately judged.",
+  "out": [],
+  "inc": [
+   {
+    "id": "edom",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "sennacherib",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-foolish-shepherd",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "religious-orders-consecrated-life",
+  "name": "Religious Orders (Consecrated Life)",
+  "testament": "NT",
+  "description": "The consecrated religious orders of the Church, professing poverty, chastity, and obedience in imitation of the apostles (Matt 19:12).",
+  "out": [],
+  "inc": [
+   {
+    "id": "the-rechabites",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "sacrament-of-penance",
+  "name": "Sacrament of Penance",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "old-law-confession-and-satisfaction",
+    "category": "Sacramental"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "new-covenant-sacraments",
+  "name": "Sacraments of the New Covenant",
+  "testament": "NT",
+  "description": "The seven sacraments instituted by Christ as signs and means of grace.",
+  "out": [],
+  "inc": [
+   {
+    "id": "joshua",
+    "category": "Covenantal"
+   },
+   {
+    "id": "levitical-leprosy-laws",
+    "category": "Sacramental"
+   },
+   {
+    "id": "ot-priesthood",
+    "category": "Sacramental"
+   },
+   {
+    "id": "ot-sacrifices",
+    "category": "Sacramental"
+   },
+   {
+    "id": "red-heifer",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-invitation-to-the-waters-isaiah-55",
+    "category": "Sacramental"
+   },
+   {
+    "id": "the-voice-of-the-lord-thunder",
+    "category": "Sacramental"
+   }
+  ],
+  "ccc": [
+   1150
+  ]
+ },
+ {
+  "id": "satan-the-devil",
+  "name": "Satan (the Devil)",
+  "testament": "NT",
+  "description": "The spiritual adversary who, despite his power, is ultimately subject to God and defeated by Christ.",
+  "out": [],
+  "inc": [
+   {
+    "id": "leviathan",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-king-of-tyre",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "spiritual-gifts-of-christ",
+  "name": "Spiritual Gifts of Christ",
+  "testament": "NT",
+  "description": "The grace and spiritual refreshment that flows from Christ to believers.",
+  "out": [],
+  "inc": [
+   {
+    "id": "elisha",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-golden-candlestick-menorah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "water-from-rock",
+    "category": "Christological"
+   }
+  ],
+  "ccc": [
+   1094
+  ]
+ },
+ {
+  "id": "spiritual-purity-and-interior-holiness",
+  "name": "Spiritual Purity and Interior Holiness",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "circumcision",
+    "category": "Covenantal"
+   },
+   {
+    "id": "dietary-laws",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-adoration-of-the-magi",
+  "name": "The Adoration of the Magi",
+  "testament": "NT",
+  "description": "The wise men from the East who came to adore the infant Christ with gifts of gold, frankincense, and myrrh (Matt 2).",
+  "out": [],
+  "inc": [
+   {
+    "id": "the-kings-of-sheba-bearing-gifts",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-betrayal-by-judas",
+  "name": "The Betrayal by Judas",
+  "testament": "NT",
+  "description": "Judas, who ate bread with Christ and was entrusted with the purse, betraying him with a kiss (John 13:18).",
+  "out": [],
+  "inc": [
+   {
+    "id": "ahithophel",
+    "category": "Christological"
+   },
+   {
+    "id": "david",
+    "category": "Christological"
+   },
+   {
+    "id": "zechariahs-thirty-pieces-of-silver",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-conversion-of-the-jews",
+  "name": "The Conversion of the Jews",
+  "testament": "NT",
+  "description": "The final conversion and restoration of the Jewish people, by which 'all Israel shall be saved' (Rom 11:26).",
+  "out": [],
+  "inc": [
+   {
+    "id": "return-from-babylonian-captivity",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-elect-predestinate",
+  "name": "The Elect (Predestinate)",
+  "testament": "NT",
+  "description": "Those whom God has chosen and predestined to eternal glory by his mercy, apart from any foreseen merits.",
+  "out": [],
+  "inc": [
+   {
+    "id": "jacob",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-gentiles-grafted-into-christs-church",
+  "name": "The Gentiles Grafted into Christ's Church",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "david",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "gideon",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "jonah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "judah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "moses",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "proselytes-strangers-in-israel",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "queen-of-sheba",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "rahab",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "return-from-babylonian-captivity",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "ruth",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-wilderness-pilgrimage-toward-the-promised-land",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-gospel-new-covenant",
+  "name": "The Gospel (New Covenant)",
+  "testament": "NT",
+  "description": "The Gospel of Jesus Christ, the New Covenant which fulfills and perfects the Law.",
+  "out": [],
+  "inc": [
+   {
+    "id": "ceremonial-law",
+    "category": "Covenantal"
+   },
+   {
+    "id": "dietary-laws",
+    "category": "Covenantal"
+   },
+   {
+    "id": "isaac",
+    "category": "Covenantal"
+   },
+   {
+    "id": "mosess-veil",
+    "category": "Covenantal"
+   },
+   {
+    "id": "ot-sacrifices",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-mosaic-law",
+    "category": "Covenantal"
+   },
+   {
+    "id": "the-vineyard-of-israel",
+    "category": "Covenantal"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-holy-spirit-as-divine-guide",
+  "name": "The Holy Spirit as Divine Guide",
+  "testament": "NT",
+  "description": "The Holy Spirit who guides the Church and individual believers, as the pillar of cloud guided Israel.",
+  "out": [],
+  "inc": [
+   {
+    "id": "cloud-in-desert",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-one-true-church",
+  "name": "The One True Church",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "ceremonial-law",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "david",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "deborah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "esther",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "hannah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "hezekiah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "isaac",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "israel-jeshurun",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "jacob",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "jael",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "job",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "joshua",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "judith",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "leah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "noahs-ark",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "ot-priesthood",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "proselytes-strangers-in-israel",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "rebecca",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "return-from-babylonian-captivity",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "sarah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-ass-and-the-colt-palm-sunday",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-faithful-remnant",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-golden-candlestick-menorah",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-heavenly-jerusalem-prophetic-vision",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-heavens",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-living-waters-from-the-sanctuary",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-rebuilt-temple",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-rejected-cornerstone",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-stone-daniels-vision",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-synagogue-old-covenant-assembly",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-tabernacle-gods-dwelling-place",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-temple-of-jerusalem",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-threshing-floor",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "the-wilderness-pilgrimage-toward-the-promised-land",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "zorobabel",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-reprobate-the-rejected",
+  "name": "The Reprobate (the Rejected)",
+  "testament": "NT",
+  "description": "Those rejected by God and excluded from salvation, in contrast to the elect.",
+  "out": [],
+  "inc": [
+   {
+    "id": "esau",
+    "category": "Eschatological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-resurrection",
+  "name": "The Resurrection",
+  "testament": "NT",
+  "description": "The resurrection of Christ and the consequent bodily resurrection of believers.",
+  "out": [],
+  "inc": [
+   {
+    "id": "binding-of-isaac",
+    "category": "Christological"
+   },
+   {
+    "id": "david",
+    "category": "Eschatological"
+   },
+   {
+    "id": "job",
+    "category": "Eschatological"
+   },
+   {
+    "id": "jonah",
+    "category": "Christological"
+   },
+   {
+    "id": "return-from-babylonian-captivity",
+    "category": "Christological"
+   },
+   {
+    "id": "samson",
+    "category": "Christological"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-saints-in-heavenly-worship",
+  "name": "The Saints in Heavenly Worship",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "cherubim-of-the-ark",
+    "category": "Ecclesial"
+   },
+   {
+    "id": "red-sea-crossing",
+    "category": "Eschatological"
+   },
+   {
+    "id": "the-altar-of-incense",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-synagogue-as-preparation-for-the-church",
+  "name": "The Synagogue as Preparation for the Church",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "deborah",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-synagogues-persecution-of-the-church",
+  "name": "The Synagogue's Persecution of the Church",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "ishmael",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "the-twelve-apostles",
+  "name": "The Twelve Apostles",
+  "testament": "NT",
+  "description": "The twelve apostles chosen by Christ, from whom the Christian people descend according to the spirit.",
+  "out": [],
+  "inc": [
+   {
+    "id": "the-twelve-patriarchs",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ },
+ {
+  "id": "unbelievers-rejection-of-christ-crucified",
+  "name": "Unbelievers' rejection of Christ crucified",
+  "testament": "NT",
+  "description": null,
+  "out": [],
+  "inc": [
+   {
+    "id": "absalom",
+    "category": "Christological"
+   },
+   {
+    "id": "noah",
+    "category": "Ecclesial"
+   }
+  ],
+  "ccc": []
+ }
+]

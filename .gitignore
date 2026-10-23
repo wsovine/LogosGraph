@@ -74,3 +74,10 @@ data/extracted/.member_adjudication_checkpoint.json
 
 # Generated pyvis network exports from typology notebooks
 notebooks/**/typology_*.html
+
+# Catechism pass: files holding full Catechism text (data/raw/ is ignored too) or regenerable inputs.
+# Regenerate with scripts/prepare_ccc_batches.py and scripts/build_ccc_verify_packets.py.
+data/extracted/ccc_pass/batches/
+data/extracted/ccc_pass/paragraphs.json
+data/extracted/ccc_pass/verse_ids.json
+data/extracted/ccc_pass/verify/packet-*.md

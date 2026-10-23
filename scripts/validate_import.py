@@ -19,8 +19,8 @@ EXPECTED_EXTERNAL_DOCS = 350  # Approximate minimum (~390 actual)
 EXPECTED_CCC_EXTERNAL_REFS = 500  # Approximate minimum (~556 actual)
 
 # Typology expected values (full seed + reviewed import; ~198 types)
-EXPECTED_TYPE_COUNT = 150  # Approximate minimum (~198 actual)
-EXPECTED_PREFIGURES = 250  # Approximate minimum (~272 actual)
+EXPECTED_TYPE_COUNT = 150  # Approximate minimum (~220 actual after the Catechism pass)
+EXPECTED_PREFIGURES = 250  # Approximate minimum (~309 actual after the Catechism pass)
 EXPECTED_BAPTISM_TYPES = 5  # OT types prefiguring Baptism (~17 actual)
 EXPECTED_CCC1094_TYPES = 9  # Types taught by CCC-1094 (9 actual)
 
@@ -406,6 +406,33 @@ def main():
             "Type required properties",
             bad_types == 0,
             f"Found {bad_types} Types with missing name or invalid testament (expected 0)"
+        )
+
+        # Check 28b: Every Catechism source on a link is a paragraph that TEACHES one of its endpoints
+        result = session.run("""
+            MATCH (a:Type)-[r:PREFIGURES]->(b:Type)
+            UNWIND r.sources AS s
+            WITH a, b, s WHERE s STARTS WITH 'CCC-' AND NOT EXISTS {
+                MATCH (c:CatechismParagraph {id: s})-[:TEACHES]->(t:Type) WHERE t = a OR t = b
+            }
+            RETURN count(*) AS count
+        """)
+        untaught = result.single()["count"]
+        all_passed &= check(
+            "Catechism link sources teach an endpoint",
+            untaught == 0,
+            f"Found {untaught} CCC sources with no TEACHES to either endpoint (expected 0)"
+        )
+
+        # Check 28c: Catechism-pass verse evidence records its paragraph
+        result = session.run("""
+            MATCH (:Verse)-[r:MEMBER_OF {source: 'ccc-review'}]->(:Type)
+            RETURN count(r) AS total, count(CASE WHEN r.ccc IS NULL THEN 1 END) AS missing
+        """).single()
+        all_passed &= check(
+            "Catechism-pass MEMBER_OF provenance",
+            result["missing"] == 0,
+            f"{result['total']} ccc-review MEMBER_OF edges, {result['missing']} without a paragraph (expected 0)"
         )
 
         # Check 29: MEMBER_OF / TEACHES only point at Type nodes

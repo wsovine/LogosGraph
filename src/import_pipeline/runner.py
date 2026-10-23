@@ -35,6 +35,11 @@ from src.data.typology_parser import (
     parse_seed_memberships,
     parse_approved_memberships,
     parse_teaches,
+    parse_ccc_approved_prefigures,
+    parse_ccc_approved_teaches,
+    parse_ccc_approved_memberships,
+    apply_type_aliases,
+    load_type_changes,
 )
 from src.data.typology_schemas import validate_all_seed_files
 from src.import_pipeline.typology_importer import (
@@ -42,6 +47,7 @@ from src.import_pipeline.typology_importer import (
     import_prefigures,
     import_verse_memberships,
     import_teaches,
+    import_ccc_memberships,
 )
 
 logger = logging.getLogger(__name__)
@@ -191,7 +197,7 @@ def run_full_import(
     if ccc_external_skipped > 0:
         print(f"   ⚠️  Skipped {ccc_external_skipped:,} (missing references)")
 
-    # Step 13: Import biblical typology (seed + reviewed)
+    # Step 13: Import biblical typology (seed + reviewed Haydock + reviewed Catechism pass)
     print("\n⛪ Step 13: Importing biblical typology...")
     step_start = time.time()
     seed_valid, seed_errors = validate_all_seed_files()
@@ -199,11 +205,21 @@ def run_full_import(
         raise ValueError(f"Typology seed files failed validation: {seed_errors}")
 
     type_count = import_types(parse_all_types(), connection)
-    prefigures = list(parse_seed_prefigures()) + list(parse_approved_prefigures())
-    prefigures_created, prefigures_skipped = import_prefigures(prefigures, connection)
+    prefigures = (list(parse_seed_prefigures()) + list(parse_approved_prefigures())
+                  + list(parse_ccc_approved_prefigures()))
+    prefigures_created, prefigures_skipped = import_prefigures(
+        apply_type_aliases(prefigures, ("from", "to")), connection)
     memberships = list(parse_seed_memberships()) + list(parse_approved_memberships())
-    member_created, member_skipped = import_verse_memberships(memberships, connection)
-    teaches_created, teaches_skipped = import_teaches(list(parse_teaches()), connection)
+    member_created, member_skipped = import_verse_memberships(
+        apply_type_aliases(memberships, ("type_id",)), connection)
+    ccc_members = apply_type_aliases(list(parse_ccc_approved_memberships()), ("type_id",))
+    if ccc_members:
+        created, skipped = import_ccc_memberships(ccc_members, connection)
+        member_created, member_skipped = member_created + created, member_skipped + skipped
+    aliases = load_type_changes()["aliases"]
+    teaches = [{**t, "type_ids": [aliases.get(i, i) for i in t["type_ids"]]}
+               for t in [*parse_teaches(), *parse_ccc_approved_teaches()]]
+    teaches_created, teaches_skipped = import_teaches(teaches, connection)
 
     stats["type_count"] = type_count
     stats["prefigures_created"] = prefigures_created

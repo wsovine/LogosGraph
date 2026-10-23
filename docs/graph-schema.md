@@ -98,7 +98,8 @@ when many sources attest the same connection, their provenance is accumulated in
 - `sources`: Array of attestations — CCC paragraph ids (`"CCC-1094"`) and/or `"haydock"`.
 - `source_verses`: Array of verse ids whose Haydock commentary attests the connection (rich provenance;
   e.g. `david → christ` carries ~26 source_verses).
-- `notes`: Authoritative description (CCC) or reviewer note (Haydock review).
+- `notes`: Authoritative description (CCC), reviewer note (Haydock review), or, for links created by the
+  Catechism pass, the paragraph's own words (`CCC 1541: "…"`).
 
 ### Other Relationships
 
@@ -122,6 +123,9 @@ carry provenance:
   reviewed: true               # passed human review
 }]
 ```
+
+Verses that the Catechism pass attached carry `source: "ccc-review"`, `ccc: "CCC-1541"` (the paragraph that
+cites them), and `reviewed: true`.
 
 Query the curated evidence layer only with `WHERE r.source IS NULL`.
 

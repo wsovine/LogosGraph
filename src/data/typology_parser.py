@@ -5,6 +5,8 @@ Yields normalized dicts for the typology importer:
 - PREFIGURES relationships (from ccc_prefigures.json + typology_approved.jsonl)
 - MEMBER_OF relationships (from ccc_verse_memberships.json + typology_approved.jsonl)
 - TEACHES relationships (from ccc_teaches.json)
+- Catechism-pass rows (from ccc_typology_approved.jsonl) and the Type changes
+  overlay (type_changes.jsonl: new Types, renames/broadenings, merges)
 
 Parsers yield dicts; the importer batches them (mirrors src/data/cpdv_parser.py).
 """
@@ -60,16 +62,22 @@ def parse_reviewed_types(file_path: Path | None = None) -> Generator[dict, None,
 def parse_all_types(
     seed_path: Path | None = None, reviewed_path: Path | None = None
 ) -> Generator[dict, None, None]:
-    """Yield seed + reviewed Type nodes, de-duplicating by id (seed wins)."""
+    """Yield seed + reviewed Type nodes, de-duplicating by id (seed wins).
+
+    The Type changes overlay applies last: renamed/broadened Types get their new
+    name and description, merged-away Types are dropped, and new Types are added.
+    """
+    changes = load_type_changes()
     seen: set[str] = set()
-    for type_data in parse_seed_types(seed_path):
-        seen.add(type_data["id"])
-        yield type_data
-    for type_data in parse_reviewed_types(reviewed_path):
-        if type_data["id"] in seen:
+    for type_data in [*parse_seed_types(seed_path), *parse_reviewed_types(reviewed_path)]:
+        if type_data["id"] in seen or type_data["id"] in changes["aliases"]:
             continue
         seen.add(type_data["id"])
-        yield type_data
+        yield {**type_data, **changes["overrides"].get(type_data["id"], {})}
+    for type_data in changes["new"]:
+        if type_data["id"] not in seen:
+            seen.add(type_data["id"])
+            yield type_data
 
 
 def _normalize_type(type_data: dict) -> dict:
@@ -207,6 +215,117 @@ def parse_teaches(file_path: Path | None = None) -> Generator[dict, None, None]:
             "ccc_id": teaches["ccc_id"],
             "type_ids": teaches.get("type_ids", []),
         }
+
+
+# ---------------------------------------------------------------------------
+# Catechism typology pass (dev/active/ccc-typology-pass/)
+# ---------------------------------------------------------------------------
+
+def load_type_changes(file_path: Path | None = None) -> dict:
+    """Read the approved Type decisions overlay.
+
+    Returns {"new": [Type rows], "overrides": {id: {name, description}},
+    "aliases": {absorbed_id: survivor_id}}. Renames and broadenings keep the id.
+    """
+    if file_path is None:
+        file_path = REVIEWED_DIR / "type_changes.jsonl"
+    changes: dict = {"new": [], "overrides": {}, "aliases": {}}
+    if not file_path.exists():
+        return changes
+    with open(file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            d = json.loads(line)
+            if d["action"] == "new":
+                changes["new"].append(_normalize_type({
+                    "id": d["new_id"], "name": d["name"], "testament": d["testament"],
+                    "description": d.get("description"), "source": "ccc-review", "reviewed": True,
+                }))
+            elif d["action"] in ("broaden", "rename", "merge"):
+                override = {"name": d["name"]}
+                if d.get("description"):
+                    override["description"] = d["description"]
+                changes["overrides"][d["target_id"]] = override
+                for absorbed in d.get("absorbs") or []:
+                    changes["aliases"][absorbed] = d["target_id"]
+    return changes
+
+
+def apply_type_aliases(rows: list[dict], keys: tuple[str, ...]) -> list[dict]:
+    """Re-point rows at merge survivors (merged-away Type ids -> surviving id)."""
+    aliases = load_type_changes()["aliases"]
+    if not aliases:
+        return rows
+    return [{**r, **{k: aliases.get(r[k], r[k]) for k in keys if r.get(k)}} for r in rows]
+
+
+def _ccc_approved(file_path: Path | None) -> list[dict]:
+    if file_path is None:
+        file_path = REVIEWED_DIR / "ccc_typology_approved.jsonl"
+    if not file_path.exists():
+        return []
+    with open(file_path, "r", encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def _ccc_quotes(rec: dict) -> list[tuple[int, str]]:
+    """(paragraph, quote) pairs: one for a plain row, one per paragraph for a synthesized row."""
+    if rec.get("quotes"):
+        return [(q["ccc"], q["quote"]) for q in rec["quotes"]]
+    return [(rec["ccc"], rec["quote"])]
+
+
+def parse_ccc_approved_prefigures(file_path: Path | None = None) -> Generator[dict, None, None]:
+    """Yield PREFIGURES rows from the reviewed Catechism pass.
+
+    Each attesting paragraph becomes a source ("CCC-1541"). The note is the
+    Catechism's own words, never AI text. A link the graph already had keeps its
+    category (bucket A rows carry it as existing_category).
+    """
+    for rec in _ccc_approved(file_path):
+        if rec["kind"] != "prefigures":
+            continue
+        quotes = _ccc_quotes(rec)
+        note = " … ".join(f"CCC {n}: “{q}”" for n, q in quotes)
+        for n, _ in quotes:
+            yield {
+                "from": rec["type_id"],
+                "to": rec["antitype_id"],
+                "source": f"CCC-{n}",
+                "confidence": rec.get("confidence"),
+                "category": rec.get("existing_category") or rec.get("category"),
+                "notes": note,
+                "source_verse": None,
+            }
+
+
+def parse_ccc_approved_teaches(file_path: Path | None = None) -> Generator[dict, None, None]:
+    """Yield {ccc_id, type_ids[]} TEACHES rows from the reviewed Catechism pass.
+
+    A plain pair: the paragraph teaches both Types. A synthesized pair: the row's
+    own paragraph carries the antitype, and the other quoted paragraphs the type.
+    """
+    for rec in _ccc_approved(file_path):
+        if rec["kind"] == "teaches":
+            yield {"ccc_id": f"CCC-{rec['ccc']}", "type_ids": [rec["type_id"]]}
+        elif rec.get("quotes"):
+            for n, _ in _ccc_quotes(rec):
+                side = rec["antitype_id"] if n == rec["ccc"] else rec["type_id"]
+                yield {"ccc_id": f"CCC-{n}", "type_ids": [side]}
+        else:
+            yield {"ccc_id": f"CCC-{rec['ccc']}", "type_ids": [rec["type_id"], rec["antitype_id"]]}
+
+
+def parse_ccc_approved_memberships(file_path: Path | None = None) -> Generator[dict, None, None]:
+    """Yield {verse_id, type_id, ccc} for verse evidence approved with Catechism-pass rows."""
+    for rec in _ccc_approved(file_path):
+        sides = {"type_verses": rec["type_id"], "antitype_verses": rec.get("antitype_id"),
+                 "verses": rec["type_id"]}
+        for side, verse_ids in (rec.get("verse_ids") or {}).items():
+            for verse_id in verse_ids:
+                if sides.get(side):
+                    yield {"verse_id": verse_id, "type_id": sides[side], "ccc": f"CCC-{rec['ccc']}"}
 
 
 if __name__ == "__main__":

@@ -205,6 +205,41 @@ def import_mined_memberships(
     )
 
 
+def import_ccc_memberships(
+    rows: Iterable[dict],
+    connection: Neo4jConnection | None = None,
+    batch_size: int | None = None,
+) -> tuple[int, int]:
+    """Import MEMBER_OF edges for verses approved in the Catechism typology pass.
+
+    Like :func:`import_mined_memberships`, the edge carries provenance
+    (source='ccc-review', the attesting paragraph) set ON CREATE only, so an
+    existing curated or mined edge is left untouched.
+
+    Args:
+        rows: dicts with keys verse_id, type_id, ccc (e.g. "CCC-1541").
+
+    Returns:
+        Tuple of (edges_processed, rows_skipped) -- skipped rows had a missing
+        Verse or Type endpoint.
+    """
+    query = """
+        UNWIND $rows AS m
+        MATCH (t:Type {id: m.type_id})
+        MATCH (v:Verse {id: m.verse_id})
+        MERGE (v)-[r:MEMBER_OF]->(t)
+        ON CREATE SET
+            r.source = 'ccc-review',
+            r.ccc = m.ccc,
+            r.reviewed = true
+        RETURN count(r) AS created
+    """
+    return _import_edges(
+        list(rows), query, "rows", lambda batch: len(batch),
+        "Importing Catechism-pass MEMBER_OF edges", connection, batch_size,
+    )
+
+
 def import_teaches(
     teaches: Iterable[dict],
     connection: Neo4jConnection | None = None,

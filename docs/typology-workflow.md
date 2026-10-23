@@ -240,6 +240,47 @@ narrates, institutes, prophesies, or explicitly invokes it. Thematic
 similarity is not membership, and a verse about the antitype is not
 evidence for the type.
 
+## Step 6: Catechism Typology Pass
+
+The CCC seed (Step 0) was a hand-picked set of 13 paragraphs. This pass reads **every** Catechism
+paragraph. The LLM work runs as Claude Code subagents (Opus); the scripts around it are deterministic.
+
+```bash
+# 1. Prep: 8 batches, the Type catalog and the gold set → data/extracted/ccc_pass/
+python scripts/prepare_ccc_batches.py
+
+# 2. Extract: one ccc-typology-extractor agent per batch writes raw/batch-NN.jsonl
+#    and self-checks with:
+python scripts/check_ccc_raw.py NN
+
+# 3. Reconcile: buckets, Type ledger, gold recall
+python scripts/reconcile_ccc_typology.py
+
+# 4. Consolidate Types: one theologian agent turns the ledger into type_decisions.jsonl
+#    (existing / new / broaden / rename / merge, with every affected link checked), then:
+python scripts/reconcile_ccc_typology.py --check-decisions
+python scripts/reconcile_ccc_typology.py --apply-decisions
+
+# 5. Verify: blind theologian verifiers, one per packet
+python scripts/build_ccc_verify_packets.py --packets 6
+python scripts/build_ccc_verify_packets.py --check
+
+# 6. Review, then import with the rest of the typology layer
+python scripts/review_ccc_typology.py
+python scripts/import_typology.py --reset && python scripts/import_memberships.py
+python scripts/validate_import.py
+```
+
+Rules the pass enforces:
+- Every quote must be a verbatim substring of its paragraph (checked by script).
+- Each candidate carries a relation label: `explicit`, `preparatory`, `synthesized` (imported after review),
+  or `prophecy` / `nt-figure` (held; see `dev/BACKLOG.md`).
+- Imported link notes are the Catechism's own words (`CCC 1541: "…"`), never AI text.
+- Type changes are an overlay (`data/reviewed/type_changes.jsonl`). Renames keep the Type id, and merges
+  become an alias map applied at parse time, so the source files stay untouched.
+
+Result (2026-10-23): 220 Types, 309 PREFIGURES (88 with Catechism support), 312 TEACHES.
+
 ## Tips
 
 ### Recognizing True Typology

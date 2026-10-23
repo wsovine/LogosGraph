@@ -49,7 +49,13 @@ def load_theologian_prompt(path: Path | None = None) -> str:
         logger.warning(f"Theologian prompt not found: {path}")
         return ""
 
-    return path.read_text(encoding="utf-8")
+    text = path.read_text(encoding="utf-8")
+    # The file doubles as a Claude Code agent definition; drop its YAML frontmatter
+    if text.startswith("---\n"):
+        end = text.find("\n---\n", 4)
+        if end != -1:
+            text = text[end + 5 :].lstrip("\n")
+    return text
 
 
 class TheologyAssistant:

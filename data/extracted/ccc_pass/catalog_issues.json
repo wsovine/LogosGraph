@@ -1,0 +1,33 @@
+[
+ {
+  "kind": "catalog-issue",
+  "ccc": 60,
+  "ids": [
+   "the-synagogue-as-preparation-for-the-church",
+   "deborah"
+  ],
+  "issue": "`the-synagogue-as-preparation-for-the-church` is labeled NT, but its name describes an OT reality (the preparation), not a New Testament fulfillment, and its only link is ← deborah, so the edge reads OT → OT. §60 states the preparation in the Catechism's own terms: the chosen people were 'called to prepare for that day when God would gather all his children into the unity of the Church' (Israel → the Church). Consider retiring this node and re-pointing deborah's link to the-one-true-church, or folding the idea into an OT Israel Type.",
+  "batch": "01"
+ },
+ {
+  "kind": "catalog-issue",
+  "ccc": 1222,
+  "ids": [
+   "jordan-crossing",
+   "eternal-life",
+   "the-promised-land"
+  ],
+  "issue": "The catalog links jordan-crossing → eternal-life and credits CCC 1222, but in §1222 'an image of eternal life' is in apposition to 'the gift of the land promised to Abraham's descendants': the promised land is the image of eternal life, and the Jordan crossing prefigures Baptism. The supported pairs are jordan-crossing → baptism and the-promised-land → eternal-life.",
+  "batch": "04"
+ },
+ {
+  "kind": "catalog-issue",
+  "ccc": 1333,
+  "ids": [
+   "melchizedek",
+   "eucharist"
+  ],
+  "issue": "The catalog credits CCC 1334 for Melchizedek, but §1334 never mentions him. The Melchizedek → Eucharist statement is §1333 ('a prefiguring of her own offering'), and §1350 repeats it ('takes up the gesture of Melchizedek').",
+  "batch": "04"
+ }
+]

@@ -48,16 +48,8 @@
       "to_type": "spiritual-gifts-of-christ",
       "source": "CCC-1094",
       "confidence": "high",
-      "category": "Christological",
+      "category": "Ecclesial",
       "notes": "Water from the rock was the figure of the spiritual gifts of Christ"
-    },
-    {
-      "from_type": "water-from-rock",
-      "to_type": "christ",
-      "source": "CCC-1094",
-      "confidence": "high",
-      "category": "Christological",
-      "notes": "The rock itself is a type of Christ (cf. 1 Cor 10:4)"
     },
     {
       "from_type": "manna",
@@ -84,12 +76,12 @@
       "notes": "Baptism is prefigured in the crossing of the Jordan River"
     },
     {
-      "from_type": "jordan-crossing",
+      "from_type": "the-promised-land",
       "to_type": "eternal-life",
       "source": "CCC-1222",
       "confidence": "high",
       "category": "Eschatological",
-      "notes": "Entry into the Promised Land is an image of eternal life"
+      "notes": "The land promised to Abraham's descendants is an image of eternal life"
     },
     {
       "from_type": "melchizedek",
@@ -102,7 +94,7 @@
     {
       "from_type": "melchizedek",
       "to_type": "eucharist",
-      "source": "CCC-1334",
+      "source": "CCC-1333",
       "confidence": "high",
       "category": "Sacramental",
       "notes": "Melchizedek's offering of bread and wine prefigures the Eucharist"

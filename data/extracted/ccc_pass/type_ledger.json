@@ -1,0 +1,2069 @@
+{
+ "existing_type_changes": [
+  {
+   "id": "israel-jeshurun",
+   "name": "Israel (Jeshurun)",
+   "testament": "OT",
+   "description": "Israel under the title Jeshurun, the beloved of God; a figure of the Messiah, the true Beloved.",
+   "out": [
+    {
+     "id": "christ",
+     "category": "Christological"
+    },
+    {
+     "id": "the-one-true-church",
+     "category": "Ecclesial"
+    }
+   ],
+   "inc": [],
+   "proposals": [
+    {
+     "cand_id": "c60:israel-jeshurun>the-one-true-church",
+     "ccc": 60,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "Jeshurun is a poetic name for Israel itself (Deut 33:5, 26), so the catalog's title-specific Type and 'the chosen people' of §60 are one figure. Link test: → christ (Israel, God's son, read as a figure of the Messiah; cf. Hos 11:1 / Matt 2:15) still reads true; → the-one-true-church still reads true and is exactly what §60 says. Fallback if the consolidator wants the Jeshurun reading kept separate: a new Type 'Israel, the Chosen People'.",
+     "alternatives_considered": [
+      {
+       "id": "the-synagogue-old-covenant-assembly",
+       "why_not": "defined by the rejection of the Messiah and set in contrast with the Church; §60 speaks of the chosen people as called to prepare for the Church, so this Type would invert the sense"
+      },
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "only the few preserved through judgment, not the whole chosen people descended from Abraham"
+      },
+      {
+       "id": "proselytes-strangers-in-israel",
+       "why_not": "Gentile converts incorporated into Israel, not Israel itself"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "Israel, the Chosen People (Jeshurun)",
+     "new_description": "The people descended from Abraham, Isaac and Jacob whom God chose as his own possession and formed at Sinai, also called by the poetic title Jeshurun, 'the upright one' (Deut 7:6; 32:15; Isa 44:2)."
+    },
+    {
+     "cand_id": "c751:israel-jeshurun>the-one-true-church",
+     "ccc": 751,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "The 'assembly of the Chosen People before God', above all at Sinai where Israel 'was established by God as his holy people', is Israel convoked as God's people (the qahal). No catalog Type names Israel as God's chosen People. `israel-jeshurun` is Israel under its poetic title, i.e. the same people, so renaming it to the people itself covers this figure without creating a near-duplicate. Link test: → christ still reads true (Israel, God's chosen son, is read as a figure of Christ, Hos 11:1 / Matt 2:15, and the Jeshurun-as-'Beloved' reading survives under the new name); → the-one-true-church is exactly the Catechism's claim.",
+     "alternatives_considered": [
+      {
+       "id": "the-synagogue-old-covenant-assembly",
+       "why_not": "closest by name ('Old Covenant Assembly'), but its description defines it by the rejection of the Messiah, in contrast to the Church; the Catechism's claim here is positive (election, preparation, inheritance). Consolidation may want to redescribe it neutrally and fold it into this Type."
+      },
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "the few preserved through judgment (Rom 9:27), not the whole elect people"
+      },
+      {
+       "id": "proselytes-strangers-in-israel",
+       "why_not": "foreigners incorporated into Israel, not Israel itself"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "Israel, the Chosen People (Jeshurun)",
+     "new_description": "The people of Israel, chosen by God as his own possession, bound to him by covenant and assembled before him at Sinai (Exod 19:5-6; Deut 7:6), and called by the poetic name Jeshurun (Deut 32:15; 33:5)."
+    },
+    {
+     "cand_id": "c753:teaches:israel-jeshurun",
+     "ccc": 753,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "The Old Testament 'theme' of the People of God, on which the images of the Church are variations, is Israel as God's chosen people. No catalog Type names Israel as God's chosen People. `israel-jeshurun` is Israel under its poetic title, i.e. the same people, so renaming it to the people itself covers this figure without creating a near-duplicate. Link test: → christ still reads true (Israel, God's chosen son, is read as a figure of Christ, Hos 11:1 / Matt 2:15, and the Jeshurun-as-'Beloved' reading survives under the new name); → the-one-true-church is exactly the Catechism's claim.",
+     "alternatives_considered": [
+      {
+       "id": "the-synagogue-old-covenant-assembly",
+       "why_not": "closest by name ('Old Covenant Assembly'), but its description defines it by the rejection of the Messiah, in contrast to the Church; the Catechism's claim here is positive (election, preparation, inheritance). Consolidation may want to redescribe it neutrally and fold it into this Type."
+      },
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "the few preserved through judgment (Rom 9:27), not the whole elect people"
+      },
+      {
+       "id": "proselytes-strangers-in-israel",
+       "why_not": "foreigners incorporated into Israel, not Israel itself"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "Israel, the Chosen People (Jeshurun)",
+     "new_description": "The people of Israel, chosen by God as his own possession, bound to him by covenant and assembled before him at Sinai (Exod 19:5-6; Deut 7:6), and called by the poetic name Jeshurun (Deut 32:15; 33:5)."
+    },
+    {
+     "cand_id": "c759:israel-jeshurun>the-one-true-church",
+     "ccc": 759,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'The history of the people of Israel' in which the Church was prepared is Israel, the chosen people. No catalog Type names Israel as God's chosen People. `israel-jeshurun` is Israel under its poetic title, i.e. the same people, so renaming it to the people itself covers this figure without creating a near-duplicate. Link test: → christ still reads true (Israel, God's chosen son, is read as a figure of Christ, Hos 11:1 / Matt 2:15, and the Jeshurun-as-'Beloved' reading survives under the new name); → the-one-true-church is exactly the Catechism's claim.",
+     "alternatives_considered": [
+      {
+       "id": "the-synagogue-old-covenant-assembly",
+       "why_not": "closest by name ('Old Covenant Assembly'), but its description defines it by the rejection of the Messiah, in contrast to the Church; the Catechism's claim here is positive (election, preparation, inheritance). Consolidation may want to redescribe it neutrally and fold it into this Type."
+      },
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "the few preserved through judgment (Rom 9:27), not the whole elect people"
+      },
+      {
+       "id": "proselytes-strangers-in-israel",
+       "why_not": "foreigners incorporated into Israel, not Israel itself"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "Israel, the Chosen People (Jeshurun)",
+     "new_description": "The people of Israel, chosen by God as his own possession, bound to him by covenant and assembled before him at Sinai (Exod 19:5-6; Deut 7:6), and called by the poetic name Jeshurun (Deut 32:15; 33:5)."
+    },
+    {
+     "cand_id": "c762:israel-jeshurun>the-one-true-church",
+     "ccc": 762,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'Israel's election as the People of God' is Israel, the chosen people. No catalog Type names Israel as God's chosen People. `israel-jeshurun` is Israel under its poetic title, i.e. the same people, so renaming it to the people itself covers this figure without creating a near-duplicate. Link test: → christ still reads true (Israel, God's chosen son, is read as a figure of Christ, Hos 11:1 / Matt 2:15, and the Jeshurun-as-'Beloved' reading survives under the new name); → the-one-true-church is exactly the Catechism's claim.",
+     "alternatives_considered": [
+      {
+       "id": "the-synagogue-old-covenant-assembly",
+       "why_not": "closest by name ('Old Covenant Assembly'), but its description defines it by the rejection of the Messiah, in contrast to the Church; the Catechism's claim here is positive (election, preparation, inheritance). Consolidation may want to redescribe it neutrally and fold it into this Type."
+      },
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "the few preserved through judgment (Rom 9:27), not the whole elect people"
+      },
+      {
+       "id": "proselytes-strangers-in-israel",
+       "why_not": "foreigners incorporated into Israel, not Israel itself"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "Israel, the Chosen People (Jeshurun)",
+     "new_description": "The people of Israel, chosen by God as his own possession, bound to him by covenant and assembled before him at Sinai (Exod 19:5-6; Deut 7:6), and called by the poetic name Jeshurun (Deut 32:15; 33:5)."
+    },
+    {
+     "cand_id": "c781:israel-jeshurun>the-one-true-church",
+     "ccc": 781,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "'The Israelite race' chosen 'to be his own people' is Israel, the chosen people. No catalog Type names Israel as God's chosen People. `israel-jeshurun` is Israel under its poetic title, i.e. the same people, so renaming it to the people itself covers this figure without creating a near-duplicate. Link test: → christ still reads true (Israel, God's chosen son, is read as a figure of Christ, Hos 11:1 / Matt 2:15, and the Jeshurun-as-'Beloved' reading survives under the new name); → the-one-true-church is exactly the Catechism's claim.",
+     "alternatives_considered": [
+      {
+       "id": "the-synagogue-old-covenant-assembly",
+       "why_not": "closest by name ('Old Covenant Assembly'), but its description defines it by the rejection of the Messiah, in contrast to the Church; the Catechism's claim here is positive (election, preparation, inheritance). Consolidation may want to redescribe it neutrally and fold it into this Type."
+      },
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "the few preserved through judgment (Rom 9:27), not the whole elect people"
+      },
+      {
+       "id": "proselytes-strangers-in-israel",
+       "why_not": "foreigners incorporated into Israel, not Israel itself"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "Israel, the Chosen People (Jeshurun)",
+     "new_description": "The people of Israel, chosen by God as his own possession, bound to him by covenant and assembled before him at Sinai (Exod 19:5-6; Deut 7:6), and called by the poetic name Jeshurun (Deut 32:15; 33:5)."
+    }
+   ]
+  },
+  {
+   "id": "the-twelve-patriarchs",
+   "name": "The Twelve Patriarchs",
+   "testament": "OT",
+   "description": "The twelve patriarchs, ancestral heads of the tribes of Israel; prefiguring the twelve apostles.",
+   "out": [
+    {
+     "id": "the-twelve-apostles",
+     "category": "Ecclesial"
+    }
+   ],
+   "inc": [],
+   "proposals": [
+    {
+     "cand_id": "c765:the-twelve-patriarchs>the-twelve-apostles",
+     "ccc": 765,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "The paragraph names the twelve tribes, whose eponymous heads are the twelve patriarchs; the tradition reads the tribes and their heads as one twelvefold figure of the apostles (Matt 19:28). Link test: its only link, → the-twelve-apostles, still reads true under the new name.",
+     "alternatives_considered": [
+      {
+       "id": "israel-jeshurun",
+       "why_not": "Israel as a whole people, not its twelvefold tribal structure"
+      }
+     ],
+     "decision": "broaden",
+     "new_name": "The Twelve Patriarchs and Tribes of Israel",
+     "new_description": "The twelve sons of Jacob and the twelve tribes of Israel descended from and named after them (Gen 49:28); prefiguring the twelve apostles."
+    }
+   ]
+  }
+ ],
+ "new_types": [
+  {
+   "group": "abraham",
+   "name": "Abraham",
+   "name_variants": {
+    "Abraham": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "Abraham, whom God called out of his own country and promised to make the father of a great people, in whom all the families of the earth would be blessed (Gen 12:1-3)."
+   ],
+   "key_verses": [
+    "Gen 12:2"
+   ],
+   "near_catalog": [
+    "sarah",
+    "rahab",
+    "balaam"
+   ],
+   "near_new_groups": [
+    "abraham hospitality at mamre"
+   ],
+   "depends": [
+    {
+     "cand_id": "c762:new:abraham>the-one-true-church",
+     "ccc": 762,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "The paragraph names God's call of Abraham and the promise that he would father a great people as the remote preparation of the People of God. The catalog has no Type for Abraham. The claim rests on Abraham as the called patriarch and promised father (a person), so a person Type fits; if consolidation prefers an event Type, 'The Call of Abraham' (Gen 12:1-3) is the alternative.",
+     "alternatives_considered": [
+      {
+       "id": "binding-of-isaac",
+       "why_not": "an event of Abraham's life (Gen 22), not his call and the promise of a great people"
+      },
+      {
+       "id": "isaac",
+       "why_not": "his son, the child of promise; a different person"
+      },
+      {
+       "id": "sarah",
+       "why_not": "his wife; a different person"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "abraham hospitality at mamre",
+   "name": "Abraham's Hospitality at Mamre",
+   "name_variants": {
+    "Abraham's Hospitality at Mamre": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "Abraham's welcome of three mysterious visitors at the oaks of Mamre, who announced that his wife Sarah would bear a son (Gen 18:1-15)."
+   ],
+   "key_verses": [
+    "Gen 18:10"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "abraham"
+   ],
+   "depends": [
+    {
+     "cand_id": "c2571:new:abraham hospitality at mamre>new:annunciation",
+     "ccc": 2571,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The figure is the event at Mamre (the hospitality and the announcement of the son of the promise), and no catalog Type names it. There is no Abraham Type at all.",
+     "alternatives_considered": [
+      {
+       "id": "sarah",
+       "why_not": "Sarah the person (→ mary, → the-one-true-church); the paragraph's figure is the visit and announcement at Mamre, and broadening Sarah would blur a person with an event"
+      },
+      {
+       "id": "isaac",
+       "why_not": "the son of the promise himself, catalogued for the Gal 4 allegory; the figure here is the announcing visit, not Isaac"
+      },
+      {
+       "id": "binding-of-isaac",
+       "why_not": "a different Abraham event (Gen 22)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "annunciation",
+   "name": "The Annunciation",
+   "name_variants": {
+    "The Annunciation": 1
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 1
+   },
+   "descriptions": [
+    "The angel Gabriel's announcement to the Virgin Mary that she would conceive and bear a son, Jesus, the Son of the Most High (Luke 1:26-38)."
+   ],
+   "key_verses": [
+    "Luke 1:31"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c2571:new:abraham hospitality at mamre>new:annunciation",
+     "ccc": 2571,
+     "side": "antitype",
+     "relation": "explicit",
+     "reasoning": "The antitype is an event, the annunciation of the true Son of the promise; the catalog has no Annunciation Type, and the person-Types would lose the event.",
+     "alternatives_considered": [
+      {
+       "id": "christ",
+       "why_not": "the person announced; the antitype is the announcing event"
+      },
+      {
+       "id": "mary",
+       "why_not": "the paragraph stresses the announced Son, not Mary's person; the Annunciation is an event"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "baptism jesus",
+   "name": "The Baptism of Jesus",
+   "name_variants": {
+    "The Baptism of Jesus": 2
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 2
+   },
+   "descriptions": [
+    "Jesus' baptism by John in the Jordan, when the Spirit descended on him like a dove and the Father's voice declared him the beloved Son (Matt 3:13-17).",
+    "Jesus' baptism by John in the Jordan, when the Spirit descended on him and the Father declared him his beloved Son (Matt 3:13-17)."
+   ],
+   "key_verses": [
+    "Matt 3:16"
+   ],
+   "near_catalog": [
+    "baptism"
+   ],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c701:the-dove-and-the-olive-branch-noah>new:baptism jesus",
+     "ccc": 701,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The Catechism treats Jesus' own baptism as an event that signifies other mysteries; the catalog only has the sacrament.",
+     "alternatives_considered": [
+      {
+       "id": "baptism",
+       "why_not": "that is the sacrament of Christian Baptism, which the paragraph distinguishes from Jesus' own baptism"
+      },
+      {
+       "id": "christ",
+       "why_not": "the person, not this event in his life"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1224:new:spirit over waters creation>new:baptism jesus",
+     "ccc": 1224,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The antitype is the event of Jesus' own baptism, when the Spirit 'descended then on the Christ'. An event is not a person, and Jesus' baptism by John is not the sacrament.",
+     "alternatives_considered": [
+      {
+       "id": "baptism",
+       "why_not": "the sacrament; §1224 speaks of Jesus' own baptism by John"
+      },
+      {
+       "id": "christ",
+       "why_not": "a person; the paragraph names an event in his life"
+      },
+      {
+       "id": "descent-of-the-holy-spirit-at-pentecost",
+       "why_not": "a different descent of the Spirit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "cloud filling solomon temple",
+   "name": "The Cloud Filling Solomon's Temple",
+   "name_variants": {
+    "The Cloud Filling Solomon's Temple": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "The cloud of the Lord's glory that filled the Temple when Solomon dedicated it, so that the priests could not stand to minister (1 Kgs 8:10-11)."
+   ],
+   "key_verses": [
+    "1 Kgs 8:10"
+   ],
+   "near_catalog": [
+    "cloud-in-desert",
+    "the-glory-of-the-lord-departing-the-temple",
+    "the-rebuilt-temple",
+    "solomon"
+   ],
+   "near_new_groups": [
+    "cloud on mount sinai"
+   ],
+   "depends": [
+    {
+     "cand_id": "c697:new:cloud filling solomon temple>christ",
+     "ccc": 697,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "A distinct theophany at the Temple's dedication; nothing in the catalog names it.",
+     "alternatives_considered": [
+      {
+       "id": "the-temple-of-jerusalem",
+       "why_not": "the building (→ Christ, heaven, Church), not the theophanic cloud that filled it"
+      },
+      {
+       "id": "cloud-in-desert",
+       "why_not": "the wilderness pillar. Broadening would blur its Baptism and guidance links"
+      },
+      {
+       "id": "solomon",
+       "why_not": "the king, not the cloud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "cloud on mount sinai",
+   "name": "The Cloud on Mount Sinai",
+   "name_variants": {
+    "The Cloud on Mount Sinai": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "The cloud that covered Mount Sinai for six days, in which the glory of the Lord settled and from which God called Moses (Exod 24:15-18)."
+   ],
+   "key_verses": [
+    "Exod 24:16"
+   ],
+   "near_catalog": [
+    "the-feast-on-mount-zion",
+    "cloud-in-desert"
+   ],
+   "near_new_groups": [
+    "old covenant sinai covenant",
+    "cloud filling solomon temple"
+   ],
+   "depends": [
+    {
+     "cand_id": "c697:new:cloud on mount sinai>christ",
+     "ccc": 697,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The Sinai theophany cloud is a distinct event from the guiding pillar.",
+     "alternatives_considered": [
+      {
+       "id": "cloud-in-desert",
+       "why_not": "the guiding pillar. Broadening it to Sinai would blur its links → Baptism (1 Cor 10:2) and → the Spirit as guide, which belong to the pillar"
+      },
+      {
+       "id": "burning-bush",
+       "why_not": "a different Horeb theophany"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law given there, not the cloud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "confirmation",
+   "name": "Confirmation",
+   "name_variants": {
+    "Confirmation": 2
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 2
+   },
+   "descriptions": [
+    "The sacrament in which the baptized are sealed with the gift of the Holy Spirit by the laying on of hands and anointing with chrism, as the apostles laid hands on the baptized in Samaria (Acts 8:14-17).",
+    "The sacrament in which the baptized are sealed with the gift of the Holy Spirit by the laying on of hands and anointing with chrism, as the apostles laid hands on the baptized in Samaria (Acts 8:14-17)."
+   ],
+   "key_verses": [
+    "Acts 8:17"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "transfiguration",
+    "first creation"
+   ],
+   "depends": [
+    {
+     "cand_id": "c1288:new:laying on hands old covenant>new:confirmation",
+     "ccc": 1288,
+     "side": "antitype",
+     "relation": "synthesized",
+     "reasoning": "The catalog has no Type for the sacrament of Confirmation (only Baptism, Eucharist, Holy Orders, Penance and the generic sacraments). The paragraph names Confirmation specifically, so the generic Type would lose precision.",
+     "alternatives_considered": [
+      {
+       "id": "new-covenant-sacraments",
+       "why_not": "the paragraph names Confirmation specifically; the precision rule prefers the specific sacrament"
+      },
+      {
+       "id": "baptism",
+       "why_not": "a distinct sacrament, even though Confirmation completes it"
+      },
+      {
+       "id": "descent-of-the-holy-spirit-at-pentecost",
+       "why_not": "the event Confirmation perpetuates (§1288), not the sacrament itself"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1294:anointing-of-kings-priests-and-prophets>new:confirmation",
+     "ccc": 1294,
+     "side": "antitype",
+     "relation": "synthesized",
+     "reasoning": "The catalog has no Type for the sacrament of Confirmation (only Baptism, Eucharist, Holy Orders, Penance and the generic sacraments). The paragraph names Confirmation specifically, so the generic Type would lose precision.",
+     "alternatives_considered": [
+      {
+       "id": "new-covenant-sacraments",
+       "why_not": "the paragraph names Confirmation specifically; the precision rule prefers the specific sacrament"
+      },
+      {
+       "id": "baptism",
+       "why_not": "a distinct sacrament, even though Confirmation completes it"
+      },
+      {
+       "id": "descent-of-the-holy-spirit-at-pentecost",
+       "why_not": "the event Confirmation perpetuates (§1288), not the sacrament itself"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "creation world",
+   "name": "The Creation of the World",
+   "name_variants": {
+    "The Creation of the World": 2
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 2
+   },
+   "descriptions": [
+    "God's creation of the heavens and the earth and all that is in them, in the beginning (Gen 1:1-2:3).",
+    "God's creation of the heavens and the earth and all that is in them, in the beginning (Gen 1:1-2:3)."
+   ],
+   "key_verses": [
+    "Gen 1:1"
+   ],
+   "near_catalog": [
+    "gods-healing-word"
+   ],
+   "near_new_groups": [
+    "first creation",
+    "new creation in christ",
+    "spirit over waters creation"
+   ],
+   "depends": [
+    {
+     "cand_id": "c759:new:creation world>the-one-true-church",
+     "ccc": 759,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "'Present in figure at the beginning of the world' places a figure of the Church in the beginning of the world; the nearest concrete referent is the creation itself (cf. §760, 'The world was created for the sake of the Church').",
+     "alternatives_considered": [
+      {
+       "id": "the-heavens",
+       "why_not": "the sky of Ps 19 read as a figure of the Church's preachers; one image, not the work of creation"
+      },
+      {
+       "id": "adam",
+       "why_not": "the first man, a person; the paragraph speaks of the beginning of the world as a whole"
+      }
+     ]
+    },
+    {
+     "cand_id": "c778:new:creation world>the-one-true-church",
+     "ccc": 778,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "'Prefigured in creation' names creation as the place where the Church is prefigured.",
+     "alternatives_considered": [
+      {
+       "id": "the-heavens",
+       "why_not": "the sky of Ps 19 read as a figure of the Church's preachers; one image, not the work of creation"
+      },
+      {
+       "id": "adam",
+       "why_not": "the first man, a person; the paragraph speaks of the beginning of the world as a whole"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "daughter zion",
+   "name": "The Daughter of Zion",
+   "name_variants": {
+    "The Daughter of Zion": 3
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 3
+   },
+   "descriptions": [
+    "Zion/Jerusalem personified as a daughter, the people of God summoned to rejoice because the Lord her king comes to her (Zeph 3:14-17; Zech 9:9).",
+    "Zion/Jerusalem personified as a daughter, the people of God summoned to rejoice because the Lord her king comes to her (Zeph 3:14-17; Zech 9:9).",
+    "The prophets' personification of Jerusalem and the faithful people of Israel, called to rejoice because the Lord their God is in their midst (Zeph 3:14-17; Zech 9:9)."
+   ],
+   "key_verses": [
+    "Zech 9:9",
+    "Zeph 3:14"
+   ],
+   "near_catalog": [
+    "jephthahs-daughter",
+    "the-feast-on-mount-zion"
+   ],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c559:new:daughter zion>the-one-true-church",
+     "ccc": 559,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The Catechism uses 'Daughter of Zion' as a figure in its own right (of the Church in §559; as Mary's title in §489 and §722). No catalog Type names it.",
+     "alternatives_considered": [
+      {
+       "id": "the-heavenly-jerusalem-prophetic-vision",
+       "why_not": "the jewelled Jerusalem of Tobit 13 / Isa 54 (→ glorified Church), a specific vision; broadening would blur that vision with the personified daughter"
+      },
+      {
+       "id": "the-ass-and-the-colt-palm-sunday",
+       "why_not": "the animals of Zech 9:9, not the daughter addressed"
+      },
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the bride of the Canticle, a different personification"
+      }
+     ]
+    },
+    {
+     "cand_id": "c722:new:daughter zion>mary",
+     "ccc": 722,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The Catechism uses 'Daughter of Zion' as a figure in its own right (of the Church in §559; as Mary's title in §489 and §722). No catalog Type names it.",
+     "alternatives_considered": [
+      {
+       "id": "the-heavenly-jerusalem-prophetic-vision",
+       "why_not": "the jewelled Jerusalem of Tobit 13 / Isa 54 (→ glorified Church), a specific vision; broadening would blur that vision with the personified daughter"
+      },
+      {
+       "id": "the-ass-and-the-colt-palm-sunday",
+       "why_not": "the animals of Zech 9:9, not the daughter addressed"
+      },
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the bride of the Canticle, a different personification"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2676:new:daughter zion>mary",
+     "ccc": 2676,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "Grounded by the Zephaniah quotation just before and stressed by 'in person'; the Magnificat is also called 'the song of the Daughter of Zion' in §2619. Not a passing list item, and no catalog Type names her.",
+     "alternatives_considered": [
+      {
+       "id": "the-faithful-remnant",
+       "why_not": "Zeph 3:12-13 names the remnant just before this oracle, but that Type is the remnant preserved through judgment (→ the-one-true-church); broadening would blur the two"
+      },
+      {
+       "id": "the-heavenly-jerusalem-prophetic-vision",
+       "why_not": "the glorified jewelled city (Tob 13 / Isa 54) → Church, a different figure"
+      },
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the Canticle's bride, a different figure and text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "elijah sacrifice on mount carmel",
+   "name": "Elijah's Sacrifice on Mount Carmel",
+   "name_variants": {
+    "Elijah's Sacrifice on Mount Carmel": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "The holocaust on Mount Carmel that the Lord consumed with fire from heaven in answer to Elijah's prayer, at the hour of the evening oblation (1 Kgs 18:30-39)."
+   ],
+   "key_verses": [
+    "1 Kgs 18:38"
+   ],
+   "near_catalog": [
+    "the-mincha-unbloody-sacrifice",
+    "elijah"
+   ],
+   "near_new_groups": [
+    "fire from heaven on mount carmel"
+   ],
+   "depends": [
+    {
+     "cand_id": "c2583:new:elijah sacrifice on mount carmel>eucharist",
+     "ccc": 2583,
+     "side": "type",
+     "relation": "synthesized",
+     "reasoning": "Both §696 and §2583 locate the figure in the event (fire from heaven on the Carmel sacrifice at Elijah's plea), not in Elijah's person. No catalog Type names it. The batch covering §696 will probably propose the same Type.",
+     "alternatives_considered": [
+      {
+       "id": "elijah",
+       "why_not": "the person (→ christ, → eucharist, …); the figure is the Carmel event, and an event is not a person"
+      },
+      {
+       "id": "divine-fire-lightning",
+       "why_not": "the fire/lightning of Ps 29 → Pentecost: a psalm image of God's power, not the Carmel sacrifice; broadening would merge a poetic theophany with a historical event"
+      },
+      {
+       "id": "ot-sacrifices",
+       "why_not": "the Mosaic sacrificial system; Carmel is a single prophetic sacrifice"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "eve formed from adam side",
+   "name": "Eve Formed from Adam's Side",
+   "name_variants": {
+    "Eve Formed from Adam's Side": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "God casting a deep sleep on Adam and forming the woman from a rib taken from his side (Gen 2:21-22)."
+   ],
+   "key_verses": [
+    "Gen 2:22"
+   ],
+   "near_catalog": [
+    "the-exodus-from-egypt",
+    "gods-deliverance-from-sennacherib",
+    "return-from-babylonian-captivity",
+    "water-from-rock"
+   ],
+   "near_new_groups": [
+    "fire from heaven on mount carmel"
+   ],
+   "depends": [
+    {
+     "cand_id": "c766:new:eve formed from adam side>the-one-true-church",
+     "ccc": 766,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The type is the formation of Eve from the side of the sleeping Adam (Gen 2:21-22). No catalog Type names this event.",
+     "alternatives_considered": [
+      {
+       "id": "eve",
+       "why_not": "the person, linked to Mary as the first mother; the parallel here is the event of her formation from Adam's side, and an event is not a person"
+      },
+      {
+       "id": "adam-and-eve",
+       "why_not": "the marriage of Adam and Eve, a figure of the spousal union (→ christ-church); here the figure is the Church's birth from the side, a distinct patristic figure, so broadening would merge two figures"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "fire from heaven on mount carmel",
+   "name": "Fire from Heaven on Mount Carmel",
+   "name_variants": {
+    "Fire from Heaven on Mount Carmel": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "The fire of the Lord that fell at Elijah's prayer and consumed his sacrifice on Mount Carmel (1 Kgs 18:36-39)."
+   ],
+   "key_verses": [
+    "1 Kgs 18:38"
+   ],
+   "near_catalog": [
+    "return-from-babylonian-captivity",
+    "the-living-waters-from-the-sanctuary",
+    "water-from-rock",
+    "gods-deliverance-from-sennacherib"
+   ],
+   "near_new_groups": [
+    "elijah sacrifice on mount carmel",
+    "eve formed from adam side"
+   ],
+   "depends": [
+    {
+     "cand_id": "c696:new:fire from heaven on mount carmel>descent-of-the-holy-spirit-at-pentecost",
+     "ccc": 696,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The Catechism calls 'this event' (not Elijah himself) a figure. An event is not a person, and no catalog Type names the Carmel fire.",
+     "alternatives_considered": [
+      {
+       "id": "elijah",
+       "why_not": "the person; the paragraph says the event was the figure"
+      },
+      {
+       "id": "divine-fire-lightning",
+       "why_not": "the lightning of Ps 29 (→ Pentecost). Broadening would keep its one link true, but it would merge a psalm image with a distinct narrative event the tradition treats separately"
+      },
+      {
+       "id": "ot-sacrifices",
+       "why_not": "the sacrifice consumed, not the fire"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "first creation",
+   "name": "The First Creation",
+   "name_variants": {
+    "The First Creation": 4
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 4
+   },
+   "descriptions": [
+    "God's creation of the heavens and the earth 'in the beginning', the work of the six days completed on the seventh day (Gen 1:1-2:2).",
+    "God's creation of the heavens and the earth 'in the beginning', the work of the six days completed on the seventh day (Gen 1:1-2:2).",
+    "God's creation of the heavens and the earth 'in the beginning', the work of the six days completed on the seventh day (Gen 1:1-2:2).",
+    "God's creation of the heavens and the earth 'in the beginning', the work of the six days completed on the seventh day (Gen 1:1-2:2)."
+   ],
+   "key_verses": [
+    "Gen 1:1"
+   ],
+   "near_catalog": [
+    "christs-ascension"
+   ],
+   "near_new_groups": [
+    "confirmation",
+    "spirit over waters creation",
+    "creation world",
+    "new creation in christ"
+   ],
+   "depends": [
+    {
+     "cand_id": "c280:new:first creation>new:new creation in christ",
+     "ccc": 280,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the creation itself. §280, §315 and §349 treat 'the first creation' as a reality that finds its goal and summit in 'the new creation in Christ', so it needs its own OT node.",
+     "alternatives_considered": [
+      {
+       "id": "adam",
+       "why_not": "the first man only; these paragraphs speak of the whole work of creation, 'the heavens and the earth', not of Adam"
+      },
+      {
+       "id": "the-heavens",
+       "why_not": "the heavens and stars read (from Ps 18/19) as a figure of the Church's preachers; a created thing, not the act and work of creation"
+      }
+     ]
+    },
+    {
+     "cand_id": "c281:teaches:new:first creation",
+     "ccc": 281,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names the creation itself. §280, §315 and §349 treat 'the first creation' as a reality that finds its goal and summit in 'the new creation in Christ', so it needs its own OT node.",
+     "alternatives_considered": [
+      {
+       "id": "adam",
+       "why_not": "the first man only; these paragraphs speak of the whole work of creation, 'the heavens and the earth', not of Adam"
+      },
+      {
+       "id": "the-heavens",
+       "why_not": "the heavens and stars read (from Ps 18/19) as a figure of the Church's preachers; a created thing, not the act and work of creation"
+      }
+     ]
+    },
+    {
+     "cand_id": "c315:new:first creation>new:new creation in christ",
+     "ccc": 315,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the creation itself. §280, §315 and §349 treat 'the first creation' as a reality that finds its goal and summit in 'the new creation in Christ', so it needs its own OT node.",
+     "alternatives_considered": [
+      {
+       "id": "adam",
+       "why_not": "the first man only; these paragraphs speak of the whole work of creation, 'the heavens and the earth', not of Adam"
+      },
+      {
+       "id": "the-heavens",
+       "why_not": "the heavens and stars read (from Ps 18/19) as a figure of the Church's preachers; a created thing, not the act and work of creation"
+      }
+     ]
+    },
+    {
+     "cand_id": "c349:new:first creation>new:new creation in christ",
+     "ccc": 349,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the creation itself. §280, §315 and §349 treat 'the first creation' as a reality that finds its goal and summit in 'the new creation in Christ', so it needs its own OT node.",
+     "alternatives_considered": [
+      {
+       "id": "adam",
+       "why_not": "the first man only; these paragraphs speak of the whole work of creation, 'the heavens and the earth', not of Adam"
+      },
+      {
+       "id": "the-heavens",
+       "why_not": "the heavens and stars read (from Ps 18/19) as a figure of the Church's preachers; a created thing, not the act and work of creation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "god seventh day rest sabbath",
+   "name": "God's Seventh-Day Rest (the Sabbath)",
+   "name_variants": {
+    "God's Seventh-Day Rest (the Sabbath)": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "God's rest on the seventh day after completing the work of creation, the day he blessed and hallowed (Gen 2:2-3), which grounds Israel's sabbath rest (Exod 20:8-11)."
+   ],
+   "key_verses": [
+    "Gen 2:2"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "sabbath"
+   ],
+   "depends": [
+    {
+     "cand_id": "c2002:new:god seventh day rest sabbath>eternal-life",
+     "ccc": 2002,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "No catalog Type names the Sabbath or God's rest on the seventh day. Event and institution are joined because the tradition (Heb 4:4-10) reads them as one figure of the final rest. Batches covering §345-349 and §2168ff may propose a Sabbath Type too; consolidation should reconcile them into one.",
+     "alternatives_considered": [
+      {
+       "id": "the-promised-land",
+       "why_not": "Heb 4 links the land's 'rest' to God's rest, but the paragraph names the seventh day, not the land; folding the Sabbath into the land would blur two figures"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a related sabbatical institution (Lev 25), but a distinct figure, linked in the catalog to Christ's redemption, not to God's creation rest"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "israel bride lord nuptial covenant",
+   "name": "Israel, Bride of the Lord (Nuptial Covenant)",
+   "name_variants": {
+    "Israel, Bride of the Lord (Nuptial Covenant)": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "The prophets' portrayal of God's covenant with Israel as a marriage, the Lord as husband and Israel as his bride, betrothed, unfaithful and taken back (Isa 54:5; 62:5; Jer 2:2; Hos 2)."
+   ],
+   "key_verses": [
+    "Isa 54:5"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "nuptial covenant god and israel"
+   ],
+   "depends": [
+    {
+     "cand_id": "c796:new:israel bride lord nuptial covenant>christ-church",
+     "ccc": 796,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "What 'the prophets' prepared is the theme of the Lord as Israel's bridegroom. No catalog Type names Israel as God's bride; the same Type should serve §1612 ('the nuptial covenant between God and his people Israel had prepared the way').",
+     "alternatives_considered": [
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the bride of a different book, read of the Church or the soul; the prophets' bride is Israel under covenant, often unfaithful (Hos 2; Ezek 16). Broadening would pass the link test (→ christ-church) but blur two figures the tradition reads separately"
+      },
+      {
+       "id": "hosea",
+       "why_not": "the prophet's own marriage as a sign; a person, not the nuptial covenant itself"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "Israel as people; here the figure is specifically the spousal bond"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "laying on hands old covenant",
+   "name": "Laying on of Hands (Old Covenant)",
+   "name_variants": {
+    "Laying on of Hands (Old Covenant)": 2
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 2
+   },
+   "descriptions": [
+    "The Old Testament gesture of laying hands on a person or an offering to bless, consecrate or commission, as when Moses laid his hands on Joshua and gave him a charge (Num 27:18-23; Deut 34:9).",
+    "The Old Testament gesture of laying hands on a person or an offering to bless, consecrate or commission, as when Moses laid his hands on Joshua and gave him a charge (Num 27:18-23; Deut 34:9)."
+   ],
+   "key_verses": [
+    "Num 27:23"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c1150:new:laying on hands old covenant>new-covenant-sacraments",
+     "ccc": 1150,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "§1150 lists 'laying on of hands' as its own liturgical sign of the Old Covenant. No catalog Type names this gesture; joining it to the anointing or priesthood Types would blur rites the paragraph lists separately.",
+     "alternatives_considered": [
+      {
+       "id": "anointing-of-kings-priests-and-prophets",
+       "why_not": "a different rite, listed separately in the same sentence"
+      },
+      {
+       "id": "joshua",
+       "why_not": "the person on whom Moses laid hands, not the gesture"
+      },
+      {
+       "id": "ot-priesthood",
+       "why_not": "an institution; the laying on of hands is also used for blessing and commissioning non-priests"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1288:new:laying on hands old covenant>new:confirmation",
+     "ccc": 1288,
+     "side": "type",
+     "relation": "synthesized",
+     "reasoning": "§1150 lists 'laying on of hands' as its own liturgical sign of the Old Covenant. No catalog Type names this gesture; joining it to the anointing or priesthood Types would blur rites the paragraph lists separately.",
+     "alternatives_considered": [
+      {
+       "id": "anointing-of-kings-priests-and-prophets",
+       "why_not": "a different rite, listed separately in the same sentence"
+      },
+      {
+       "id": "joshua",
+       "why_not": "the person on whom Moses laid hands, not the gesture"
+      },
+      {
+       "id": "ot-priesthood",
+       "why_not": "an institution; the laying on of hands is also used for blessing and commissioning non-priests"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "lord day sunday",
+   "name": "The Lord's Day (Sunday)",
+   "name_variants": {
+    "The Lord's Day (Sunday)": 4
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 4
+   },
+   "descriptions": [
+    "The first day of the week, the day of Christ's Resurrection, on which Christians gather for the breaking of bread (Acts 20:7; Rev 1:10).",
+    "The first day of the week, the day of Christ's Resurrection, on which Christians gather for the breaking of bread (Acts 20:7; Rev 1:10).",
+    "The first day of the week, the day of Christ's Resurrection, on which Christians gather for the breaking of bread (Acts 20:7; Rev 1:10).",
+    "The first day of the week, the day of Christ's Resurrection, on which Christians gather for the breaking of bread (Acts 20:7; Rev 1:10)."
+   ],
+   "key_verses": [
+    "Rev 1:10"
+   ],
+   "near_catalog": [
+    "the-ass-and-the-colt-palm-sunday"
+   ],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c2174:teaches:new:lord day sunday",
+     "ccc": 2174,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names Sunday or the Lord's Day. The Catechism treats it as a distinct reality, the weekly day of the Resurrection that 'replaces' and 'fulfills' the sabbath (§§2174-2176, 2190), so it needs its own NT Type rather than being folded into the Resurrection or the Eucharist.",
+     "alternatives_considered": [
+      {
+       "id": "the-resurrection",
+       "why_not": "the event Sunday commemorates; the paragraphs make the day itself the fulfillment of the sabbath"
+      },
+      {
+       "id": "eucharist",
+       "why_not": "the sacrament celebrated on Sunday (§2177), not the day itself"
+      },
+      {
+       "id": "christ",
+       "why_not": "§2175's 'prefigured some aspects of Christ' is general; the concrete fulfillment the paragraph names is Sunday, the Lord's Day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2175:new:sabbath>new:lord day sunday",
+     "ccc": 2175,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names Sunday or the Lord's Day. The Catechism treats it as a distinct reality, the weekly day of the Resurrection that 'replaces' and 'fulfills' the sabbath (§§2174-2176, 2190), so it needs its own NT Type rather than being folded into the Resurrection or the Eucharist.",
+     "alternatives_considered": [
+      {
+       "id": "the-resurrection",
+       "why_not": "the event Sunday commemorates; the paragraphs make the day itself the fulfillment of the sabbath"
+      },
+      {
+       "id": "eucharist",
+       "why_not": "the sacrament celebrated on Sunday (§2177), not the day itself"
+      },
+      {
+       "id": "christ",
+       "why_not": "§2175's 'prefigured some aspects of Christ' is general; the concrete fulfillment the paragraph names is Sunday, the Lord's Day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2176:new:sabbath>new:lord day sunday",
+     "ccc": 2176,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names Sunday or the Lord's Day. The Catechism treats it as a distinct reality, the weekly day of the Resurrection that 'replaces' and 'fulfills' the sabbath (§§2174-2176, 2190), so it needs its own NT Type rather than being folded into the Resurrection or the Eucharist.",
+     "alternatives_considered": [
+      {
+       "id": "the-resurrection",
+       "why_not": "the event Sunday commemorates; the paragraphs make the day itself the fulfillment of the sabbath"
+      },
+      {
+       "id": "eucharist",
+       "why_not": "the sacrament celebrated on Sunday (§2177), not the day itself"
+      },
+      {
+       "id": "christ",
+       "why_not": "§2175's 'prefigured some aspects of Christ' is general; the concrete fulfillment the paragraph names is Sunday, the Lord's Day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2190:new:sabbath>new:lord day sunday",
+     "ccc": 2190,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names Sunday or the Lord's Day. The Catechism treats it as a distinct reality, the weekly day of the Resurrection that 'replaces' and 'fulfills' the sabbath (§§2174-2176, 2190), so it needs its own NT Type rather than being folded into the Resurrection or the Eucharist.",
+     "alternatives_considered": [
+      {
+       "id": "the-resurrection",
+       "why_not": "the event Sunday commemorates; the paragraphs make the day itself the fulfillment of the sabbath"
+      },
+      {
+       "id": "eucharist",
+       "why_not": "the sacrament celebrated on Sunday (§2177), not the day itself"
+      },
+      {
+       "id": "christ",
+       "why_not": "§2175's 'prefigured some aspects of Christ' is general; the concrete fulfillment the paragraph names is Sunday, the Lord's Day"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "lord passing by at horeb cleft rock",
+   "name": "The Lord Passing By at Horeb (the Cleft of the Rock)",
+   "name_variants": {
+    "The Lord Passing By at Horeb (the Cleft of the Rock)": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "On Mount Horeb (Sinai) the Lord passed by Moses, sheltered in a cleft of the rock, who saw his back but not his face; Elijah later met him there at the mouth of a cave in a still small voice (Exod 33:18-23; 1 Kgs 19:9-13)."
+   ],
+   "key_verses": [
+    "Exod 33:22"
+   ],
+   "near_catalog": [
+    "water-from-rock"
+   ],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c2583:new:lord passing by at horeb cleft rock>new:transfiguration",
+     "ccc": 2583,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "The paragraph joins the two Horeb theophanies ('Elijah, like Moses before him, hides \"in a cleft of the rock\"') as one figure of the veiled vision of God, which is fulfilled in the unveiled vision at the Transfiguration. No catalog Type names it.",
+     "alternatives_considered": [
+      {
+       "id": "moses",
+       "why_not": "person-Type; the figure is the theophany event shared by Moses and Elijah"
+      },
+      {
+       "id": "elijah",
+       "why_not": "same: person, not event"
+      },
+      {
+       "id": "burning-bush",
+       "why_not": "a different Sinai theophany (Exod 3), in which God called Moses rather than passing by"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "matrimony sacrament marriage",
+   "name": "Matrimony (Sacrament of Marriage)",
+   "name_variants": {
+    "Matrimony (Sacrament of Marriage)": 1
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 1
+   },
+   "descriptions": [
+    "The marriage covenant between a baptized man and woman, raised by Christ to a sacrament that signifies the union of Christ and the Church (Eph 5:25-32)."
+   ],
+   "key_verses": [
+    "Eph 5:32"
+   ],
+   "near_catalog": [
+    "sacrament-of-penance",
+    "adam-and-eve"
+   ],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c1642:new:nuptial covenant god and israel>new:matrimony sacrament marriage",
+     "ccc": 1642,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "'The sacrament of Matrimony', through which Christ now encounters Christian spouses, is the NT term of the comparison.",
+     "alternatives_considered": [
+      {
+       "id": "new-covenant-sacraments",
+       "why_not": "generic; the paragraph names Matrimony, and the precision rule prefers the specific sacrament"
+      },
+      {
+       "id": "christ-church",
+       "why_not": "the union of Christ and the Church is what marriage signifies, not the sacrament itself"
+      },
+      {
+       "id": "adam-and-eve",
+       "why_not": "the OT marriage of the first couple; this is the sacrament of the New Covenant"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "mercy seat",
+   "name": "The Mercy Seat",
+   "name_variants": {
+    "The Mercy Seat": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "The golden cover of the ark between the cherubim, where God promised to meet Moses and on which the high priest sprinkled the blood of atonement on the Day of Atonement (Exod 25:17-22; Lev 16:14-16)."
+   ],
+   "key_verses": [
+    "Exod 25:22"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c433:new:mercy seat>christ",
+     "ccc": 433,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "The paragraph turns on the mercy seat as 'the place of God's presence' where atonement was made, and on Paul's word for Christ as expiation (hilasterion, Rom 3:25). That is a distinct figure from the ark as a whole.",
+     "alternatives_considered": [
+      {
+       "id": "the-ark-of-the-covenant",
+       "why_not": "the ark as a whole (→ Christ, heaven, Mary); the Catechism's point is the propitiatory cover and the atonement rite on it, the specific figure behind Rom 3:25"
+      },
+      {
+       "id": "the-holy-of-holies",
+       "why_not": "the sanctuary room (→ ascension, heaven), not the cover where the blood is sprinkled"
+      },
+      {
+       "id": "the-scapegoat-day-of-atonement",
+       "why_not": "the scapegoat is a different Day of Atonement rite; broadening it would blur two distinct figures"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "new creation in christ",
+   "name": "The New Creation in Christ",
+   "name_variants": {
+    "The New Creation in Christ": 3
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 3
+   },
+   "descriptions": [
+    "The renewal of all things begun in Christ's Resurrection on the 'eighth day' and to be completed in the new heavens and the new earth (2 Cor 5:17; Rev 21:1-5).",
+    "The renewal of all things begun in Christ's Resurrection on the 'eighth day' and to be completed in the new heavens and the new earth (2 Cor 5:17; Rev 21:1-5).",
+    "The renewal of all things begun in Christ's Resurrection on the 'eighth day' and to be completed in the new heavens and the new earth (2 Cor 5:17; Rev 21:1-5)."
+   ],
+   "key_verses": [
+    "2 Cor 5:17"
+   ],
+   "near_catalog": [
+    "unbelievers-rejection-of-christ-crucified",
+    "the-gentiles-grafted-into-christs-church",
+    "christ",
+    "spiritual-gifts-of-christ"
+   ],
+   "near_new_groups": [
+    "creation world",
+    "temptation christ in desert",
+    "first creation",
+    "spirit over waters creation"
+   ],
+   "depends": [
+    {
+     "cand_id": "c280:new:first creation>new:new creation in christ",
+     "ccc": 280,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The phrase 'the new creation in Christ' recurs in §280, §281, §315, §349 and §374 as the counterpart of the first creation; no catalog Type names it at this precision.",
+     "alternatives_considered": [
+      {
+       "id": "christ",
+       "why_not": "the person of Christ; the Catechism names 'the new creation in Christ', the work of redemption renewing creation, and folding it into the person would blur the two"
+      },
+      {
+       "id": "the-resurrection",
+       "why_not": "§349 says the day of Christ's Resurrection *begins* the new creation; the Resurrection is the inaugurating event, not the whole renewed creation"
+      },
+      {
+       "id": "eternal-life",
+       "why_not": "the heavenly inheritance of the baptized person; the new creation is cosmic ('the heavens and the earth')"
+      }
+     ]
+    },
+    {
+     "cand_id": "c315:new:first creation>new:new creation in christ",
+     "ccc": 315,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The phrase 'the new creation in Christ' recurs in §280, §281, §315, §349 and §374 as the counterpart of the first creation; no catalog Type names it at this precision.",
+     "alternatives_considered": [
+      {
+       "id": "christ",
+       "why_not": "the person of Christ; the Catechism names 'the new creation in Christ', the work of redemption renewing creation, and folding it into the person would blur the two"
+      },
+      {
+       "id": "the-resurrection",
+       "why_not": "§349 says the day of Christ's Resurrection *begins* the new creation; the Resurrection is the inaugurating event, not the whole renewed creation"
+      },
+      {
+       "id": "eternal-life",
+       "why_not": "the heavenly inheritance of the baptized person; the new creation is cosmic ('the heavens and the earth')"
+      }
+     ]
+    },
+    {
+     "cand_id": "c349:new:first creation>new:new creation in christ",
+     "ccc": 349,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The phrase 'the new creation in Christ' recurs in §280, §281, §315, §349 and §374 as the counterpart of the first creation; no catalog Type names it at this precision.",
+     "alternatives_considered": [
+      {
+       "id": "christ",
+       "why_not": "the person of Christ; the Catechism names 'the new creation in Christ', the work of redemption renewing creation, and folding it into the person would blur the two"
+      },
+      {
+       "id": "the-resurrection",
+       "why_not": "§349 says the day of Christ's Resurrection *begins* the new creation; the Resurrection is the inaugurating event, not the whole renewed creation"
+      },
+      {
+       "id": "eternal-life",
+       "why_not": "the heavenly inheritance of the baptized person; the new creation is cosmic ('the heavens and the earth')"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "nuptial covenant god and israel",
+   "name": "The Nuptial Covenant of God and Israel",
+   "name_variants": {
+    "The Nuptial Covenant of God and Israel": 3
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 3
+   },
+   "descriptions": [
+    "The covenant between the Lord and Israel, portrayed by the prophets as an exclusive and faithful marriage in which the Lord is the husband and Israel his bride (Hos 2:19-20; Isa 54:5; Jer 2:2).",
+    "The covenant between the Lord and Israel, portrayed by the prophets as an exclusive and faithful marriage in which the Lord is the husband and Israel his bride (Hos 2:19-20; Isa 54:5; Jer 2:2).",
+    "The covenant between the Lord and Israel, portrayed by the prophets as an exclusive and faithful marriage in which the Lord is the husband and Israel his bride (Hos 2:19-20; Isa 54:5; Jer 2:2)."
+   ],
+   "key_verses": [
+    "Isa 54:5"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "israel bride lord nuptial covenant"
+   ],
+   "depends": [
+    {
+     "cand_id": "c1611:teaches:new:nuptial covenant god and israel",
+     "ccc": 1611,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "'God's covenant with Israel in the image of exclusive and faithful married love' is the prophets' nuptial-covenant figure; same proposed Type as §1612.",
+     "alternatives_considered": [
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the bride of one book, defined by its reading as the Church; §1611 itself treats the prophets' covenant-as-marriage image and the Song of Solomon as two separate witnesses, so broadening would merge figures the Catechism keeps apart (its one link, → christ-church, would survive, but the 'one figure in the tradition' test fails)"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "Israel as God's beloved prefiguring the Messiah (→ christ); recasting it as the bride would make that → christ link blurry, since the bride's antitype is the Church, not Christ"
+      },
+      {
+       "id": "hosea",
+       "why_not": "the prophet whose marriage enacts the image; a person, not the covenant itself"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1612:new:nuptial covenant god and israel>christ-church",
+     "ccc": 1612,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'The nuptial covenant between God and his people Israel' is named outright. Searched the catalog for Israel as God's bride: none. The Canticle spouse, Israel (Jeshurun), Hosea, the vineyard of Israel and the marriage of Adam and Eve are each a different figure, so new.",
+     "alternatives_considered": [
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the bride of one book, defined by its reading as the Church; §1611 itself treats the prophets' covenant-as-marriage image and the Song of Solomon as two separate witnesses, so broadening would merge figures the Catechism keeps apart (its one link, → christ-church, would survive, but the 'one figure in the tradition' test fails)"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "Israel as God's beloved prefiguring the Messiah (→ christ); recasting it as the bride would make that → christ link blurry, since the bride's antitype is the Church, not Christ"
+      },
+      {
+       "id": "hosea",
+       "why_not": "the prophet whose marriage enacts the image; a person, not the covenant itself"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1642:new:nuptial covenant god and israel>new:matrimony sacrament marriage",
+     "ccc": 1642,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'Of old God encountered his people with a covenant of love and fidelity': the nuptial covenant (the parallel with Christ 'the spouse of the Church' makes the nuptial sense plain); same proposed Type as §1612.",
+     "alternatives_considered": [
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "the bride of one book, defined by its reading as the Church; §1611 itself treats the prophets' covenant-as-marriage image and the Song of Solomon as two separate witnesses, so broadening would merge figures the Catechism keeps apart (its one link, → christ-church, would survive, but the 'one figure in the tradition' test fails)"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "Israel as God's beloved prefiguring the Messiah (→ christ); recasting it as the bride would make that → christ link blurry, since the bride's antitype is the Church, not Christ"
+      },
+      {
+       "id": "hosea",
+       "why_not": "the prophet whose marriage enacts the image; a person, not the covenant itself"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "old covenant sinai covenant",
+   "name": "The Old Covenant (Sinai Covenant)",
+   "name_variants": {
+    "The Old Covenant (Sinai Covenant)": 3
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 3
+   },
+   "descriptions": [
+    "The covenant God made with Israel at Sinai through Moses, ratified with the blood of sacrifice, by which Israel became his own people (Exod 19:5-6; 24:7-8).",
+    "The covenant God made with Israel at Sinai through Moses, ratified with the blood of sacrifice, by which Israel became his own people (Exod 19:5-6; 24:7-8).",
+    "The covenant God made with Israel at Sinai through Moses, ratified with the blood of sacrifice, by which Israel became his own people (Exod 19:5-6; 24:7-8)."
+   ],
+   "key_verses": [
+    "Exod 24:8"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "cloud on mount sinai"
+   ],
+   "depends": [
+    {
+     "cand_id": "c759:new:old covenant sinai covenant>the-one-true-church",
+     "ccc": 759,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'The old Alliance' is the Old Covenant made with Israel. The catalog has Types for the Law and for Israel but none for the covenant itself.",
+     "alternatives_considered": [
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law given within the covenant, not the covenant bond itself; the Catechism treats the Old Law separately (§1961-1964), and broadening would blur its → heaven link"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "the covenant partner (a people), not the covenant"
+      },
+      {
+       "id": "ceremonial-law",
+       "why_not": "the ritual prescriptions only"
+      }
+     ]
+    },
+    {
+     "cand_id": "c778:new:old covenant sinai covenant>the-one-true-church",
+     "ccc": 778,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'The Old Covenant' in which the Church was 'prepared for'. The catalog has Types for the Law and for Israel but none for the covenant itself.",
+     "alternatives_considered": [
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law given within the covenant, not the covenant bond itself; the Catechism treats the Old Law separately (§1961-1964), and broadening would blur its → heaven link"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "the covenant partner (a people), not the covenant"
+      },
+      {
+       "id": "ceremonial-law",
+       "why_not": "the ritual prescriptions only"
+      }
+     ]
+    },
+    {
+     "cand_id": "c781:new:old covenant sinai covenant>the-gospel-new-covenant",
+     "ccc": 781,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "'Established a covenant with it [the Israelite race]' is the Sinai covenant. The catalog has Types for the Law and for Israel but none for the covenant itself.",
+     "alternatives_considered": [
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law given within the covenant, not the covenant bond itself; the Catechism treats the Old Law separately (§1961-1964), and broadening would blur its → heaven link"
+      },
+      {
+       "id": "israel-jeshurun",
+       "why_not": "the covenant partner (a people), not the covenant"
+      },
+      {
+       "id": "ceremonial-law",
+       "why_not": "the ritual prescriptions only"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "sabbath",
+   "name": "The Sabbath",
+   "name_variants": {
+    "The Sabbath": 9
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 9
+   },
+   "descriptions": [
+    "The seventh day, on which God rested from the work of creation and which he blessed and hallowed (Gen 2:2-3), kept by Israel as a holy day of rest under the Law (Exod 20:8-11).",
+    "The seventh day, on which God rested from the work of creation and which he blessed and hallowed (Gen 2:2-3), kept by Israel as a holy day of rest under the Law (Exod 20:8-11).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17).",
+    "The seventh day of rest, which God blessed and hallowed at the completion of creation and gave Israel to keep holy as a perpetual sign of the covenant (Gen 2:2-3; Exod 20:8-11; 31:16-17)."
+   ],
+   "key_verses": [
+    "Exod 20:8",
+    "Gen 2:3"
+   ],
+   "near_catalog": [
+    "sarah"
+   ],
+   "near_new_groups": [
+    "god seventh day rest sabbath"
+   ],
+   "depends": [
+    {
+     "cand_id": "c314:new:sabbath>eternal-life",
+     "ccc": 314,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the sabbath. §345-§349 treat it as the completion of the first creation and §314 speaks of 'that definitive sabbath rest' to which God guides creation.",
+     "alternatives_considered": [
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "the jubilee year of liberation and debt-release (Lev 25), a distinct institution; it is not the seventh day of creation"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the sabbath is one precept of the Law, but §314 and §345 root it in creation itself (Gen 2:2), before Sinai"
+      }
+     ]
+    },
+    {
+     "cand_id": "c349:teaches:new:sabbath",
+     "ccc": 349,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names the sabbath. §345-§349 treat it as the completion of the first creation and §314 speaks of 'that definitive sabbath rest' to which God guides creation.",
+     "alternatives_considered": [
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "the jubilee year of liberation and debt-release (Lev 25), a distinct institution; it is not the seventh day of creation"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the sabbath is one precept of the Law, but §314 and §345 root it in creation itself (Gen 2:2), before Sinai"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2169:teaches:new:sabbath",
+     "ccc": 2169,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "ceremonial-law",
+       "why_not": "the generic body of OT ritual prescriptions; the Catechism treats the sabbath as one named institution that is also a creation memorial (§2169) and a moral precept (§2176), so folding it in would blur it, and that Type's link → the-one-true-church does not read true of the sabbath"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law as a whole; the sabbath is one commandment and sign within it"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2170:teaches:new:sabbath",
+     "ccc": 2170,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "ceremonial-law",
+       "why_not": "the generic body of OT ritual prescriptions; the Catechism treats the sabbath as one named institution that is also a creation memorial (§2169) and a moral precept (§2176), so folding it in would blur it, and that Type's link → the-one-true-church does not read true of the sabbath"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law as a whole; the sabbath is one commandment and sign within it"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2171:teaches:new:sabbath",
+     "ccc": 2171,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "ceremonial-law",
+       "why_not": "the generic body of OT ritual prescriptions; the Catechism treats the sabbath as one named institution that is also a creation memorial (§2169) and a moral precept (§2176), so folding it in would blur it, and that Type's link → the-one-true-church does not read true of the sabbath"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law as a whole; the sabbath is one commandment and sign within it"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2173:teaches:new:sabbath",
+     "ccc": 2173,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "ceremonial-law",
+       "why_not": "the generic body of OT ritual prescriptions; the Catechism treats the sabbath as one named institution that is also a creation memorial (§2169) and a moral precept (§2176), so folding it in would blur it, and that Type's link → the-one-true-church does not read true of the sabbath"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law as a whole; the sabbath is one commandment and sign within it"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2175:new:sabbath>new:lord day sunday",
+     "ccc": 2175,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "ceremonial-law",
+       "why_not": "the generic body of OT ritual prescriptions; the Catechism treats the sabbath as one named institution that is also a creation memorial (§2169) and a moral precept (§2176), so folding it in would blur it, and that Type's link → the-one-true-church does not read true of the sabbath"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law as a whole; the sabbath is one commandment and sign within it"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2176:new:sabbath>new:lord day sunday",
+     "ccc": 2176,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "'The moral command of the Old Covenant' whose weekly 'rhythm' Sunday takes up is the sabbath precept: the paragraph directly follows §2175 in the section on the third commandment. No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "the-mosaic-law",
+       "why_not": "'the moral command of the Old Covenant' is one precept, identified by its weekly 'rhythm' as the sabbath, not the Law as a whole"
+      },
+      {
+       "id": "ceremonial-law",
+       "why_not": "the paragraph speaks expressly of the moral command, as distinct from the ceremonial observance §2175 says is replaced"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    },
+    {
+     "cand_id": "c2190:new:sabbath>new:lord day sunday",
+     "ccc": 2190,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the weekly sabbath. The Catechism teaches it at length as its own sign (§§2168-2173) and pairs it with Sunday (§§2175, 2176, 2190), so it needs its own OT Type.",
+     "alternatives_considered": [
+      {
+       "id": "ceremonial-law",
+       "why_not": "the generic body of OT ritual prescriptions; the Catechism treats the sabbath as one named institution that is also a creation memorial (§2169) and a moral precept (§2176), so folding it in would blur it, and that Type's link → the-one-true-church does not read true of the sabbath"
+      },
+      {
+       "id": "the-mosaic-law",
+       "why_not": "the Law as a whole; the sabbath is one commandment and sign within it"
+      },
+      {
+       "id": "the-year-of-jubilee",
+       "why_not": "a distinct sabbatical institution (Lev 25) with its own link to Christ's redemption, not the weekly seventh day"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "seventy elders",
+   "name": "The Seventy Elders",
+   "name_variants": {
+    "The Seventy Elders": 2
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 2
+   },
+   "descriptions": [
+    "The seventy elders of Israel on whom the Lord placed part of the spirit that was on Moses, so that they might bear the burden of the people with him (Num 11:16-25).",
+    "The seventy elders of Israel on whom the Lord placed part of the spirit that was on Moses, so that they might bear the burden of the people with him (Num 11:16-25)."
+   ],
+   "key_verses": [
+    "Num 11:25"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c1541:new:seventy elders>holy-orders",
+     "ccc": 1541,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The paragraph names 'the institution of the seventy elders' as a separate item; no catalog Type covers it.",
+     "alternatives_considered": [
+      {
+       "id": "ot-priesthood",
+       "why_not": "the elders were not priests; broadening the Levitical priesthood to cover them would blur two institutions the paragraph itself lists separately"
+      },
+      {
+       "id": "moses",
+       "why_not": "Moses is the person whose spirit was shared; the figure here is the institution of the seventy who received it"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1542:teaches:new:seventy elders",
+     "ccc": 1542,
+     "side": "type",
+     "relation": "teaches-only",
+     "reasoning": "The ordination prayer for priests recalls the seventy who received Moses' spirit; same proposed Type as §1541.",
+     "alternatives_considered": [
+      {
+       "id": "ot-priesthood",
+       "why_not": "the elders were not priests; broadening the Levitical priesthood to cover them would blur two institutions the paragraph itself lists separately"
+      },
+      {
+       "id": "moses",
+       "why_not": "Moses is the person whose spirit was shared; the figure here is the institution of the seventy who received it"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "spirit over waters creation",
+   "name": "The Spirit over the Waters of Creation",
+   "name_variants": {
+    "The Spirit over the Waters of Creation": 2
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 2
+   },
+   "descriptions": [
+    "The Spirit of God moving over the face of the waters at the beginning of creation (Gen 1:2).",
+    "The Spirit of God moving over the face of the waters at the beginning of creation (Gen 1:2)."
+   ],
+   "key_verses": [
+    "Gen 1:2"
+   ],
+   "near_catalog": [
+    "the-invitation-to-the-waters-isaiah-55",
+    "the-holy-spirit-as-divine-guide",
+    "the-living-waters-from-the-sanctuary",
+    "descent-of-the-holy-spirit-at-pentecost"
+   ],
+   "near_new_groups": [
+    "first creation",
+    "new creation in christ",
+    "creation world"
+   ],
+   "depends": [
+    {
+     "cand_id": "c1217:new:spirit over waters creation>baptism",
+     "ccc": 1217,
+     "side": "type",
+     "relation": "synthesized",
+     "reasoning": "No catalog Type names the creation waters. The Easter Vigil blessing (§§1217-1222) lists them as a figure separate from the flood, the Red Sea and the Jordan, so broadening a generic water Type would blur figures the liturgy keeps distinct.",
+     "alternatives_considered": [
+      {
+       "id": "gods-wonders-by-water",
+       "why_not": "a collective of water wonders in the Exodus and wilderness; broadening it to cover creation would merge figures the liturgy lists separately"
+      },
+      {
+       "id": "noahs-flood",
+       "why_not": "a different event (the waters of judgment and new beginning)"
+      }
+     ]
+    },
+    {
+     "cand_id": "c1224:new:spirit over waters creation>new:baptism jesus",
+     "ccc": 1224,
+     "side": "type",
+     "relation": "preparatory",
+     "reasoning": "No catalog Type names the creation waters. The Easter Vigil blessing (§§1217-1222) lists them as a figure separate from the flood, the Red Sea and the Jordan, so broadening a generic water Type would blur figures the liturgy keeps distinct.",
+     "alternatives_considered": [
+      {
+       "id": "gods-wonders-by-water",
+       "why_not": "a collective of water wonders in the Exodus and wilderness; broadening it to cover creation would merge figures the liturgy lists separately"
+      },
+      {
+       "id": "noahs-flood",
+       "why_not": "a different event (the waters of judgment and new beginning)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "temptation christ in desert",
+   "name": "The Temptation of Christ in the Desert",
+   "name_variants": {
+    "The Temptation of Christ in the Desert": 1
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 1
+   },
+   "descriptions": [
+    "Jesus' forty days in the desert, where he was tempted by Satan and remained obedient to the Father (Matt 4:1-11)."
+   ],
+   "key_verses": [
+    "Matt 4:1"
+   ],
+   "near_catalog": [
+    "manna",
+    "christ-high-priest",
+    "cloud-in-desert",
+    "unbelievers-rejection-of-christ-crucified"
+   ],
+   "near_new_groups": [
+    "new creation in christ"
+   ],
+   "depends": [
+    {
+     "cand_id": "c539:israels-disobedience-in-the-wilderness>new:temptation christ in desert",
+     "ccc": 539,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The Catechism sets Jesus' forty days of temptation against Israel's forty years of testing in the desert; that is an event, not the person.",
+     "alternatives_considered": [
+      {
+       "id": "christ",
+       "why_not": "the paragraph's antitype is the desert episode, which matches Israel's desert testing event-for-event"
+      },
+      {
+       "id": "christs-victory",
+       "why_not": "the catalog Type is the Paschal victory; §539 says the desert victory 'anticipates' it, so they are distinct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "transfiguration",
+   "name": "The Transfiguration",
+   "name_variants": {
+    "The Transfiguration": 1
+   },
+   "testament": "NT",
+   "testament_votes": {
+    "NT": 1
+   },
+   "descriptions": [
+    "Christ's transfiguration on the mountain before Peter, James and John, when Moses and Elijah appeared talking with him (Matt 17:1-8; Mark 9:2-8; Luke 9:28-36)."
+   ],
+   "key_verses": [
+    "Matt 17:2"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [
+    "confirmation"
+   ],
+   "depends": [
+    {
+     "cand_id": "c2583:new:lord passing by at horeb cleft rock>new:transfiguration",
+     "ccc": 2583,
+     "side": "antitype",
+     "relation": "preparatory",
+     "reasoning": "The paragraph locates the fulfillment on 'the mountain of the Transfiguration'. The catalog has no Transfiguration Type.",
+     "alternatives_considered": [
+      {
+       "id": "christ",
+       "why_not": "the face beheld is Christ's, but the paragraph names the event on the mountain"
+      },
+      {
+       "id": "christs-ascension",
+       "why_not": "a different glorification event"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "group": "wisdom personified proverbs 8",
+   "name": "Wisdom Personified (Proverbs 8)",
+   "name_variants": {
+    "Wisdom Personified (Proverbs 8)": 1
+   },
+   "testament": "OT",
+   "testament_votes": {
+    "OT": 1
+   },
+   "descriptions": [
+    "Wisdom personified as a woman who raises her voice to call the simple and who was beside God when he established the heavens (Prov 8)."
+   ],
+   "key_verses": [
+    "Prov 8:22"
+   ],
+   "near_catalog": [],
+   "near_new_groups": [],
+   "depends": [
+    {
+     "cand_id": "c721:new:wisdom personified proverbs 8>mary",
+     "ccc": 721,
+     "side": "type",
+     "relation": "explicit",
+     "reasoning": "The 'texts on wisdom' (footnote Prov 8:1-9) are read of Mary, 'Seat of Wisdom'. No catalog Type names personified Wisdom.",
+     "alternatives_considered": [
+      {
+       "id": "solomon",
+       "why_not": "the wise king, not personified Wisdom"
+      },
+      {
+       "id": "the-spouse-of-the-canticle-song-of-songs",
+       "why_not": "a different personification (the bride)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

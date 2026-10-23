@@ -1,0 +1,71 @@
+{
+ "prepared": "2026-10-20",
+ "paragraphs": 2865,
+ "types": 198,
+ "batches": {
+  "01": {
+   "first": 1,
+   "last": 390,
+   "paragraphs": 390,
+   "words": 28139,
+   "file": "batches/batch-01.md",
+   "output": "raw/batch-01.jsonl"
+  },
+  "02": {
+   "first": 391,
+   "last": 747,
+   "paragraphs": 357,
+   "words": 31085,
+   "file": "batches/batch-02.md",
+   "output": "raw/batch-02.jsonl"
+  },
+  "03": {
+   "first": 748,
+   "last": 1065,
+   "paragraphs": 318,
+   "words": 26001,
+   "file": "batches/batch-03.md",
+   "output": "raw/batch-03.jsonl"
+  },
+  "04": {
+   "first": 1066,
+   "last": 1380,
+   "paragraphs": 315,
+   "words": 25010,
+   "file": "batches/batch-04.md",
+   "output": "raw/batch-04.jsonl"
+  },
+  "05": {
+   "first": 1381,
+   "last": 1690,
+   "paragraphs": 310,
+   "words": 24967,
+   "file": "batches/batch-05.md",
+   "output": "raw/batch-05.jsonl"
+  },
+  "06": {
+   "first": 1691,
+   "last": 2130,
+   "paragraphs": 440,
+   "words": 28907,
+   "file": "batches/batch-06.md",
+   "output": "raw/batch-06.jsonl"
+  },
+  "07": {
+   "first": 2131,
+   "last": 2557,
+   "paragraphs": 427,
+   "words": 28674,
+   "file": "batches/batch-07.md",
+   "output": "raw/batch-07.jsonl"
+  },
+  "08": {
+   "first": 2558,
+   "last": 2865,
+   "paragraphs": 308,
+   "words": 25196,
+   "file": "batches/batch-08.md",
+   "output": "raw/batch-08.jsonl"
+  }
+ }
+}

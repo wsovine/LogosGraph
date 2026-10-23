@@ -45,13 +45,18 @@
     },
     {
       "ccc_id": "CCC-1222",
-      "type_ids": ["jordan-crossing", "baptism", "eternal-life"],
-      "notes": "Jordan crossing prefigures baptism and eternal life"
+      "type_ids": ["jordan-crossing", "baptism", "the-promised-land", "eternal-life"],
+      "notes": "Jordan crossing prefigures baptism; the promised land is an image of eternal life"
+    },
+    {
+      "ccc_id": "CCC-1333",
+      "type_ids": ["melchizedek", "eucharist"],
+      "notes": "Melchizedek's bread and wine, a prefiguring of the Church's offering"
     },
     {
       "ccc_id": "CCC-1334",
-      "type_ids": ["melchizedek", "passover", "manna", "eucharist"],
-      "notes": "OT bread/wine offerings and Passover prefigure Eucharist"
+      "type_ids": ["passover", "manna", "eucharist"],
+      "notes": "OT bread/wine offerings, the manna and the Passover prefigure the Eucharist"
     },
     {
       "ccc_id": "CCC-1544",

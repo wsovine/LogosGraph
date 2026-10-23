@@ -250,6 +250,73 @@ python scripts/import_memberships.py
 
 ---
 
+## Catechism Typology Pass
+
+A systematic read of all 2,865 Catechism paragraphs for typology. The LLM steps (extraction, Type
+consolidation, verification) run as **Claude Code subagents**, not API scripts. Their instructions live in
+`.claude/agents/ccc-typology-extractor.md` and `.claude/agents/theologian.md` (local; `.claude/` is gitignored).
+These scripts are the deterministic steps around them. Outputs go to `data/extracted/ccc_pass/`. See
+[typology-workflow.md](typology-workflow.md#step-6-catechism-typology-pass).
+
+### prepare_ccc_batches.py
+
+Write the extractor inputs: 8 batch files (contiguous paragraph ranges by Part), the Type catalog, all
+paragraph texts with their Scripture CITES, the Verse ID list, and the recall gold set. Requires Neo4j.
+
+```bash
+python scripts/prepare_ccc_batches.py --dry-run   # print batch sizes only
+python scripts/prepare_ccc_batches.py
+```
+
+### check_ccc_raw.py
+
+Validate one batch of extractor output (`raw/batch-NN.jsonl`): verbatim quotes, Type decisions with
+alternatives considered, categories, resolvable verse refs, and a coverage row. No database needed.
+Extractor agents run it on themselves before finishing.
+
+```bash
+python scripts/check_ccc_raw.py 04
+```
+
+### reconcile_ccc_typology.py
+
+Merge all batches: re-check rows, sort them into review buckets (A source on an existing link, B new link,
+C needs a Type decision, T teaches-only, X held), build the Type ledger, measure gold recall, and write
+`reconcile-report.md`.
+
+| Option | Description |
+|--------|-------------|
+| `--batches NN …` | Only these batches |
+| `--check-decisions` | Validate `type_decisions.jsonl` against the ledger |
+| `--apply-decisions` | Rewrite candidates to final Type ids → `candidates_final.jsonl` |
+
+### build_ccc_verify_packets.py
+
+Build blind packets for the verifier (claims + Catechism text + a recall sample, without the extractor's
+reasoning), and check the verdict files.
+
+```bash
+python scripts/build_ccc_verify_packets.py --packets 6
+python scripts/build_ccc_verify_packets.py --check
+```
+
+### review_ccc_typology.py
+
+Interactive review (Type decisions first, then new links, then Catechism sources on existing links, then
+teaches rows). Writes `data/reviewed/ccc_typology_approved.jsonl` / `_rejected.jsonl` and the Type changes
+overlay `data/reviewed/type_changes.jsonl`. Resumable.
+
+| Option | Description |
+|--------|-------------|
+| `--bucket {A,B,C,T}` | Review one bucket (skips Type decisions) |
+| `--stats` | Show progress |
+| `--auto-verifier` | Apply the verifier's verdicts to everything not yet reviewed (each record is labeled as such) |
+
+Keys: `y` approve · `n` reject · `e` edit · `r` apply the verifier's fix · `v` full paragraph · `s` skip ·
+`q` quit · `A` approve the rest of bucket A or T (verifier-accepted or label-only).
+
+---
+
 ## Database
 
 ### import_all.py

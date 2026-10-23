@@ -2,7 +2,8 @@
 """CLI script to import biblical typology into Neo4j.
 
 Loads Type nodes and PREFIGURES / MEMBER_OF / TEACHES relationships from the
-curated CCC seed files and the reviewed Haydock extractions. Can run the whole
+curated CCC seed files, the reviewed Haydock extractions, and the reviewed
+Catechism typology pass (with its Type changes overlay). Can run the whole
 typology import or individual steps, and can restrict to seed-only or
 reviewed-only sources for incremental loads.
 
@@ -32,6 +33,11 @@ from src.data.typology_parser import (
     parse_seed_memberships,
     parse_approved_memberships,
     parse_teaches,
+    parse_ccc_approved_prefigures,
+    parse_ccc_approved_teaches,
+    parse_ccc_approved_memberships,
+    apply_type_aliases,
+    load_type_changes,
 )
 from src.data.typology_schemas import validate_all_seed_files
 from src.db.connection import get_connection
@@ -41,6 +47,7 @@ from src.import_pipeline.typology_importer import (
     import_prefigures,
     import_verse_memberships,
     import_teaches,
+    import_ccc_memberships,
 )
 
 
@@ -56,7 +63,7 @@ def main():
     # Source selection
     source = parser.add_mutually_exclusive_group()
     source.add_argument("--seed-only", action="store_true", help="Only curated CCC seed data")
-    source.add_argument("--reviewed-only", action="store_true", help="Only reviewed Haydock data")
+    source.add_argument("--reviewed-only", action="store_true", help="Only reviewed data (Haydock + Catechism pass)")
     parser.add_argument(
         "--reset",
         action="store_true",
@@ -113,6 +120,7 @@ def main():
 
         stats = {}
         start = time.time()
+        aliases_map = load_type_changes()["aliases"]
 
         if do_types:
             print("\n📦 Importing Type nodes...")
@@ -131,8 +139,10 @@ def main():
             if not args.reviewed_only:
                 rels += list(parse_seed_prefigures())
             if not args.seed_only:
+                # Haydock before the Catechism pass, so links the user already reviewed keep their notes
                 rels += list(parse_approved_prefigures())
-            created, skipped = import_prefigures(rels, connection)
+                rels += list(parse_ccc_approved_prefigures())
+            created, skipped = import_prefigures(apply_type_aliases(rels, ("from", "to")), connection)
             stats["prefigures"] = (created, skipped)
             print(f"   ✓ {created:,} PREFIGURES edges" + (f" ({skipped} skipped)" if skipped else ""))
 
@@ -143,16 +153,25 @@ def main():
                 mems += list(parse_seed_memberships())
             if not args.seed_only:
                 mems += list(parse_approved_memberships())
-            created, skipped = import_verse_memberships(mems, connection)
+            created, skipped = import_verse_memberships(apply_type_aliases(mems, ("type_id",)), connection)
             stats["memberships"] = (created, skipped)
             print(f"   ✓ {created:,} MEMBER_OF edges" + (f" ({skipped} skipped)" if skipped else ""))
+            if not args.seed_only:
+                ccc_mems = apply_type_aliases(list(parse_ccc_approved_memberships()), ("type_id",))
+                if ccc_mems:
+                    created, skipped = import_ccc_memberships(ccc_mems, connection)
+                    stats["ccc_memberships"] = (created, skipped)
+                    print(f"   ✓ {created:,} Catechism-pass MEMBER_OF edges"
+                          + (f" ({skipped} skipped)" if skipped else ""))
 
         if do_teaches:
-            if args.reviewed_only:
-                print("\n🔗 Skipping TEACHES (no reviewed CCC teaching data)")
-            else:
-                print("\n🔗 Importing TEACHES edges...")
-                created, skipped = import_teaches(list(parse_teaches()), connection)
+            print("\n🔗 Importing TEACHES edges...")
+            teaches = [] if args.reviewed_only else list(parse_teaches())
+            if not args.seed_only:
+                teaches += list(parse_ccc_approved_teaches())
+            if teaches:
+                teaches = [{**t, "type_ids": [aliases_map.get(i, i) for i in t["type_ids"]]} for t in teaches]
+                created, skipped = import_teaches(teaches, connection)
                 stats["teaches"] = (created, skipped)
                 print(f"   ✓ {created:,} TEACHES edges" + (f" ({skipped} skipped)" if skipped else ""))
 
