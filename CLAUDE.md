@@ -45,6 +45,7 @@ LogosGraph/
 | [docs/graph-schema.md](docs/graph-schema.md) | Neo4j schema and sample queries |
 | [docs/data-sources.md](docs/data-sources.md) | TSK and Haydock background |
 | [docs/typology-workflow.md](docs/typology-workflow.md) | Typology extraction guide |
+| [docs/scrollytelling.md](docs/scrollytelling.md) | The three published sites: exports, publishing, submodules |
 | [docs/architecture.md](docs/architecture.md) | Design decisions |
 
 ## Key Technical Details

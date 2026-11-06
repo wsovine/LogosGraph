@@ -13,6 +13,7 @@ Detailed documentation for LogosGraph, a Neo4j knowledge graph of the Catholic B
 | [Theological Concepts](theological-concepts.md) | Cross-references, typology, Catholic canon, Magisterial interpretation |
 | [Data Formats](data-formats.md) | JSON/JSONL file schemas for seed and extracted data |
 | [Typology Workflow](typology-workflow.md) | End-to-end guide for typology extraction and review |
+| [Scrollytelling Sites](scrollytelling.md) | The three published sites (arcs, timeline, typology): data exports and publishing |
 | [Architecture](architecture.md) | Project structure, design decisions, and data flow |
 
 ## Quick Links
@@ -50,6 +51,11 @@ The typology pipeline extracts OT type → NT antitype connections:
 4. Import to Neo4j
 
 Full details in [Typology Workflow](typology-workflow.md).
+
+### Published Sites
+
+Three scrollytelling sites are built from the graph (Old and New Testament arcs, the Bible timeline, and
+*Shadow & Fulfillment* on typology). How each one's data is exported and published: [Scrollytelling Sites](scrollytelling.md).
 
 ## Project Structure
 

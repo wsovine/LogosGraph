@@ -194,10 +194,10 @@ RETURN ccc.paragraph, ccc.text
 
 ### Typology Queries
 
-Current graph (2026-10-16): 198 Type nodes (156 OT / 42 NT), 275 PREFIGURES, 1,130 MEMBER_OF
-(555 curated + 575 `crossref-mined`), 43 TEACHES.
+Current graph (2026-11-06, after the Catechism pass): 220 Type nodes (170 OT / 50 NT), 309 PREFIGURES, 1,235 MEMBER_OF
+(555 curated + 569 `crossref-mined` + 111 `ccc-review`), 312 TEACHES.
 
-**What prefigures Baptism?** — OT types pointing at the `baptism` antitype (→ 17 results).
+**What prefigures Baptism?** — OT types pointing at the `baptism` antitype (→ 18 results).
 
 ```cypher
 MATCH (ot:Type)-[r:PREFIGURES]->(:Type {id: 'baptism'})

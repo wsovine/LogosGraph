@@ -44,13 +44,14 @@ Full documentation in [docs/](docs/README.md):
 - [Data Sources](docs/data-sources.md) - TSK, Haydock, CPDV, and CCC details
 - [Theological Concepts](docs/theological-concepts.md) - Cross-references, typology, Catholic canon
 - [Typology Workflow](docs/typology-workflow.md) - Extraction and review guide
+- [Scrollytelling Sites](docs/scrollytelling.md) - The three published sites and their data exports
 - [Architecture](docs/architecture.md) - Project design
 
 ## Roadmap
 
 - **Phase 3/4 (Complete)**: Catechism of the Catholic Church integration (2,865 paragraphs, Scripture citations, external documents)
-- **Typology (Complete)**: OT type → NT antitype connections from CCC and Haydock (198 Types, 275 PREFIGURES, 1,130 verse memberships incl. cross-ref-mined)
-- **Typology scrollytelling (Live)**: [Shadow & Fulfillment](https://wsovine.github.io/bible-typology/), a scroll-driven story and explorer of every Type ([source](https://github.com/wsovine/bible-typology), submodule at `scrollytelling/bible_typology`)
+- **Typology (Complete)**: OT type → NT antitype connections from CCC and Haydock, including a pass over all 2,865 Catechism paragraphs (220 Types, 309 PREFIGURES, 1,235 verse memberships, 312 Catechism links)
+- **Scrollytelling sites (Live)**: [Old and New Testament arcs](https://wsovine.github.io/bible-crossrefs-visualization/), [the Bible timeline](https://wsovine.github.io/bible-timeline/), and [Shadow & Fulfillment](https://wsovine.github.io/bible-typology/), a scroll-driven story and explorer of biblical typology (submodules under `scrollytelling/`; see [docs/scrollytelling.md](docs/scrollytelling.md))
 - **Future**: Patristic sources (e.g. Daniélou's *From Shadows to Reality*), original language cross-references
 
 ## License & Credits
